@@ -1,21 +1,87 @@
 <!doctype html>
-<html lang="de"><head>
-<meta charset="utf-8">
-<title>Modern Ritualistic Tattoo</title>
-<link rel="stylesheet" href="assets/css/style.css">
-</head><body>
-<header><h1>Modern Ritualistic Tattoo</h1>
-<nav><ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">Studio</a></li>
-<li><a href="gallery.html">Galerie</a></li>
-<li><a href="contact.html">Kontakt</a></li>
-<li><a href="booking.html">Termin</a></li>
-</ul></nav></header>
-<section class="hero">
-<video autoplay loop muted playsinline><source src="assets/video/banner.mp4" type="video/mp4"></video>
-<div class="hero-overlay"><h2>Ink beyond Skin · Rituale in Linien & Schatten</h2><a href="contact.html">Termin anfragen</a></div>
-</section>
-<footer>© <span id="year"></span> AmoTattooAtelier</footer>
-<script src="assets/js/main.js"></script>
-</body></html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modern Ritualistic Tattoo – AmoTattooAtelier</title>
+  <meta name="description" content="Modern Ritualistic Tattoo – Alexander Vöckt, AmoTattooAtelier in Wehr. Moderne Tattoo-Kunst mit ritueller Ästhetik, präzisen Linien & sakraler Symbolik.">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Modern Ritualistic Tattoo</h1>
+    <nav>
+      <a href="index.html" aria-current="page">Home</a> |
+      <a href="studio.html">Studio</a> |
+      <a href="galerie.html">Galerie</a> |
+      <a href="contact.html">Kontakt</a> |
+      <a href="booking.html">Termin</a> |
+      <a href="impressum.html">Impressum</a> |
+      <a href="datenschutz.html">Datenschutz</a>
+    </nav>
+  </header>
+
+  <!-- Hero-Video -->
+  <section class="hero">
+    <video src="assets/video/banner.mp4" autoplay muted loop playsinline></video>
+    <div>
+      <h2 style="font-size:2rem; letter-spacing:.05em; color:#fff; text-shadow:0 3px 10px rgba(0,0,0,.6);">
+        Ritual • Kunst • Transformation
+      </h2>
+      <p style="max-width:600px;margin:1rem auto;color:#d0b37a;font-size:1.1rem;">
+        AmoTattooAtelier verbindet moderne Tattoo-Technik mit rituell-ästhetischer Symbolik.  
+        Präzise Linien. Ruhige Schatten. Arbeiten mit Bedeutung.
+      </p>
+      <a href="booking.html" class="btn">Termin anfragen</a>
+    </div>
+  </section>
+
+  <main class="content narrow">
+    <h2>Über das Atelier</h2>
+    <p>
+      Das <strong>AmoTattooAtelier</strong> steht für bewusste Gestaltung und tiefe Symbolik.
+      Jedes Motiv entsteht in Ruhe, auf Basis eines Vorgesprächs und mit Blick auf Harmonie von Körper, Form und Geist.
+    </p>
+    <p>
+      <em>„Ein Tattoo ist mehr als ein Bild – es ist ein Prozess.“</em>
+    </p>
+
+    <hr class="hr-bronze">
+
+    <section class="card">
+      <h3>Schwerpunkte</h3>
+      <ul>
+        <li>Feinlinige, rituelle Motive und sakrale Geometrien</li>
+        <li>Ruhige Schatten – Klarheit und Struktur</li>
+        <li>Individuelle Beratung und respektvolle Atmosphäre</li>
+        <li>Ritual-inspirierte Tattoos mit künstlerischem Fokus</li>
+      </ul>
+      <p><a href="galerie.html" class="btn">Galerie ansehen</a></p>
+    </section>
+
+    <hr class="hr-bronze">
+
+    <section>
+      <h3>Kontakt</h3>
+      <p>
+        <strong>AmoTattooAtelier</strong><br>
+        Sternenstrasse 5<br>
+        79664 Wehr<br>
+        Alexander Vöckt<br>
+        <a href="mailto:voeckt.alexander@web.de">voeckt.alexander@web.de</a><br>
+        <a href="https://www.instagram.com/amotattooatelier" target="_blank" rel="noopener">@amotattooatelier</a>
+      </p>
+      <a href="contact.html" class="btn">Nachricht senden</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Modern Ritualistic Tattoo</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
