@@ -2,83 +2,47 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Modern Ritualistic Tattoo – AmoTattooAtelier</title>
-  <meta name="description" content="Modern Ritualistic Tattoo in Wehr. Ritual-inspirierte Tattoos mit klaren Linien, ruhigen Schatten und sakraler Ästhetik.">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Modern Ritualistic Tattoo</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header>
-    <h1>Modern Ritualistic Tattoo</h1>
-    <nav>
-      <a href="index.html" aria-current="page">Home</a> |
-      <a href="studio.html">Studio</a> |
-      <a href="galerie.html">Galerie</a> |
-      <a href="contact.html">Kontakt</a> |
-      <a href="booking.html">Termin</a> |
-      <a href="impressum.html">Impressum</a> |
-      <a href="datenschutz.html">Datenschutz</a>
-    </nav>
-  </header>
+<header>
+  <h1>Modern Ritualistic Tattoo</h1>
+  <nav>
+    <a href="index.html" aria-current="page">Home</a> |
+    <a href="contact.html">Kontakt</a> |
+    <a href="booking.html">Termin</a>
+  </nav>
+</header>
 
-  <!-- HERO mit fixiertem Hintergrund-Video -->
-  <section class="hero">
-    <video autoplay muted loop playsinline>
-      <source src="assets/video/banner.mp4" type="video/mp4">
-      Dein Browser unterstützt keine HTML5-Videos.
-    </video>
-    <div>
-      <h2 style="font-size:2rem;letter-spacing:.05em;text-shadow:0 3px 10px rgba(0,0,0,.6);">
-        Ink beyond Skin
-      </h2>
-      <p style="max-width:640px;margin:1rem auto;color:#d0b37a;font-size:1.1rem;">
-        Rituale in Linien &amp; Schatten – präzise, ruhig, bedeutungsvoll.
-      </p>
-      <a class="btn" href="booking.html">Termin anfragen</a>
-    </div>
-  </section>
+<!-- Hero-Bereich mit Video -->
+<section class="hero">
+  <video autoplay muted loop playsinline>
+    <source src="assets/video/banner.mp4" type="video/mp4">
+    Dein Browser unterstützt keine HTML5-Videos.
+  </video>
+  <div class="hero-content">
+    <h2>Ink Beyond Skin</h2>
+    <p>Rituale in Linien & Schatten – Modern Ritualistic Tattoo</p>
+    <a href="booking.html" class="btn">Termin vereinbaren</a>
+  </div>
+</section>
 
-  <main class="content narrow">
-    <h2>Willkommen im AmoTattooAtelier</h2>
-    <p>
-      Jedes Motiv entsteht im Dialog zwischen Körper, Form und Bedeutung.
-      Moderne Technik trifft rituelle Ästhetik – klar strukturiert, respektvoll umgesetzt.
-    </p>
+<main class="content narrow">
+  <h2>Willkommen</h2>
+  <p>Willkommen bei Modern Ritualistic Tattoo – einem Ort, an dem Tätowieren zu einem bewussten, rituellen Akt wird. Jedes Design ist ein Symbol, eine Erinnerung, ein Schritt auf deinem Weg.</p>
+  <hr class="hr-bronze">
+  <p>Ich kombiniere moderne Technik mit uralten Symboliken und spirituellen Formen, um individuelle Kunstwerke zu schaffen – tiefgründig, bedeutungsvoll und einzigartig.</p>
+</main>
 
-    <hr class="hr-bronze">
+<footer>
+  <p>© <span id="year"></span> Modern Ritualistic Tattoo</p>
+</footer>
 
-    <section class="card">
-      <h3>Schwerpunkte</h3>
-      <ul>
-        <li>Sakrale Geometrie &amp; rituelle Symbolik</li>
-        <li>Feinlinige Arbeiten mit ruhigen Schatten</li>
-        <li>Individuelle Beratung &amp; ruhige Atmosphäre</li>
-      </ul>
-      <p><a class="btn" href="galerie.html">Galerie ansehen</a></p>
-    </section>
-
-    <hr class="hr-bronze">
-
-    <section>
-      <h3>Kontakt</h3>
-      <p>
-        <strong>AmoTattooAtelier</strong><br>
-        Sternenstrasse 5, 79664 Wehr<br>
-        Alexander Vöckt ·
-        <a href="mailto:voeckt.alexander@web.de">voeckt.alexander@web.de</a><br>
-        <a href="https://www.instagram.com/amotattooatelier" target="_blank" rel="noopener">@amotattooatelier</a>
-      </p>
-      <a class="btn" href="contact.html">Nachricht senden</a>
-    </section>
-  </main>
-
-  <footer>
-    <p>© <span id="year"></span> Modern Ritualistic Tattoo</p>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
