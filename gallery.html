@@ -4,56 +4,56 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Galerie – Modern Ritualistic Tattoo</title>
-  <link rel="stylesheet" href="style.css">
   <meta name="description" content="Ritual Tattoos, Artworks & Studio – Einblick in Arbeiten des AmoTattoo Ateliers.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
   <h1>Modern Ritualistic Tattoo</h1>
   <nav>
     <a href="index.html">Home</a> |
-    <a href="about.html">Philosophie</a> |
-    <a href="services.html">Angebote</a> |
+    <a href="philosophie.html">Philosophie</a> |
+    <a href="angebote.html">Angebote & Preise</a> |
     <a href="gallery.html" aria-current="page">Galerie</a> |
     <a href="contact.html">Kontakt</a> |
-    <a href="booking.html">Termin</a>
+    <a href="booking.html">Termin</a> |
+    <a href="impressum.html">Impressum</a> |
+    <a href="datenschutz.html">Datenschutz</a>
   </nav>
 </header>
 
 <main class="content narrow">
   <h2>Galerie</h2>
-  <p>Ritual Tattoos – Artworks – Studio & Nature</p>
+  <p>Ritual Tattoos – Artworks – Studio &amp; Nature</p>
   <hr class="hr-bronze">
 
   <section class="grid">
-    <!-- Ersetze die Dateien im Ordner assets/img/… -->
+    <!-- Ersetze durch echte Dateien unter /assets/img/ -->
     <figure>
-      <img src="assets/img/tattoo01.jpg" alt="Ritual Tattoo – Linien & Symbolik">
+      <img src="assets/img/tattoo01.jpg" alt="Ritual Tattoo – Linien & Symbolik" loading="lazy">
       <figcaption>Ritual Tattoo</figcaption>
     </figure>
     <figure>
-      <img src="assets/img/tattoo02.jpg" alt="Schattierungen – Intention & Ruhe">
-      <figcaption>Linien & Schatten</figcaption>
+      <img src="assets/img/tattoo02.jpg" alt="Linien & Schatten – Intention" loading="lazy">
+      <figcaption>Linien &amp; Schatten</figcaption>
     </figure>
     <figure>
-      <img src="assets/img/artwork01.jpg" alt="Artwork / Illustration">
+      <img src="assets/img/artwork01.jpg" alt="Artwork / Illustration" loading="lazy">
       <figcaption>Artwork / Illustration</figcaption>
     </figure>
     <figure>
-      <img src="assets/img/studio01.jpg" alt="Atelier – Raum & Stille">
+      <img src="assets/img/studio01.jpg" alt="Atelier – Raum & Stille" loading="lazy">
       <figcaption>Atelier</figcaption>
-    </figure>
-    <figure>
-      <img src="assets/img/nature01.jpg" alt="Natur – Umgebung des Ateliers">
-      <figcaption>Natur</figcaption>
     </figure>
   </section>
 
-  <p style="opacity:.8;margin-top:1rem">Hinweis: Lade deine Bilder nach <code>assets/img/</code> und benenne sie wie oben – oder passe die Dateinamen an.</p>
+  <p style="opacity:.8;margin-top:1rem">
+    Lege Bilder in <code>/assets/img/</code> ab und passe Dateinamen an.
+  </p>
 </main>
 
 <footer>
-  <p>© <span id="year"></span> Modern Ritualistic Tattoo · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+  <p>© <span id="year"></span> Modern Ritualistic Tattoo</p>
 </footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
