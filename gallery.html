@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Galerie – Modern Ritualistic Tattoo</title>
   <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Ritual Tattoos, Artworks & Studio – Einblick in Arbeiten des AmoTattoo Ateliers.">
 </head>
-
 <body>
 <header>
   <h1>Modern Ritualistic Tattoo</h1>
   <nav>
     <a href="index.html">Home</a> |
+    <a href="about.html">Philosophie</a> |
+    <a href="services.html">Angebote</a> |
     <a href="gallery.html" aria-current="page">Galerie</a> |
     <a href="contact.html">Kontakt</a> |
     <a href="booking.html">Termin</a>
@@ -20,19 +22,39 @@
 
 <main class="content narrow">
   <h2>Galerie</h2>
-  <p>Ein Einblick in meine Arbeiten – jedes Tattoo erzählt eine Geschichte.</p>
+  <p>Ritual Tattoos – Artworks – Studio & Nature</p>
   <hr class="hr-bronze">
 
   <section class="grid">
+    <!-- Ersetze die Dateien im Ordner assets/img/… -->
     <figure>
-      <img src="assets/img/tattoo1.jpg" alt="Tattoo Beispiel 1">
-      <figcaption>Symbolische Linienarbeit</figcaption>
+      <img src="assets/img/tattoo01.jpg" alt="Ritual Tattoo – Linien & Symbolik">
+      <figcaption>Ritual Tattoo</figcaption>
     </figure>
-
     <figure>
-      <img src="assets/img/tattoo2.jpg" alt="Tattoo Beispiel 2">
-      <figcaption>Rituelle Geometrie</figcaption>
+      <img src="assets/img/tattoo02.jpg" alt="Schattierungen – Intention & Ruhe">
+      <figcaption>Linien & Schatten</figcaption>
     </figure>
-
     <figure>
-      <img src="assets/img/tattoo3.jpg" alt="Tattoo Beispiel 
+      <img src="assets/img/artwork01.jpg" alt="Artwork / Illustration">
+      <figcaption>Artwork / Illustration</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/img/studio01.jpg" alt="Atelier – Raum & Stille">
+      <figcaption>Atelier</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/img/nature01.jpg" alt="Natur – Umgebung des Ateliers">
+      <figcaption>Natur</figcaption>
+    </figure>
+  </section>
+
+  <p style="opacity:.8;margin-top:1rem">Hinweis: Lade deine Bilder nach <code>assets/img/</code> und benenne sie wie oben – oder passe die Dateinamen an.</p>
+</main>
+
+<footer>
+  <p>© <span id="year"></span> Modern Ritualistic Tattoo · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
