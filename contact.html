@@ -6,31 +6,37 @@
   <title>Kontakt – Modern Ritualistic Tattoo</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 <header>
   <h1>Modern Ritualistic Tattoo</h1>
   <nav>
     <a href="index.html">Home</a> |
+    <a href="philosophie.html">Philosophie</a> |
+    <a href="angebote.html">Angebote & Preise</a> |
+    <a href="gallery.html">Galerie</a> |
     <a href="contact.html" aria-current="page">Kontakt</a> |
-    <a href="booking.html">Termin</a>
+    <a href="booking.html">Termin</a> |
+    <a href="impressum.html">Impressum</a> |
+    <a href="datenschutz.html">Datenschutz</a>
   </nav>
 </header>
 
 <main class="content narrow">
   <h2>Kontakt</h2>
-  <p>Schreibe mir dein Anliegen. Ich antworte in der Regel innerhalb von 1–2 Werktagen.</p>
+  <div class="card" style="margin-bottom:1rem">
+    <p><strong>AmoTattoo Atelier</strong> – Alexander Vöckt<br>
+      Sternenstraße 5, 79664 Wehr (Baden)</p>
+    <p>E-Mail: <a href="mailto:voeckt.alexander@web.de">voeckt.alexander@web.de</a> ·
+       Instagram: <a href="https://www.instagram.com/amotattooatelier" target="_blank" rel="noopener">@amotattooatelier</a></p>
+  </div>
 
-  <!-- Formsubmit-Kontaktformular -->
   <form action="https://formsubmit.co/voeckt.alexander@web.de" method="POST">
-    <!-- Formsubmit-Optionen -->
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_subject" value="Neue Nachricht · modern-ritualistic-tattoo.com">
     <input type="hidden" name="_next" value="https://modern-ritualistic-tattoo.com/thanks.html">
     <input type="text" name="_honey" style="display:none">
     <input type="hidden" name="_template" value="table">
 
-    <!-- Formularfelder -->
     <label for="name">Name</label>
     <input id="name" name="name" type="text" required autocomplete="name">
 
@@ -40,13 +46,11 @@
     <label for="message">Nachricht</label>
     <textarea id="message" name="message" rows="6" required></textarea>
 
-    <!-- DSGVO-Zustimmung -->
     <label style="display:flex;gap:.6rem;align-items:flex-start;margin-top:.5rem;">
       <input type="checkbox" required>
       <span>Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Angaben zu.</span>
     </label>
 
-    <!-- Senden -->
     <button type="submit">Senden</button>
   </form>
 </main>
@@ -54,9 +58,6 @@
 <footer>
   <p>© <span id="year"></span> Modern Ritualistic Tattoo</p>
 </footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>
