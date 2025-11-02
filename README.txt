@@ -1,0 +1,1 @@
+Modern Ritualistic Tattoo – static bilingual template.
