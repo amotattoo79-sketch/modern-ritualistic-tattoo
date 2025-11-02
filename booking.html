@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Termin – Modern Ritualistic Tattoo</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Nur CSS: unkritisch für DSGVO, sorgt dafür, dass das Widget sichtbar gestylt ist -->
+  <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
 </head>
 <body>
 <header>
@@ -25,7 +28,6 @@
   <h2>Termin buchen</h2>
   <p>Der Kalender wird erst nach deiner Zustimmung geladen (DSGVO-konform).</p>
 
-  <!-- Consent-Box -->
   <section id="consent-box" class="card" style="margin-top:1rem">
     <p>
       Mit Klick auf „Kalender laden“ werden Inhalte von Calendly (externer Anbieter)
@@ -35,10 +37,8 @@
     <button id="loadCalendly" type="button" class="btn">Kalender laden</button>
   </section>
 
-  <!-- Container für das Inline-Widget -->
-  <div id="calendly-container" style="display:none;min-height:820px">
-    <!-- Calendly wird hier eingefügt -->
-  </div>
+  <!-- Zielcontainer -->
+  <div id="calendly-container" style="display:none;min-height:820px"></div>
 </main>
 
 <footer>
@@ -48,41 +48,57 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  const btn = document.getElementById('loadCalendly');
-  const box = document.getElementById('consent-box');
-  const container = document.getElementById('calendly-container');
-
   const CAL_URL = "https://calendly.com/amotattoo79/30min?hide_gdpr_banner=1";
+  const consentBox = document.getElementById('consent-box');
+  const container  = document.getElementById('calendly-container');
+  const btn        = document.getElementById('loadCalendly');
 
-  btn.addEventListener('click', () => {
-    // Consent-Box ausblenden
-    box.style.display = 'none';
-    // Container anzeigen
-    container.style.display = 'block';
+  function ensureInline(div) {
+    // Falls das Inline-Widget allein durch data-url gerendert wird, lassen wir es zu;
+    // ansonsten initialisieren wir aktiv:
+    if (window.Calendly && window.Calendly.initInlineWidget) {
+      window.Calendly.initInlineWidget({ url: CAL_URL, parentElement: div });
+    }
+  }
 
-    // Widget-Container anlegen
+  function loadCalendly() {
+    consentBox.style.display = 'none';
+    container.style.display  = 'block';
+
+    // Widget-Div anlegen
     const inline = document.createElement('div');
-    inline.id = "calendly-inline-widget";
-    inline.className = "calendly-inline-widget";
+    inline.className = 'calendly-inline-widget';
+    inline.style.minWidth = '320px';
+    inline.style.height   = '800px';
     inline.setAttribute('data-url', CAL_URL);
-    inline.style.minWidth = "320px";
-    inline.style.height = "800px";
     container.appendChild(inline);
 
-    // Calendly-Script laden und NACH dem Laden initialisieren
+    // Wenn Skript schon da ist: sofort initialisieren
+    if (window.Calendly) {
+      ensureInline(inline);
+      return;
+    }
+
+    // Andernfalls Script nachladen und dann initialisieren
     const s = document.createElement('script');
-    s.src = "https://assets.calendly.com/assets/external/widget.js";
+    s.src = 'https://assets.calendly.com/assets/external/widget.js';
     s.async = true;
-    s.onload = () => {
-      if (window.Calendly && window.Calendly.initInlineWidget) {
-        window.Calendly.initInlineWidget({
-          url: CAL_URL,
-          parentElement: inline
-        });
-      }
-    };
+    s.onload = () => ensureInline(inline);
     document.body.appendChild(s);
-  });
+
+    // Fallback: falls onload nicht feuert (Safari-Eigenheiten)
+    let tries = 0;
+    const iv = setInterval(() => {
+      tries++;
+      if (window.Calendly) {
+        clearInterval(iv);
+        ensureInline(inline);
+      }
+      if (tries > 40) clearInterval(iv); // ~8s Timeout
+    }, 200);
+  }
+
+  btn.addEventListener('click', loadCalendly);
 </script>
 </body>
 </html>
