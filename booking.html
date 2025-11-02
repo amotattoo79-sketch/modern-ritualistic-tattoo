@@ -1,18 +1,10 @@
 <!doctype html>
 <html lang="de">
-<head><!doctype html>
-<html lang="de">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Termin – Modern Ritualistic Tattoo</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    .cta {margin-top:1rem}
-    .cal-holder{margin:2rem auto;max-width:1000px}
-    .cal-frame{width:100%;height:850px;border:0;display:block;background:#111}
-    .notice{color:#cfcfcf;font-size:.95rem;opacity:.9}
-  </style>
 </head>
 <body>
 <header>
@@ -20,60 +12,7 @@
   <nav>
     <a href="index.html">Home</a> |
     <a href="philosophie.html">Philosophie</a> |
-    <a href="angebote.html">Angebote & Preise</a> |
-    <a href="gallery.html">Galerie</a> |
-    <a href="contact.html">Kontakt</a> |
-    <a href="booking.html" aria-current="page">Termin</a>
-  </nav>
-</header>
-
-<main class="content narrow">
-  <h2>Terminvereinbarung</h2>
-  <p>Buche hier deine Session im AmoTattoo Atelier. Der Kalender wird aus Datenschutzgründen erst nach deinem Klick geladen.</p>
-
-  <div class="cta">
-    <button id="loadCal" type="button">Kalender laden (DSGVO-konform)</button>
-    <p class="notice">Mit dem Laden erklärst du dich einverstanden, dass Inhalte von <strong>Calendly</strong> eingebettet werden.</p>
-  </div>
-
-  <div id="calRoot" class="cal-holder" aria-live="polite"></div>
-
-  <noscript>
-    <p class="notice">JavaScript ist deaktiviert. Du kannst hier direkt buchen:
-      <a href="https://calendly.com/amotattoo79/30min" target="_blank" rel="noopener">calendly.com/amotattoo79/30min</a>
-    </p>
-  </noscript>
-</main>
-
-<footer>
-  <p>© <span id="year"></span> Modern Ritualistic Tattoo</p>
-</footer>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  document.getElementById('loadCal').addEventListener('click', function(){
-    const root = document.getElementById('calRoot');
-    // iFrame-Variante ohne externes JS → robust gegen Blocker
-    const url = 'https://calendly.com/amotattoo79/30min?hide_gdpr_banner=1';
-    root.innerHTML = '<iframe class="cal-frame" title="Calendly Termin" src="'+url+'"></iframe>';
-    this.disabled = true; this.textContent = 'Kalender geladen';
-  }, {once:true});
-</script>
-</body>
-</html>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Termin – Modern Ritualistic Tattoo</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header>
-  <h1>Modern Ritualistic Tattoo</h1>
-  <nav>
-    <a href="index.html">Home</a> |
-    <a href="philosophie.html">Philosophie</a> |
-    <a href="angebote.html">Angebote & Preise</a> |
+    <a href="angebote.html">Angebote &amp; Preise</a> |
     <a href="gallery.html">Galerie</a> |
     <a href="contact.html">Kontakt</a> |
     <a href="booking.html" aria-current="page">Termin</a> |
@@ -86,13 +25,20 @@
   <h2>Termin buchen</h2>
   <p>Der Kalender wird erst nach deiner Zustimmung geladen (DSGVO-konform).</p>
 
-  <div class="card" id="cal-box" style="text-align:center;padding:1.25rem">
-    <p>Mit Klick auf „Kalender laden“ werden Inhalte von Calendly (externer Anbieter) geladen.
-       Dabei können personenbezogene Daten (z. B. IP-Adresse) übertragen werden. Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
-    <button class="btn" id="loadCal">Kalender laden</button>
-  </div>
+  <!-- Consent-Box -->
+  <section id="consent-box" class="card" style="margin-top:1rem">
+    <p>
+      Mit Klick auf „Kalender laden“ werden Inhalte von Calendly (externer Anbieter)
+      geladen. Dabei können personenbezogene Daten (z. B. IP-Adresse) übertragen werden.
+      Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.
+    </p>
+    <button id="loadCalendly" type="button" class="btn">Kalender laden</button>
+  </section>
 
-  <div id="calendly-wrap" style="margin-top:1rem"></div>
+  <!-- Container für das Inline-Widget -->
+  <div id="calendly-container" style="display:none;min-height:820px">
+    <!-- Calendly wird hier eingefügt -->
+  </div>
 </main>
 
 <footer>
@@ -100,17 +46,43 @@
 </footer>
 
 <script>
-document.getElementById('year').textContent=new Date().getFullYear();
-document.getElementById('loadCal').addEventListener('click', function(){
-  var s=document.createElement('script');
-  s.src='https://assets.calendly.com/assets/external/widget.js';
-  s.onload=function(){
-    var div=document.getElementById('calendly-wrap');
-    div.innerHTML='<div class="calendly-inline-widget" data-url="https://calendly.com/amotattoo79/30min" style="min-width:320px;height:720px;"></div>';
-  };
-  document.body.appendChild(s);
-  document.getElementById('cal-box').style.display='none';
-});
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const btn = document.getElementById('loadCalendly');
+  const box = document.getElementById('consent-box');
+  const container = document.getElementById('calendly-container');
+
+  const CAL_URL = "https://calendly.com/amotattoo79/30min?hide_gdpr_banner=1";
+
+  btn.addEventListener('click', () => {
+    // Consent-Box ausblenden
+    box.style.display = 'none';
+    // Container anzeigen
+    container.style.display = 'block';
+
+    // Widget-Container anlegen
+    const inline = document.createElement('div');
+    inline.id = "calendly-inline-widget";
+    inline.className = "calendly-inline-widget";
+    inline.setAttribute('data-url', CAL_URL);
+    inline.style.minWidth = "320px";
+    inline.style.height = "800px";
+    container.appendChild(inline);
+
+    // Calendly-Script laden und NACH dem Laden initialisieren
+    const s = document.createElement('script');
+    s.src = "https://assets.calendly.com/assets/external/widget.js";
+    s.async = true;
+    s.onload = () => {
+      if (window.Calendly && window.Calendly.initInlineWidget) {
+        window.Calendly.initInlineWidget({
+          url: CAL_URL,
+          parentElement: inline
+        });
+      }
+    };
+    document.body.appendChild(s);
+  });
 </script>
 </body>
 </html>
