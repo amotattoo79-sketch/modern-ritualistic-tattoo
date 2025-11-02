@@ -1,48 +1,147 @@
-/* ==== HERO + FIXED BACKGROUND VIDEO ==== */
-body {
-  margin: 0;
-  font-family: sans-serif;
-  background: #0c0c0c;
-  color: #f2f2f2;
-  line-height: 1.6;
+/* ===========================
+   Modern Ritualistic Tattoo
+   Global Styles (Dark + Bronze)
+   =========================== */
+
+/* Variablen */
+:root{
+  --bg:#0c0c0c;        /* dunkler Hintergrund */
+  --fg:#f2f2f2;        /* Textfarbe */
+  --muted:#cfcfcf;     /* sekundärer Text */
+  --line:#222;         /* Linien / Borders */
+
+  --bronze1:#b97a32;   /* Kupfer/Bronze */
+  --bronze2:#d4af37;   /* warmes Gold */
+  --link:#d0b37a;      /* Linkfarbe */
 }
+
+/* Base Reset */
+*,
+*::before,
+*::after{ box-sizing: border-box; }
+
+html, body{
+  margin:0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Layout */
+.content.narrow{ max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+main p{ color: var(--muted); }
+.lead{font-size:1.15rem;opacity:.9}
+.center{text-align:center}
+.price{color:var(--bronze2);font-weight:700}
 
 /* Header & Footer */
-header,
-footer {
+header, footer{
   padding: 1rem;
   text-align: center;
-  background: rgba(0, 0, 0, .8);
+  background: rgba(0,0,0,.8);
 }
+header h1{ margin:.5rem 0 0; font-size:1.4rem; letter-spacing:.02em }
 
 /* Navigation */
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
+nav{ margin:.5rem 0 1rem; }
+nav a{
+  color: var(--fg);
+  text-decoration: none;
+  margin-right: .75rem;
+  position: relative;
+}
+nav a:hover{ color: var(--link); text-decoration: underline; }
+/* Aktiver Menüpunkt */
+nav a[aria-current="page"]{
+  color: var(--link);
+  font-weight: 600;
+}
+nav a[aria-current="page"]::after{
+  content: "";
+  position: absolute;
+  left: 0; bottom: -4px;
+  width: 100%; height: 2px;
+  background: linear-gradient(90deg, var(--bronze1), var(--bronze2));
+  opacity: .85;
 }
 
 /* Links */
-a {
-  color: #d0b37a;
-  text-decoration: none;
+a{ color: var(--link); text-decoration: none; }
+a:hover{ text-decoration: underline; }
+
+/* Buttons */
+.btn, button, [type=submit]{
+  display: inline-block;
+  border: 0;
+  padding: .7rem 1.1rem;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--bronze1), var(--bronze2));
+  color: #000;
+  transition: .25s transform, .25s filter;
 }
-a:hover {
-  text-decoration: underline;
+.btn:hover, button:hover, [type=submit]:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.12);
 }
 
-/* Hero-Section mit fixiertem Video-Hintergrund */
-.hero {
+/* Formulare */
+label{ display:block; margin:.6rem 0 .25rem; }
+input[type=text], input[type=email], textarea{
+  width: 100%;
+  box-sizing: border-box;
+  background: #131313;
+  color: var(--fg);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: .65rem .75rem;
+  outline: none;
+}
+input[type=text]:focus, input[type=email]:focus, textarea:focus{
+  border-color: #3a3a3a;
+  box-shadow: 0 0 0 2px rgba(212,175,55,.15);
+}
+textarea{ resize: vertical; }
+
+/* Karten / Boxen */
+.card{
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.08);
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+/* Bronze-Divider */
+.hr-bronze{
+  height:1px; border:0; margin:1.25rem 0;
+  background: linear-gradient(90deg, transparent, var(--bronze1), var(--bronze2), transparent);
+  opacity:.6;
+}
+
+/* Galerie-Grid */
+.grid{
+  display:grid;
+  gap:1rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  align-items:start;
+}
+.grid figure{ margin:0; background: rgba(255,255,255,.02); padding:.5rem; border:1px solid rgba(255,255,255,.08); }
+.grid img{ width:100%; height:auto; display:block; }
+.grid figcaption{ font-size:.9rem; opacity:.8; margin-top:.4rem; }
+
+/* Hero mit fixiertem Video */
+.hero{
   position: relative;
-  min-height: 100vh;
+  min-height: 60vh; /* Starthöhe, kann 100vh sein */
   display: grid;
   place-items: center;
   text-align: center;
 }
-.hero video {
+.hero video{
   position: fixed;
   inset: 0;
   width: 100%;
@@ -50,12 +149,21 @@ a:hover {
   object-fit: cover;
   z-index: -1;
 }
-.hero::after {
+.hero::after{
   content: "";
   position: fixed;
   inset: 0;
-  background: linear-gradient(to bottom,
-              rgba(12,12,12,.3),
-              rgba(12,12,12,.9));
+  background: linear-gradient(to bottom, rgba(12,12,12,.3), rgba(12,12,12,.9));
   z-index: -1;
+}
+
+/* Footer Kleintext */
+footer p{ color: rgba(255,255,255,.8); font-size: .95rem; }
+
+/* Responsive */
+@media (max-width: 720px){
+  .content.narrow{ margin: 1.25rem auto; }
+  header h1{ font-size: 1.15rem; }
+  nav a{ margin-right: .55rem; }
+  .hero{ min-height: 50vh; }
 }
