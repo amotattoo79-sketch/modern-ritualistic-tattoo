@@ -12,7 +12,7 @@
   <h1>Modern Ritualistic Tattoo</h1>
   <nav>
     <a href="index.html">Home</a> |
-    <a href="contact.html">Kontakt</a> |
+    <a href="contact.html" aria-current="page">Kontakt</a> |
     <a href="booking.html">Termin</a>
   </nav>
 </header>
@@ -23,12 +23,14 @@
 
   <!-- Formsubmit-Kontaktformular -->
   <form action="https://formsubmit.co/voeckt.alexander@web.de" method="POST">
+    <!-- Formsubmit-Optionen -->
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_subject" value="Neue Nachricht · modern-ritualistic-tattoo.com">
-    <input type="hidden" name="_next" value="https://modern-ritualistic-tattoo.com/thank-you.html">
+    <input type="hidden" name="_next" value="https://modern-ritualistic-tattoo.com/thanks.html">
     <input type="text" name="_honey" style="display:none">
     <input type="hidden" name="_template" value="table">
 
+    <!-- Formularfelder -->
     <label for="name">Name</label>
     <input id="name" name="name" type="text" required autocomplete="name">
 
@@ -38,11 +40,13 @@
     <label for="message">Nachricht</label>
     <textarea id="message" name="message" rows="6" required></textarea>
 
+    <!-- DSGVO-Zustimmung -->
     <label style="display:flex;gap:.6rem;align-items:flex-start;margin-top:.5rem;">
       <input type="checkbox" required>
       <span>Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Angaben zu.</span>
     </label>
 
+    <!-- Senden -->
     <button type="submit">Senden</button>
   </form>
 </main>
