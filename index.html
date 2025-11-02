@@ -8,7 +8,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- (Optional) schneller laden -->
+  <!-- Schnelleres Laden des Videos -->
   <link rel="preload" as="video" href="assets/video/banner.mp4" type="video/mp4">
 </head>
 <body>
@@ -27,27 +27,25 @@
   </nav>
 </header>
 
-<!-- HERO mit fixiertem Hintergrundvideo -->
-<section class="hero" aria-label="Hero-Intro">
+<!-- HERO mit fixiertem Video -->
+<section class="hero" id="hero">
   <video
     id="heroVideo"
+    class="hero-video"
+    src="assets/video/banner.mp4"
+    poster="assets/img/hero-poster.jpg"
     autoplay
     muted
-    loop
     playsinline
-    preload="auto"
-    poster="assets/img/hero-poster.jpg"  <!-- optional; wenn nicht vorhanden, einfach lassen -->
-  >
-    <!-- Bevorzugte Quelle -->
-    <source src="assets/video/banner.mp4" type="video/mp4">
-    <!-- Fallback (falls die Datei versehentlich im Root liegt) -->
-    <source src="banner.mp4" type="video/mp4">
-    Ihr Browser unterstützt das Abspielen von Hintergrundvideos nicht.
-  </video>
+    loop
+    preload="metadata"
+    webkit-playsinline
+  ></video>
 
   <div class="hero-content">
     <h2>Ink Beyond Skin</h2>
-    <p>Rituale in Linien & Schatten – Modern Ritualistic Tattoo</p>
+    <p>Rituale in Linien &amp; Schatten – Modern Ritualistic Tattoo</p>
+    <hr class="hr-bronze">
   </div>
 </section>
 
@@ -69,7 +67,7 @@
 
   <hr class="hr-bronze">
 
-  <p>
+  <p style="text-align:center">
     <a class="btn" href="booking.html">Termin vereinbaren</a>
   </p>
 </main>
@@ -79,18 +77,19 @@
 </footer>
 
 <script>
-  // Jahreszahl im Footer
+  // Jahr aktualisieren
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // iOS-Sicherheitsgurt: falls Autoplay trotz muted/playsinline blockiert,
-  // versuche nach dem ersten User-Interaction zu starten.
-  (function(){
-    const v = document.getElementById('heroVideo');
-    if (!v) return;
+  // iOS / Safari Autoplay-Fix
+  const v = document.getElementById('heroVideo');
+  if (v) {
     const tryPlay = () => v.play().catch(() => {});
-    document.addEventListener('touchstart', tryPlay, { once:true, passive:true });
-    document.addEventListener('click', tryPlay, { once:true });
-  })();
+    v.addEventListener('canplay', tryPlay, { once: true });
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) tryPlay();
+    });
+    window.addEventListener('touchstart', tryPlay, { once: true, passive: true });
+  }
 </script>
 
 </body>
