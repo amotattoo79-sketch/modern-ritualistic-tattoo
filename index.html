@@ -3,46 +3,60 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Modern Ritualistic Tattoo</title>
+  <title>Home – Modern Ritualistic Tattoo</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 <header>
-  <h1>Modern Ritualistic Tattoo</h1>
+  <h1>AmoTattoo Atelier – Modern Ritualistic Tattooing</h1>
   <nav>
     <a href="index.html" aria-current="page">Home</a> |
+    <a href="about.html">Philosophie</a> |
+    <a href="pricing.html">Angebote & Preise</a> |
+    <a href="gallery.html">Galerie</a> |
     <a href="contact.html">Kontakt</a> |
     <a href="booking.html">Termin</a>
   </nav>
 </header>
 
-<!-- Hero-Bereich mit Video -->
-<section class="hero">
-  <video autoplay muted loop playsinline>
-    <source src="assets/video/banner.mp4" type="video/mp4">
-    Dein Browser unterstützt keine HTML5-Videos.
-  </video>
-  <div class="hero-content">
-    <h2>Ink Beyond Skin</h2>
-    <p>Rituale in Linien & Schatten – Modern Ritualistic Tattoo</p>
-    <a href="booking.html" class="btn">Termin vereinbaren</a>
-  </div>
-</section>
+<main>
+  <!-- Hero mit (optionalem) Loop-Video, wenn vorhanden -->
+  <section class="hero">
+    <video autoplay muted playsinline loop poster="placeholder.jpg">
+      <source src="assets/video/banner.mp4" type="video/mp4">
+    </video>
+    <div class="content narrow">
+      <h2>Ink Beyond Skin</h2>
+      <p class="lead">Rituale in Linien &amp; Schatten – Modern Ritualistic Tattoo</p>
+      <hr class="hr-bronze">
+    </div>
+  </section>
 
-<main class="content narrow">
-  <h2>Willkommen</h2>
-  <p>Willkommen bei Modern Ritualistic Tattoo – einem Ort, an dem Tätowieren zu einem bewussten, rituellen Akt wird. Jedes Design ist ein Symbol, eine Erinnerung, ein Schritt auf deinem Weg.</p>
-  <hr class="hr-bronze">
-  <p>Ich kombiniere moderne Technik mit uralten Symboliken und spirituellen Formen, um individuelle Kunstwerke zu schaffen – tiefgründig, bedeutungsvoll und einzigartig.</p>
+  <section class="content narrow">
+    <p>In einer Welt, die immer schneller, lauter und oberflächlicher wird, schaffen wir Raum für Tiefe.
+    Bei AmoTattoo geht es nicht nur um Tätowierungen – sondern um Intention, Bewusstsein und Transformation.</p>
+
+    <p>Jede Linie, jeder Schatten, jedes Symbol entsteht mit Bedeutung.
+    Unsere Arbeit verbindet Kunst, Ritual und Präzision zu einem bewussten Prozess, der weit über die Haut hinausgeht.
+    Ein Tattoo ist hier kein Konsumgut, sondern ein Moment, ein Übergang, ein sichtbares Stück innerer Entwicklung.</p>
+
+    <p>Wir glauben, dass Tätowierungen Schutz, Erinnerung und Erneuerung tragen können.
+    Darum gestalten wir jede Session individuell – achtsam, respektvoll und mit Fokus auf deine Energie.
+    Unser Atelier in Wehr (Baden) liegt eingebettet in Natur und Stille – ein Ort, an dem Kunst, Symbolik und Mensch zu einer Sprache verschmelzen.</p>
+
+    <p>Wenn du bereit bist für mehr als nur ein Tattoo –
+    für ein Zeichen, das bleibt, weil es aus Tiefe geboren wurde –
+    dann bist du hier richtig.</p>
+
+    <p class="center">
+      <a class="btn" href="booking.html">→ Termin vereinbaren</a>
+    </p>
+  </section>
 </main>
 
 <footer>
   <p>© <span id="year"></span> Modern Ritualistic Tattoo</p>
 </footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>
