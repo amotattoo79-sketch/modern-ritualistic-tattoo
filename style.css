@@ -140,3 +140,11 @@ section, .content, main{
   position: relative;
   z-index: 5;
 }
+/* Banner Logo Style */
+.site-banner {
+  display: block;
+  margin: 0 auto 10px auto;
+  max-width: 280px;
+  height: auto;
+  object-fit: contain;
+}
