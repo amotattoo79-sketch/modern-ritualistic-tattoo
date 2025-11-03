@@ -126,3 +126,28 @@ footer {
   color: var(--muted);
   font-size: 0.9rem;
 }
+/* Fester Background unter dem Inhalt, über dem Video */
+body {
+  background: #0c0c0c;
+}
+
+/* PNG-Hintergrund (case-sensitive Pfad!) */
+body::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("assets/img/background_main.PNG") center / cover no-repeat;
+  opacity: 0.22;              /* Stärke des Musters */
+  z-index: -1;                /* über dem Video, unter dem Inhalt */
+  pointer-events: none;
+}
+
+/* Video wirklich in die unterste Ebene */
+.hero video{
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;                /* unter dem PNG-Background */
+}
