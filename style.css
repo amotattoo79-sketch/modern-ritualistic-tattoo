@@ -107,4 +107,36 @@ footer {
   color: #aaa;
   font-size: 0.9rem;
   border-top: 1px solid #222;
+  
+}
+/* ==== BACKGROUND & LAYERING FIX (oben unter Header sichtbar) ==== */
+body{
+  /* zeigt dein Pattern ganz oben hinter allem Content */
+  background: #000 url("assets/img/background_main.PNG") top center / cover no-repeat fixed;
+  background-attachment: fixed;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Header bleibt sichtbar über dem Hintergrundbild */
+header{
+  background-color: rgba(0,0,0,0); /* transparent lassen; ggf. 0.6 für dunkler */
+  position: relative;
+  z-index: 10;
+}
+
+/* Hero/Banner liegt über dem Bild; leichte Abdunklung für Lesbarkeit */
+.hero{
+  position: relative;
+  z-index: 5;
+  background: rgba(0,0,0,0.40); /* gewünschte Lesbarkeit; auf 0 setzen wenn nicht gewollt */
+  padding-top: 140px;          /* Platz unter dem Header */
+  padding-bottom: 100px;
+}
+
+/* Falls es eine Section direkt nach dem Hero gibt, weicher Übergang */
+section, .content, main{
+  position: relative;
+  z-index: 5;
 }
