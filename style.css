@@ -183,3 +183,49 @@ section, .content, main{
   transform: scale(1.05);
   filter: brightness(1.15);
 }
+/* Alternierende Galerie */
+.gallery-alt {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.gallery-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.gallery-item img {
+  width: 46%;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .4);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .55);
+}
+
+/* Linke und rechte Ausrichtung */
+.gallery-item.left {
+  justify-content: flex-start;
+}
+.gallery-item.right {
+  justify-content: flex-end;
+}
+
+/* Mobile Darstellung */
+@media (max-width: 768px) {
+  .gallery-item {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .gallery-item img {
+    width: 95%;
+  }
+}
