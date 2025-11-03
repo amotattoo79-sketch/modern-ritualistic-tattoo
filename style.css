@@ -1,211 +1,110 @@
-/* ===========================
-   Modern Ritualistic Tattoo
-   Dark + Bronze (nur Hintergrundbild)
-   =========================== */
-
-/* Farben/Variablen */
-:root{
-  --bg:#0c0c0c;
-  --fg:#f2f2f2;
-  --muted:#cfcfcf;
-  --line:#222;
-  --bronze1:#b97a32;
-  --bronze2:#d4af37;
-  --link:#d0b37a;
-}
-
-/* Reset/Basis */
-*,*::before,*::after{ box-sizing:border-box; }
-html,body{ margin:0; padding:0; }
-body{
-  font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-  color: var(--fg);
-  line-height: 1.6;
-  /* >>> HINTERGRUNDBILD (Pfad ist case-sensitive!) <<< */
-  background: url("assets/img/background_main.PNG") center top / cover fixed no-repeat, var(--bg);
-}
-
-/* Header & Navigation */
-header{
-  padding: 1rem 1rem .5rem;
-  text-align: center;
-  background: rgba(0,0,0,.85);
-  border-bottom: 1px solid rgba(255,255,255,.06);
-}
-header h1{
-  margin:.25rem 0 .5rem;
-  font-size:1.5rem;
-  letter-spacing:.02em;
-}
-nav{ margin: .25rem 0 .75rem; }
-nav a{
-  color: var(--fg);
-  text-decoration: none;
-  margin: 0 .4rem;
-  position: relative;
-}
-nav a:hover{ color: var(--link); text-decoration: underline; }
-nav a[aria-current="page"]{
-  color: var(--link);
-  font-weight: 600;
-}
-nav a[aria-current="page"]::after{
-  content:"";
-  position:absolute; left:0; bottom:-4px;
-  width:100%; height:2px;
-  background: linear-gradient(90deg, var(--bronze1), var(--bronze2));
-  opacity:.9;
-}
-
-/* Hero (Banner ohne Overlay/Video) */
-.hero{
-  min-height: 58vh;            /* sichtbarer Bannerbereich */
-  display: grid;
-  place-items: center;
-  text-align: center;
-  padding: 8vh 1rem 6vh;
-  /* kein eigener Hintergrund → Body-Hintergrund bleibt sichtbar */
-  background: transparent;
-}
-.hero-inner{
-  text-shadow: 0 2px 6px rgba(0,0,0,.55); /* Lesbarkeit auf Bild */
-  max-width: 900px;
-}
-.hero h2{
-  font-size: clamp(2rem, 3.5vw, 3rem);
-  margin: 0 0 .35rem;
-  background: linear-gradient(90deg,var(--bronze1),var(--bronze2));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.hero p{ margin:.25rem 0 0; color: var(--fg); }
-
-/* Bronze-Divider */
-.hr-bronze{
-  height:1px; border:0; margin:1.1rem auto 1.4rem;
-  width: min(720px, 90%);
-  background: linear-gradient(90deg, transparent, var(--bronze1), var(--bronze2), transparent);
-  opacity:.7;
-}
-
-/* Inhalt */
-.content.narrow{
-  max-width: 900px;
-  margin: 2rem auto 3rem;
-  padding: 1.25rem 1rem 1.5rem;
-  background: rgba(0,0,0,.62); /* halbtransparent, Bild bleibt sichtbar */
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: 8px;
-  box-shadow: 0 12px 28px rgba(0,0,0,.35);
-}
-.content.narrow h3{
-  margin:0 0 .5rem;
-  font-size: 1.35rem;
-  letter-spacing:.01em;
-}
-
-/* Buttons */
-.btn, button, [type=submit]{
-  display:inline-block;
-  border:0;
-  padding:.7rem 1.15rem;
-  border-radius:4px;
-  font-weight:700;
-  cursor:pointer;
-  background: linear-gradient(135deg, var(--bronze1), var(--bronze2));
-  color:#000;
-  transition: .2s transform, .2s filter;
-}
-.btn:hover, button:hover, [type=submit]:hover{
-  transform: translateY(-1px);
-  filter: brightness(1.1);
-}
-
-/* Links allgemein */
-a{ color: var(--link); text-decoration: none; }
-a:hover{ text-decoration: underline; }
-
-/* Footer */
-footer{
-  text-align: center;
-  padding: 1rem;
-  background: rgba(0,0,0,.85);
-  border-top: 1px solid rgba(255,255,255,.06);
-}
-footer p{ color: rgba(255,255,255,.85); font-size:.95rem; }
-
-/* Responsive */
-@media (max-width: 720px){
-  header h1{ font-size: 1.25rem; }
-  .hero{ min-height: 48vh; padding: 6vh 1rem 5vh; }
-  .content.narrow{ margin: 1.25rem auto 2rem; }
-}
-/* === Globales Hintergrundbild (blockiert keine Klicks) === */
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  background-image:url("/assets/img/background_main.PNG"); /* Groß-/Kleinschreibung beachten */
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
-  opacity:.25;              /* 0.15 dezent – 0.40 kräftiger */
-  z-index:-1;               /* hinter dem Inhalt */
-  pointer-events:none;      /* lässt Klicks/Lnks durch */
-}
-
-/* Body transparent lassen, damit Bild sichtbar ist */
-body{ background:transparent; }
-
-/* Optional: Lesbarkeit der Inhaltsflächen erhöhen */
-header, footer{ position:relative; z-index:1; background:rgba(0,0,0,.90); }
-main, .content, .hero{ position:relative; z-index:1; background:rgba(0,0,0,.75); border-radius:4px; }
-
-/* Buttons/Links sind sicher über dem Hintergrund */
-button, .btn, a{ position:relative; z-index:2; }
-/* === Globales Hintergrundbild, klick-durchlässig === */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("/assets/img/background_main.PNG") center center / cover no-repeat;
-  opacity: 0.25; /* 0.15 = sehr dezent, 0.40 = kräftiger */
-  z-index: -1; /* immer hinter allem */
-  pointer-events: none; /* lässt Klicks und Buttons durch */
-}
-
-/* === Hauptlayout transparent halten === */
+/* === Grundlayout === */
 body {
-  background: transparent;
-  color: #f4f4f4;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #000;
+  color: #f2f2f2;
   margin: 0;
   padding: 0;
+  background-image: url('assets/img/background_main.PNG');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-/* === Header & Footer über Hintergrund === */
-header, footer {
-  position: relative;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.9);
+/* === Navigation === */
+header {
+  background-color: #000;
   text-align: center;
-  padding: 10px 0;
+  padding: 20px 10px;
 }
 
-/* === Hauptinhalt leicht transparent === */
-main, .hero, .content {
-  position: relative;
-  z-index: 1;
+header h1 {
+  color: #f2f2f2;
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #d9b26d;
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: 500;
+}
+
+nav a:hover,
+nav a.active {
+  border-bottom: 2px solid #d9b26d;
+}
+
+/* === Hero-Bereich === */
+.hero {
+  text-align: center;
+  padding: 100px 20px 80px;
+  background: rgba(0, 0, 0, 0.6); /* halbtransparent für Lesbarkeit */
+}
+
+.hero h2 {
+  font-size: 2.4rem;
+  color: #d9b26d;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* === Buttons === */
+.btn {
+  background: linear-gradient(90deg, #d9b26d, #a87b00);
+  color: #000;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #c59a4a, #7a5c00);
+  transform: translateY(-2px);
+}
+
+/* === Hauptinhalt === */
+main {
   background: rgba(0, 0, 0, 0.7);
-  border-radius: 4px;
-  padding: 20px;
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 12px;
 }
 
-/* === Buttons & Links bleiben klickbar === */
-button, .btn, a {
-  position: relative;
-  z-index: 2;
+main h2 {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+main p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+  color: #aaa;
+  font-size: 0.9rem;
+  border-top: 1px solid #222;
 }
