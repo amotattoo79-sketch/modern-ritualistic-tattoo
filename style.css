@@ -168,3 +168,18 @@ section, .content, main{
     width: 180px;        /* Mobile Anpassung */
   }
 }
+/* --- Termin Button (PNG) --- */
+.termin-button {
+  display: block;
+  margin: 30px auto;
+  width: 260px; /* optisch gute Größe, responsiv */
+  max-width: 80%;
+  height: auto;
+  transition: transform 0.25s ease-in-out, filter 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+.termin-button:hover {
+  transform: scale(1.05);
+  filter: brightness(1.15);
+}
