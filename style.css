@@ -1,9 +1,9 @@
 /* ===========================
    Modern Ritualistic Tattoo
-   Global Styles (Dark + Bronze) - Overlay entfernt, PNG-Hintergrund aktiv
+   Cinematic Bronze Design
    =========================== */
 
-/* Variablen */
+/* Farbvariablen */
 :root{
   --bg:#0c0c0c;
   --fg:#f2f2f2;
@@ -12,47 +12,61 @@
   --bronze1:#b97a32;
   --bronze2:#d4af37;
   --link:#d0b37a;
+  --shadow:rgba(0,0,0,0.45);
 }
 
-/* Base Reset */
+/* Reset */
 *,
 *::before,
-*::after{ box-sizing:border-box; }
+*::after{ box-sizing: border-box; }
 
-/* Body / Grundlayout */
-html,body{
+/* Grundlayout */
+html, body{
   margin:0;
-  background:var(--bg);
-  color:var(--fg);
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Container */
 .content.narrow{ max-width:900px; margin:2rem auto; padding:0 1rem; }
-main p{ color:var(--muted); }
+main p{ color: var(--muted); }
 
-/* Header & Footer */
-header,footer{
+/* ===========================
+   Header & Navigation
+   =========================== */
+header{
   padding:1rem;
   text-align:center;
-  background:rgba(0,0,0,.8);
+  background:rgba(0,0,0,0.85);
+  position:relative;
+  z-index:100;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+  box-shadow:0 4px 12px var(--shadow);
 }
-header h1{ margin:.5rem 0 0; font-size:1.4rem; letter-spacing:.02em }
+header h1{
+  margin:.5rem 0 0;
+  font-size:1.4rem;
+  letter-spacing:.02em;
+  text-shadow:0 0 6px rgba(212,175,55,.2);
+}
 
-/* Navigation — Links ODER <ul> */
-nav{ margin:.5rem 0 1rem; }
+nav{
+  margin:.6rem 0 1rem;
+  font-size:1rem;
+}
 nav a{
   color:var(--fg);
   text-decoration:none;
-  margin-right:.75rem;
+  margin:0 .55rem;
   position:relative;
+  transition:color .3s;
 }
-nav a:hover{ color:var(--link); text-decoration:underline; }
-
-/* Aktiver Menüpunkt */
+nav a:hover{
+  color:var(--link);
+}
 nav a[aria-current="page"]{
   color:var(--link);
   font-weight:600;
@@ -60,72 +74,16 @@ nav a[aria-current="page"]{
 nav a[aria-current="page"]::after{
   content:"";
   position:absolute;
-  left:0; bottom:-4px;
-  width:100%; height:2px;
+  left:0;
+  bottom:-4px;
+  width:100%;
+  height:2px;
   background:linear-gradient(90deg,var(--bronze1),var(--bronze2));
   opacity:.85;
 }
 
-/* Alternative UL-Navigation (falls genutzt) */
-nav ul{
-  list-style:none; display:flex; gap:1rem; justify-content:center;
-  padding:0; margin:0;
-}
-nav ul li a{ color:var(--fg); text-decoration:none; }
-nav ul li a:hover{ color:var(--link); text-decoration:underline; }
-
-/* Links allgemein */
-a{ color:var(--link); text-decoration:none; }
-a:hover{ text-decoration:underline; }
-
-/* Buttons */
-.btn,button,[type=submit]{
-  display:inline-block; border:0; padding:.7rem 1.1rem; border-radius:4px;
-  font-weight:700; cursor:pointer;
-  background:linear-gradient(135deg,var(--bronze1),var(--bronze2)); color:#000;
-  transition:.25s transform,.25s filter;
-}
-.btn:hover,button:hover,[type=submit]:hover{
-  transform:translateY(-1px); filter:brightness(1.12);
-}
-
-/* Formulare */
-label{ display:block; margin:.6rem 0 .25rem; }
-input[type=text],input[type=email],textarea{
-  width:100%; background:#131313; color:var(--fg);
-  border:1px solid var(--line); border-radius:4px; padding:.65rem .75rem; outline:none;
-}
-input[type=text]:focus,input[type=email]:focus,textarea:focus{
-  border-color:#3a3a3a; box-shadow:0 0 0 2px rgba(212,175,55,.15);
-}
-textarea{ resize:vertical; }
-
-/* Karten / Boxen */
-.card{
-  background:rgba(255,255,255,.03);
-  border:1px solid rgba(255,255,255,.08);
-  padding:1rem; border-radius:6px;
-}
-
-/* Bronze-Divider */
-.hr-bronze{
-  height:1px; border:0; margin:1.25rem 0;
-  background:linear-gradient(90deg,transparent,var(--bronze1),var(--bronze2),transparent);
-  opacity:.6;
-}
-
-/* Galerie-Grid */
-.grid{
-  display:grid; gap:1rem;
-  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
-  align-items:start;
-}
-.grid figure{ margin:0; background:rgba(255,255,255,.02); padding:.5rem; border:1px solid rgba(255,255,255,.08); }
-.grid img{ width:100%; height:auto; display:block; }
-.grid figcaption{ font-size:.9rem; opacity:.8; margin-top:.4rem; }
-
 /* ===========================
-   HERO – Video + PNG (ohne Overlay)
+   Hero mit Video + PNG
    =========================== */
 .hero{
   position:relative;
@@ -136,39 +94,139 @@ textarea{ resize:vertical; }
   color:#f2f2f2;
   overflow:hidden;
 }
-
-/* Video im Hintergrund */
 .hero video{
-  position:absolute; inset:0;
-  width:100%; height:100%;
+  position:absolute;
+  top:0; left:0;
+  width:100%;
+  height:100%;
   object-fit:cover;
   z-index:0;
-  opacity:.65; /* fein mischen */
+  opacity:.55;
 }
-
-/* PNG-Hintergrund über dem Video */
+/* PNG-Hintergrund */
 .hero::before{
   content:"";
-  position:absolute; inset:0;
+  position:absolute;
+  inset:0;
   background:url("assets/img/background_main.PNG") center top/cover no-repeat;
+  opacity:.6;
   z-index:1;
-  opacity:.75; /* Sichtbarkeit des Musters */
 }
-
-/* Hero-Content über allem */
+/* Overlay-Gradient */
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to bottom,rgba(12,12,12,.2),rgba(12,12,12,.9));
+  z-index:2;
+}
+/* Text über allem */
 .hero > *{
   position:relative;
-  z-index:2;
+  z-index:3;
   text-shadow:0 2px 6px rgba(0,0,0,.6);
 }
 
-/* Footer Kleintext */
+/* ===========================
+   Typografie
+   =========================== */
+h1,h2,h3{
+  color:var(--fg);
+  font-weight:700;
+  letter-spacing:.02em;
+}
+h2{
+  font-size:1.8rem;
+  margin-top:1rem;
+  background:linear-gradient(90deg,var(--bronze1),var(--bronze2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+a{ color:var(--link); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+
+/* ===========================
+   Buttons
+   =========================== */
+.btn, button, [type=submit]{
+  display:inline-block;
+  border:0;
+  padding:.7rem 1.2rem;
+  border-radius:4px;
+  font-weight:700;
+  cursor:pointer;
+  background:linear-gradient(135deg,var(--bronze1),var(--bronze2));
+  color:#000;
+  transition:.25s transform,.25s filter;
+}
+.btn:hover, button:hover, [type=submit]:hover{
+  transform:translateY(-2px);
+  filter:brightness(1.12);
+}
+
+/* ===========================
+   Formulare
+   =========================== */
+label{ display:block; margin:.6rem 0 .25rem; }
+input[type=text], input[type=email], textarea{
+  width:100%;
+  background:#131313;
+  color:var(--fg);
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:.65rem .75rem;
+  outline:none;
+}
+input[type=text]:focus, input[type=email]:focus, textarea:focus{
+  border-color:#3a3a3a;
+  box-shadow:0 0 0 2px rgba(212,175,55,.15);
+}
+textarea{ resize:vertical; }
+
+/* ===========================
+   Cards, Linien & Galerie
+   =========================== */
+.card{
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  padding:1rem;
+  border-radius:6px;
+}
+.hr-bronze{
+  height:1px;
+  border:0;
+  margin:1.25rem 0;
+  background:linear-gradient(90deg,transparent,var(--bronze1),var(--bronze2),transparent);
+  opacity:.6;
+}
+.grid{
+  display:grid;
+  gap:1rem;
+  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  align-items:start;
+}
+.grid figure{ margin:0; background:rgba(255,255,255,.02); padding:.5rem; border:1px solid rgba(255,255,255,.08); }
+.grid img{ width:100%; height:auto; display:block; border-radius:4px; }
+.grid figcaption{ font-size:.9rem; opacity:.8; margin-top:.4rem; }
+
+/* ===========================
+   Footer
+   =========================== */
+footer{
+  padding:1rem;
+  text-align:center;
+  background:rgba(0,0,0,.85);
+  border-top:1px solid rgba(255,255,255,.05);
+}
 footer p{ color:rgba(255,255,255,.8); font-size:.95rem; }
 
-/* Responsive */
+/* ===========================
+   Responsive Design
+   =========================== */
 @media (max-width:720px){
   .content.narrow{ margin:1.25rem auto; }
   header h1{ font-size:1.15rem; }
-  nav a{ margin-right:.55rem; }
+  nav a{ margin-right:.4rem; }
   .hero{ min-height:70vh; }
+  h2{ font-size:1.5rem; }
 }
