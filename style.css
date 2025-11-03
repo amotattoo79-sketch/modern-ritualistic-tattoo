@@ -148,3 +148,23 @@ section, .content, main{
   height: auto;
   object-fit: contain;
 }
+/* === GRAFISCHER TERMIN-BUTTON === */
+.cta-image {
+  display: inline-block;
+  width: 240px;           /* Desktopgröße */
+  height: auto;
+  margin-top: 10px;
+  transition: transform 0.25s ease, filter 0.25s ease;
+  cursor: pointer;
+}
+
+.cta-image:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
+}
+
+@media (max-width: 768px) {
+  .cta-image {
+    width: 180px;        /* Mobile Anpassung */
+  }
+}
