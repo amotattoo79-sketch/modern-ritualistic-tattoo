@@ -140,3 +140,26 @@ footer p{ color: rgba(255,255,255,.85); font-size:.95rem; }
   .hero{ min-height: 48vh; padding: 6vh 1rem 5vh; }
   .content.narrow{ margin: 1.25rem auto 2rem; }
 }
+/* === Globales Hintergrundbild (blockiert keine Klicks) === */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background-image:url("/assets/img/background_main.PNG"); /* Groß-/Kleinschreibung beachten */
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  opacity:.25;              /* 0.15 dezent – 0.40 kräftiger */
+  z-index:-1;               /* hinter dem Inhalt */
+  pointer-events:none;      /* lässt Klicks/Lnks durch */
+}
+
+/* Body transparent lassen, damit Bild sichtbar ist */
+body{ background:transparent; }
+
+/* Optional: Lesbarkeit der Inhaltsflächen erhöhen */
+header, footer{ position:relative; z-index:1; background:rgba(0,0,0,.90); }
+main, .content, .hero{ position:relative; z-index:1; background:rgba(0,0,0,.75); border-radius:4px; }
+
+/* Buttons/Links sind sicher über dem Hintergrund */
+button, .btn, a{ position:relative; z-index:2; }
