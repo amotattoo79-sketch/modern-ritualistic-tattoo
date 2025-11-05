@@ -249,3 +249,44 @@ footer{
 /* ---------- Kleine Hilfsklassen ---------- */
 .center{ text-align: center; }
 .hr-space{ margin: 28px 0; }
+/* === Hero Video als zentraler Header (statt Text) === */
+.hero-video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px;           /* gleiche Breite wie dein Contentbereich */
+  aspect-ratio: 16 / 9;
+  margin: 0 auto 2rem auto;   /* zentriert über dem restlichen Inhalt */
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.65);
+}
+
+.hero-video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.93) contrast(1.08) saturate(1.05);
+  transition: filter 0.3s ease;
+}
+
+.hero-video-wrapper:hover video {
+  filter: brightness(1) contrast(1.12) saturate(1.1);
+}
+
+/* Weicher Fade-Rand für harmonischen Übergang */
+.hero-video-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0) 25%, rgba(0, 0, 0, 0.0) 75%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+/* Mobile Anpassung */
+@media (max-width: 768px) {
+  .hero-video-wrapper {
+    border-radius: 8px;
+    max-width: 95%;
+  }
+}
