@@ -1,491 +1,198 @@
-/* ===========================
-   Modern Ritualistic Tattoo
-   Saubere, konsolidierte style.css
-   =========================== */
-
-/* ---------- Design-Variablen ---------- */
+/* =======================
+   Basis
+======================= */
 :root{
-  --bg: #000000;
-  --panel: rgba(0,0,0,.72);
-  --panel-soft: rgba(0,0,0,.55);
-  --text: #f2f2f2;
-  --muted: #cfcfcf;
-  --gold: #d9b26d;
-  --gold-deep: #a87b00;
-  --gold-soft: #c59a4a;
-  --border: rgba(255,255,255,.08);
-  --shadow: 0 10px 28px rgba(0,0,0,.45);
-  --radius: 12px;
-  --radius-sm: 8px;
-  --maxw: 980px;              /* zentraler Inhaltsbereich */
+  --bg:#000;
+  --text:#f2f2f2;
+  --muted:#c9c9c9;
+  --gold:#d9b26d;
+  --gold-d:#b6903d;
+  --shadow:0 10px 28px rgba(0,0,0,.55);
 }
 
-/* ---------- Reset / Baseline ---------- */
-*{ box-sizing: border-box; }
-html,body{ height: 100%; }
-html{ scroll-behavior: smooth; }
+*{box-sizing:border-box}
+html,body{height:100%}
+html{scroll-behavior:smooth}
 
 body{
-  margin: 0;
-  color: var(--text);
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.55;
-
-  /* Durchgehender Seitenhintergrund (wie auf Home) */
-  background: var(--bg) url("assets/img/background_main.PNG")
-              top center / cover no-repeat fixed;
+  margin:0;
+  color:var(--text);
+  font-family: system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #000 url("assets/img/background_main.PNG") top center / cover no-repeat fixed;
 }
 
-/* Bilder und Medien */
-img,svg,video{ max-width: 100%; height: auto; display: block; }
+.no-scroll{overflow:hidden}
 
-/* Links */
-a{ color: var(--gold); text-decoration: none; }
-a:hover{ text-decoration: underline; }
-
-/* ---------- Header & Navigation ---------- */
-header{
-  position: relative;
-  z-index: 10;
-  text-align: center;
-  padding: 18px 12px 8px;
-  background: transparent; /* Hintergrundbild soll sichtbar sein */
-}
-
-/* Banner-Logo oben */
-.site-logo{
-  width: min(86vw, 520px);
-  margin: 4px auto 10px;
-  filter: drop-shadow(0 6px 18px rgba(0,0,0,.55));
-}
-
-/* Hauptnavigation */
-nav{ margin: 6px 0 0; }
-nav a{
-  color: var(--gold);
-  font-weight: 600;
-  padding: 6px 6px;
-  display: inline-block;
-}
-nav a[aria-current="page"],
-nav a.active{
-  border-bottom: 2px solid var(--gold);
-}
-
-/* ---------- Hero / Intro ---------- */
-.hero{
-  position: relative;
-  z-index: 5;
-  text-align: center;
-  padding: 120px 18px 90px;
-  background: rgba(0,0,0,.38); /* leichte Abdunklung für Lesbarkeit */
-  backdrop-filter: saturate(110%) blur(0px);
-}
-
-/* Hero-Typo */
-.hero h2{
-  margin: 0 0 12px;
-  font-size: clamp(2rem, 5.5vw, 3.4rem);
-  font-weight: 800;
-  color: var(--gold);
-}
-.hero p{
-  margin: 0 0 28px;
-  font-size: clamp(1rem, 2.6vw, 1.25rem);
-  color: var(--text);
-}
-
-/* Bronze-HR */
-.hr-bronze{
-  height: 2px;
-  border: none;
-  margin: 18px auto 24px;
-  width: min(86%, 720px);
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  opacity: .9;
-}
-
-/* ---------- Call-to-Action (PNG-Button) ---------- */
-/* <a class="cta" href="..."><img class="termin-button" src="assets/img/Terminbutton1.PNG" alt="Termin vereinbaren"></a> */
-
-/* === TERMIN-BUTTON — volle Größe & perfekt zentriert === */
-.termin-button {
-  display: block;
-  margin: 35px auto 45px auto;
-  width: 300px;                /* wieder ursprüngliche Größe */
-  height: auto;
-  max-width: 85%;
-  transition: transform 0.25s ease-in-out, filter 0.25s ease-in-out;
-  cursor: pointer;
-  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.6));
-}
-
-.termin-button:hover {
-  transform: scale(1.05);
-  filter: brightness(1.15) drop-shadow(0 8px 12px rgba(0,0,0,0.7));
-}55));
-}
-
-/* ---------- Hauptinhalte / Panels ---------- */
-.content,
-main{
-  position: relative;
-  z-index: 5;
-  width: min(92vw, var(--maxw));
-  margin: 0 auto;
-  padding: 56px 20px;
-  background: var(--panel);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-.content.narrow{ width: min(90vw, 860px); }
-
-main h2, .content h2{
-  margin: 0 0 16px;
-  font-size: clamp(1.4rem, 3.4vw, 1.9rem);
-  font-weight: 800;
-  color: #ffffff;
-}
-main p, .content p{ margin: 0 0 14px; }
-
-/* Kleinere, zurückhaltende Texte */
-.muted{ color: var(--muted); }
-
-/* ---------- Standard-Button (Fallback) ---------- */
-.btn{
-  display: inline-block;
-  padding: 14px 28px;
-  border-radius: 8px;
-  border: none;
-  font-weight: 800;
-  color: #000;
-  background: linear-gradient(90deg, var(--gold), var(--gold-deep));
-  box-shadow: 0 10px 22px rgba(0,0,0,.35);
-  transition: transform .18s ease, filter .18s ease;
-}
-.btn:hover{
-  transform: translateY(-2px);
-  filter: brightness(1.05);
-}
-
-/* ---------- Galerie: alternierendes, randbündiges Layout ---------- */
-/* HTML-Struktur (Beispiel):
-<section class="gallery-alt">
-  <div class="gallery-item left"><img src="assets/img/Tattoo1.PNG" alt=""></div>
-  <div class="gallery-item right"><img src="assets/img/Tattoo2.PNG" alt=""></div>
-  ...
-</section>
-*/
-
-.gallery-alt{
-  position: relative;
-  z-index: 5;
-  width: min(94vw, 1200px);
-  margin: 28px auto 0;
-}
-.gallery-item{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  margin: 0 0 2.4rem 0;
-}
-
-/* Bildgröße & Stil */
-.gallery-item img{
-  width: min(560px, 88vw);
-  height: auto;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,.03);
-  box-shadow: var(--shadow);
-}
-
-/* Links anliegend / Rechts anliegend */
-.gallery-item.left{  flex-direction: row; }
-.gallery-item.right{ flex-direction: row-reverse; }
-
-/* Optionaler „Luft“-Platz für spätere Textblöcke */
-.gallery-item::before,
-.gallery-item::after{
-  content: "";
-  flex: 1 1 40%;
-  min-height: 120px;
-}
-
-/* ---------- Footer ---------- */
-footer{
-  text-align: center;
-  padding: 24px 12px 36px;
-  color: #aaaaaa;
-  font-size: .95rem;
-  background: linear-gradient(180deg, transparent, rgba(0,0,0,.65));
-}
-
-/* ---------- Responsive Breakpoints ---------- */
-@media (max-width: 1024px){
-  .hero{ padding: 110px 16px 80px; }
-}
-
-@media (max-width: 780px){
-  nav{ line-height: 1.9; }
-  .hero{ padding: 90px 14px 70px; }
-
-  .content, main{
-    width: min(94vw, var(--maxw));
-    padding: 44px 16px;
-    border-radius: 10px;
-  }
-
-  /* Galerie mobil: untereinander, zentriert – Luft über ::before/::after entfällt */
-  .gallery-item{
-    flex-direction: column !important;
-    align-items: center;
-    gap: 1.25rem;
-    margin-bottom: 1.9rem;
-  }
-  .gallery-item::before,
-  .gallery-item::after{ display: none; }
-  .gallery-item img{ width: 92vw; }
-}
-
-/* ---------- Kleine Hilfsklassen ---------- */
-.center{ text-align: center; }
-.hr-space{ margin: 28px 0; }
-/* === Hero Video als zentraler Header (statt Text) === */
-.hero-video-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 900px;           /* gleiche Breite wie dein Contentbereich */
-  aspect-ratio: 16 / 9;
-  margin: 0 auto 2rem auto;   /* zentriert über dem restlichen Inhalt */
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.65);
-}
-
-.hero-video-wrapper video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  filter: brightness(0.93) contrast(1.08) saturate(1.05);
-  transition: filter 0.3s ease;
-}
-
-.hero-video-wrapper:hover video {
-  filter: brightness(1) contrast(1.12) saturate(1.1);
-}
-
-/* Weicher Fade-Rand für harmonischen Übergang */
-.hero-video-wrapper::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0) 25%, rgba(0, 0, 0, 0.0) 75%, rgba(0, 0, 0, 0.5) 100%);
-}
-
-/* Mobile Anpassung */
-@media (max-width: 768px) {
-  .hero-video-wrapper {
-    border-radius: 8px;
-    max-width: 95%;
-  }
-}
-/* ====== Header / Navigation / Burger ====== */
+/* =======================
+   Header, Logo, Burger
+======================= */
 .site-header{
-  position: relative;
-  z-index: 20;
-  padding: 8px 16px 0;
-  background: transparent;         /* Hintergrundbild bleibt sichtbar */
-  text-align: center;
+  position:relative;
+  z-index:100;
+  padding:8px 16px 0;
+  text-align:center;
+  background:transparent;
 }
 
-/* Logo bleibt wie bisher skaliert */
 .site-logo{
   display:block;
-  max-width: min(540px, 85vw);
+  width:min(86vw, 560px);
   height:auto;
-  margin: 10px auto 6px;
+  margin:8px auto 4px;
   filter: drop-shadow(0 6px 18px rgba(0,0,0,.55));
 }
 
-/* Navigation – Desktop: inline sichtbar */
-.site-nav{
-  margin: 6px auto 10px;
-  color:#d9b26d;
-  font-weight:500;
-  transition: transform .28s ease, opacity .28s ease;
-}
-
-/* Burger-Button: mobil sichtbar, Desktop versteckt */
-.burger{
+.menu-toggle{
   position:absolute;
-  right:12px;
-  top:12px;
+  right:14px;
+  top:10px;
+  z-index:120;
   width:44px;
   height:44px;
   padding:0;
   border:0;
   background:transparent;
-  display:none; /* Desktop */
   cursor:pointer;
 }
-.burger img{
+.menu-toggle img{
   width:100%;
   height:100%;
+  display:block;
   object-fit:contain;
 }
 
-/* Mobile-Menü als Slide-Panel */
-@media (max-width: 900px){
-  .burger{ display:block; }
-
-  .site-nav{
-    position: fixed;
-    left:0; right:0;
-    top:72px;                    /* unter dem Banner/Logo */
-    background: rgba(0,0,0,.92);
-    padding:14px 16px;
-    transform: translateY(-120%);
-    opacity: 0;
-    z-index: 25;
-    border-bottom: 1px solid rgba(255,255,255,.08);
-    box-shadow: 0 10px 24px rgba(0,0,0,.45);
-  }
-  body.nav-open .site-nav{
-    transform: translateY(0);
-    opacity: 1;
-  }
-
-  .site-nav a{
-    display:block;
-    padding: 10px 6px;
-    margin: 0;
-    border-bottom: 1px solid rgba(255,255,255,.06);
-  }
-  .site-nav a:last-child{ border-bottom: 0; }
+/* =======================
+   Overlay-Menü
+======================= */
+.nav-overlay{
+  position:fixed;
+  inset:0;
+  z-index:110;
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  padding:84px 18px 24px;
+  background:rgba(0,0,0,.78);
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .25s ease;
+}
+.nav-overlay.open{
+  opacity:1;
+  pointer-events:auto;
+}
+.nav-overlay .nav-close{
+  position:absolute;
+  right:18px;
+  top:14px;
+  font-size:34px;
+  line-height:1;
+  width:44px;height:44px;
+  border:0;background:transparent;color:#fff;cursor:pointer;
 }
 
-/* Links im Nav (Desktop + Mobil einheitlich) */
-.site-nav a{
-  color:#d9b26d;
+.nav-overlay ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  width:min(720px, 92vw);
+  background:rgba(0,0,0,.25);
+  border-radius:16px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.nav-overlay li{
+  border-bottom:1px solid rgba(217,178,109,.25);
+}
+.nav-overlay li:last-child{border-bottom:0}
+.nav-overlay a{
+  display:block;
+  padding:18px 20px;
+  color:var(--gold);
   text-decoration:none;
-  margin: 0 8px;
-  display:inline-block;
+  font-weight:700;
+  text-align:center;
 }
-.site-nav a[aria-current="page"]{
-  border-bottom:2px solid #d9b26d;
-}
-
-/* Sicherheit: kein horizontales Scrollen durch Panel */
-html, body { overflow-x:hidden; width:100%; }
-/* ======= NAV: Pipes entfernen & Abstände sauber ======= */
-.site-nav .menu {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.1rem;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-  margin: .35rem 0 0;
-}
-.site-nav .menu li::before,
-.site-nav .menu li::after,
-.site-nav .menu a::before,
-.site-nav .menu a::after { content: none !important; }
-
-/* Burger-Button oben rechts */
-.menu-toggle {
-  position: absolute;
-  top: .35rem;
-  right: .75rem;
-  background: transparent;
-  border: 0;
-  padding: 0;
-  line-height: 0;
-  cursor: pointer;
+.nav-overlay a[aria-current="page"]{
+  background:linear-gradient(90deg, rgba(217,178,109,.18), rgba(217,178,109,.05));
 }
 
-/* Mobile-Overlay */
-.mobile-menu[hidden] { display: none !important; }
-.mobile-menu {
-  position: fixed;
-  inset: 0;
-  z-index: 999;
-  background: rgba(0,0,0,.72);
-  backdrop-filter: blur(3px);
-  display: grid;
-  place-items: center;
-}
-.mobile-menu ul{
-  list-style: none;
-  margin: 0;
-  padding: 1rem 1.25rem;
-  width: min(92vw, 640px);
-  background: rgba(0,0,0,.35);
-  border-radius: 10px;
-  box-shadow: 0 20px 60px rgba(0,0,0,.6);
-}
-.mobile-menu li{
-  text-align: center;
-  padding: .9rem 0;
-  border-bottom: 1px solid rgba(217,178,109,.25);
-}
-.mobile-menu li:last-child{ border-bottom: 0; }
-.mobile-menu a{ color: #d9b26d; text-decoration: none; font-size: 1.2rem; }
-.menu-close{
-  position: absolute; top: .5rem; right: .85rem;
-  font-size: 2rem; line-height: 1; color: #d9b26d;
-  background: transparent; border: 0; cursor: pointer;
-}
-.no-scroll{ overflow: hidden; }
+/* =======================
+   Hero Video
+======================= */
+.hero{ position:relative; z-index:1; }
 
-/* ======= HERO-VIDEO: ohne dunklen Block, ~15% größer ======= */
-.hero { background: transparent !important; padding-top: 0; }
-.hero-inner { max-width: none; padding: 0 0 1.25rem 0; }
-.hero-video {
-  width: 100%;
-  max-width: min(96vw, 980px); /* ~15% größer als Standard */
-  margin: 0 auto;
-  background: transparent !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-}
-.hero-video .video{
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-  box-shadow: 0 12px 40px rgba(0,0,0,.55);
+.hero-media{
+  position:relative;
+  width:min(95vw, 1100px);         /* deutlich größer als vorher */
+  margin:10px auto 12px;
 }
 
-/* ======= CONTENT: mystische Headline + Button ======= */
-.cta-caption{
-  font-family: "Uncial Antiqua", serif;
-  font-size: clamp(1.35rem, 2.4vw + .6rem, 2rem);
-  color: #f1e0b0;
-  letter-spacing: .02em;
-  margin: .25rem 0 1rem;
+.hero-video{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  border-radius:16px;
+  box-shadow:var(--shadow);
+  background:transparent;          /* kein dunkler Block */
 }
 
-.center{ text-align: center; }
+/* =======================
+   Content
+======================= */
+.content{
+  width:min(1000px, 92vw);
+  margin:14px auto 48px;
+}
 
+.section-title{
+  font-family: "Cinzel", ui-serif, Georgia, serif;
+  font-size: clamp(26px, 3.2vw, 36px);
+  color:var(--gold);
+  letter-spacing:.5px;
+  margin: 8px 0 10px;
+  text-shadow: 0 2px 12px rgba(0,0,0,.55);
+}
+
+.lead{
+  font-size: clamp(16px, 2.4vw, 20px);
+  line-height:1.7;
+  color:#fff;
+  margin: 0 0 18px 0;
+  text-shadow: 0 2px 8px rgba(0,0,0,.35);
+}
+
+/* Termin-Button groß & zentriert */
+.cta-row{ text-align:center; margin: 10px 0 0; }
+.termin-link{ display:inline-block }
 .termin-button{
-  display: inline-block;
-  width: clamp(220px, 38vw, 396px); /* ~10% größer als vorher */
-  height: auto;
-  transform: translateZ(0);
+  width:min(720px, 86vw);          /* große Darstellung wie gewünscht */
+  height:auto;
+  display:block;
+  margin: 0 auto;
   transition: transform .2s ease, filter .2s ease;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,.55));
 }
 .termin-button:hover{
-  transform: scale(1.04);
-  filter: brightness(1.08);
+  transform: scale(1.03);
+  filter: drop-shadow(0 14px 26px rgba(0,0,0,.65)) brightness(1.05);
 }
 
-/* ======= HINTERGRUND: identisch zu Home, kein Scroll-Side-Shift ======= */
-body{
-  overscroll-behavior-y: none;
+/* =======================
+   Footer
+======================= */
+.site-footer{
+  text-align:center;
+  padding:18px 12px 28px;
+  color:#bdbdbd;
+  font-size:14px;
+}
+
+/* =======================
+   Media
+======================= */
+@media (min-width:1100px){
+  .hero-media{ width:1100px; }
 }
