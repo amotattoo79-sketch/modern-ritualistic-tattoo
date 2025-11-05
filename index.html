@@ -4,39 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Modern Ritualistic Tattoo – Home</title>
-
-  <!-- Fonts: Grundschrift + mystische Headline -->
-  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
-  <!-- CSS mit Cachebust -->
-  <link rel="stylesheet" href="style.css?v=home-vid-06">
+  <meta name="color-scheme" content="dark">
+  <link rel="stylesheet" href="style.css?v=home-autoplay-3">
 </head>
-<body class="page-index">
+<body>
 
+  <!-- ===== Header / Logo + Burger ===== -->
   <header class="site-header">
-    <!-- Banner-Logo -->
     <img src="assets/img/banner_logo.PNG" alt="Modern Ritualistic Tattoo" class="site-logo">
 
-    <!-- Desktop-Navi (ohne |) -->
-    <nav class="site-nav" aria-label="Hauptnavigation">
-      <ul class="menu">
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="philosophie.html">Philosophie</a></li>
-        <li><a href="angebote.html">Angebote & Preise</a></li>
-        <li><a href="gallery.html">Galerie</a></li>
-        <li><a href="contact.html">Kontakt</a></li>
-        <li><a href="booking.html">Termin</a></li>
-        <li><a href="impressum.html">Impressum</a></li>
-        <li><a href="datenschutz.html">Datenschutz</a></li>
-      </ul>
-      <!-- Burger -->
-      <button class="menu-toggle" aria-controls="mobileMenu" aria-expanded="false">
-        <img src="assets/icons/Menubutton1.PNG" alt="Menü öffnen" width="36" height="36">
-      </button>
-    </nav>
+    <!-- Burger (Bild) -->
+    <button class="menu-toggle" aria-label="Menü öffnen" aria-expanded="false">
+      <img src="assets/icons/Menubutton1.PNG" alt="Menü">
+    </button>
 
-    <!-- Mobile-Overlay-Menü -->
-    <div id="mobileMenu" class="mobile-menu" hidden>
+    <!-- Overlay-Menü -->
+    <nav class="nav-overlay" aria-hidden="true">
+      <button class="nav-close" aria-label="Menü schließen">×</button>
       <ul>
         <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="philosophie.html">Philosophie</a></li>
@@ -47,55 +31,99 @@
         <li><a href="impressum.html">Impressum</a></li>
         <li><a href="datenschutz.html">Datenschutz</a></li>
       </ul>
-      <button class="menu-close" aria-label="Menü schließen">×</button>
-    </div>
+    </nav>
   </header>
 
-  <!-- Hero-Video ersetzt Ink Beyond Skin -->
-<section class="hero-video">
-  <video class="intro-video" autoplay muted loop playsinline>
-    <source src="assets/video/ritual_intro.MP4" type="video/mp4">
-    Dein Browser unterstützt keine Videos.
-  </video>
-</section>
+  <!-- ===== HERO: Video (ersetzt „Ink Beyond Skin“) ===== -->
+  <section class="hero">
+    <div class="hero-media">
+      <video id="heroVideo"
+             class="hero-video"
+             autoplay
+             muted
+             loop
+             playsinline
+             preload="metadata"
+             poster="assets/img/background_main.PNG">
+        <source src="assets/video/ritual_intro.MP4" type="video/mp4">
+      </video>
+    </div>
+  </section>
 
-  <!-- Content-Block -->
-  <main class="content narrow">
-    <h3 class="cta-caption">Modern Ritualistic Tattoo</h3>
-    <p>
+  <!-- ===== Content-Intro + Termin-Button ===== -->
+  <main class="content">
+    <h3 class="section-title">Modern Ritualistic Tattoo</h3>
+    <p class="lead">
       In einer Welt, die immer schneller, lauter und oberflächlicher wird, schaffen wir Raum für Tiefe.
       Bei Modern Ritualistic Tattooing geht es nicht nur um Tätowierungen – sondern um Spiritualität,
       Intention, Bewusstsein und Transformation.
     </p>
 
-    <!-- Termin-Button (PNG) – 10% größer & zentriert -->
-    <p class="center" >
+    <p class="cta-row">
       <a href="booking.html" class="termin-link" aria-label="Termin vereinbaren">
-        <img src="assets/img/buttons/Terminbutton1.PNG" class="termin-button" alt="Termin vereinbaren">
+        <img class="termin-button"
+             src="assets/img/buttons/Terminbutton1.PNG"
+             alt="Termin vereinbaren">
       </a>
     </p>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <p>© <span id="year"></span> Modern Ritualistic Tattoo</p>
   </footer>
 
+  <!-- ===== Mini-Scripts: Menü + Autoplay-Fallback ===== -->
   <script>
     // Jahr
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Burger-Menü
-    const toggle = document.querySelector('.menu-toggle');
-    const overlay = document.getElementById('mobileMenu');
-    const closeBtn = document.querySelector('.menu-close');
+    (function () {
+      const btn = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('.nav-overlay');
+      const closeBtn = document.querySelector('.nav-close');
 
-    function openMenu(){ overlay.hidden = false; document.body.classList.add('no-scroll'); toggle.setAttribute('aria-expanded','true'); }
-    function closeMenu(){ overlay.hidden = true; document.body.classList.remove('no-scroll'); toggle.setAttribute('aria-expanded','false'); }
+      const open = () => {
+        nav.classList.add('open');
+        nav.setAttribute('aria-hidden', 'false');
+        btn.setAttribute('aria-expanded', 'true');
+        document.body.classList.add('no-scroll');
+      };
+      const close = () => {
+        nav.classList.remove('open');
+        nav.setAttribute('aria-hidden', 'true');
+        btn.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('no-scroll');
+      };
 
-    toggle.addEventListener('click', () => overlay.hidden ? openMenu() : closeMenu());
-    closeBtn.addEventListener('click', closeMenu);
-    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeMenu(); });
-    window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+      btn.addEventListener('click', open);
+      closeBtn.addEventListener('click', close);
+      nav.addEventListener('click', (e) => {
+        if (e.target === nav) close(); // Klick auf den dunklen Hintergrund schließt
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') close();
+      });
+    })();
+
+    // Autoplay-Sicherheit für iOS/Safari
+    (function () {
+      const v = document.getElementById('heroVideo');
+      if (!v) return;
+      v.muted = true; // iOS verlangt muted für Autoplay
+
+      const tryPlay = () => v.play().catch(() => {
+        // Falls Energiesparmodus/Policy blockt: Controls einblenden, damit ein Tap reicht
+        v.setAttribute('controls', '');
+      });
+
+      if (v.readyState >= 2) tryPlay();
+      else v.addEventListener('loadeddata', tryPlay);
+
+      document.addEventListener('visibilitychange', () => {
+        if (!document.hidden && v.paused && v.muted) tryPlay();
+      });
+    })();
   </script>
 </body>
 </html>
