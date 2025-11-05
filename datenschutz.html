@@ -1,113 +1,82 @@
 <!doctype html>
 <html lang="de">
-<head><!doctype html>
-<html lang="de">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Datenschutz – Modern Ritualistic Tattoo</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=unified1">
 </head>
-<body>
-<header>
-  <h1>Modern Ritualistic Tattoo</h1>
-  <nav>
-    <a href="index.html">Home</a> |
-    <a href="philosophie.html">Philosophie</a> |
-    <a href="angebote.html">Angebote & Preise</a> |
-    <a href="gallery.html">Galerie</a> |
-    <a href="contact.html">Kontakt</a> |
-    <a href="booking.html">Termin</a> |
-    <a href="impressum.html">Impressum</a> |
-    <a href="datenschutz.html" aria-current="page">Datenschutz</a>
-  </nav>
-</header>
+<body class="page-bg">
+  <header class="site-header">
+    <img src="assets/img/banner_logo.PNG" alt="Modern Ritualistic Tattoo" class="site-logo">
 
-<main class="content narrow">
-  <h2>Datenschutzerklärung</h2>
-  <p><strong>Verantwortlicher:</strong><br>
-     Alexander Vöckt, Sternenstraße 5, 79664 Wehr (Baden) ·
-     E-Mail: <a href="mailto:voeckt.alexander@web.de">voeckt.alexander@web.de</a></p>
+    <button class="burger" id="burgerBtn" aria-label="Menü öffnen" aria-expanded="false">
+      <img src="assets/icons/Menubutton1.PNG" alt="Menü">
+    </button>
 
-  <h3>Hosting</h3>
-  <p>Diese Website wird über GitHub Pages betrieben. Beim Aufruf werden technisch notwendige Verbindungsdaten verarbeitet (z. B. IP-Adresse, Zeitpunkt, User-Agent), um den sicheren Betrieb zu gewährleisten.</p>
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html">Home</a> |
+      <a href="philosophie.html">Philosophie</a> |
+      <a href="angebote.html">Angebote & Preise</a> |
+      <a href="gallery.html">Galerie</a> |
+      <a href="contact.html">Kontakt</a> |
+      <a href="booking.html">Termin</a> |
+      <a href="impressum.html">Impressum</a> |
+      <a href="datenschutz.html" aria-current="page">Datenschutz</a>
+    </nav>
+  </header>
 
-  <h3>Kontaktformular (FormSubmit)</h3>
-  <p>Bei Nutzung des Kontaktformulars werden die eingegebenen Daten (Name, E-Mail, Nachricht) über FormSubmit (formsubmit.co) an unsere E-Mail-Adresse weitergeleitet. Es findet keine Speicherung auf dieser Website statt. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.</p>
+  <main>
+    <h2>Datenschutzerklärung (Kurzfassung)</h2>
+    <p>Verantwortlich: AmoTattoo Atelier – Alexander Vöckt, Sternenstraße 5, 79664 Wehr (Baden), <a href="mailto:voeckt.alexander@web.de">voeckt.alexander@web.de</a></p>
+    <p>Wir verarbeiten personenbezogene Daten (z. B. Name, E-Mail, Nachricht) ausschließlich zur Bearbeitung von Anfragen und Terminabstimmungen. Eine Weitergabe an Dritte erfolgt nicht.</p>
+    <p>Rechtsgrundlagen: Art. 6 Abs. 1 lit. b DSGVO (Vertrag/Anbahnung), Art. 6 Abs. 1 lit. a DSGVO (Einwilligung).</p>
+    <p>Deine Rechte: Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch. Kontakt siehe oben.</p>
+    <p>Kontaktformular: Eingaben werden über Formsubmit an unsere E-Mail-Adresse übermittelt. Bitte keine sensiblen Daten senden.</p>
+    <p>Externe Dienste: Verlinkungen zu Instagram/Calendly öffnen externe Seiten. Es gelten deren Datenschutzbestimmungen.</p>
+  </main>
 
-  <h3>Terminbuchung (Calendly)</h3>
-  <p>Der Calendly-Kalender wird erst nach Ihrer Einwilligung (2-Klick-Lösung) geladen. Mit dem Laden können personenbezogene Daten an Calendly übertragen werden. Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO.</p>
+  <footer>
+    <p>© <span id="year"></span> Modern Ritualistic Tattoo</p>
+  </footer>
 
-  <h3>Rechte der Betroffenen</h3>
-  <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung sowie Datenübertragbarkeit. Kontakt siehe oben.</p>
+  <!-- Gemeinsamer Burger-Scriptblock -->
+  <script>
+    (function(){
+      const burgerBtn = document.getElementById('burgerBtn');
+      const siteNav   = document.getElementById('siteNav');
+      const body      = document.body;
+      if(!burgerBtn || !siteNav) return;
 
-  <p>Stand: 2025</p>
-</main>
+      function toggleNav(open){
+        const willOpen = (open!==undefined) ? open : !body.classList.contains('nav-open');
+        body.classList.toggle('nav-open', willOpen);
+        burgerBtn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+        document.documentElement.style.overflow = willOpen ? 'hidden' : '';
+        document.body.style.overflow = willOpen ? 'hidden' : '';
+      }
 
-<footer>
-  <p>© <span id="year"></span> Modern Ritualistic Tattoo</p>
-</footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
-</body>
-</html>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Datenschutz – Modern Ritualistic Tattoo</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+      burgerBtn.addEventListener('click', () => toggleNav());
 
-<header>
-  <h1>Modern Ritualistic Tattoo</h1>
-  <nav>
-    <a href="index.html">Home</a> |
-    <a href="about.html">Philosophie</a> |
-    <a href="services.html">Angebote</a> |
-    <a href="gallery.html">Galerie</a> |
-    <a href="booking.html">Termin</a> |
-    <a href="contact.html">Kontakt</a>
-  </nav>
-</header>
+      document.addEventListener('click', (e)=>{
+        if (!body.classList.contains('nav-open')) return;
+        if (!siteNav.contains(e.target) && !burgerBtn.contains(e.target)) toggleNav(false);
+      });
 
-<main class="content narrow">
-  <h2>Datenschutzerklärung</h2>
-  <hr class="hr-bronze">
+      let sx=null, sy=null;
+      window.addEventListener('touchstart', (e)=>{
+        const t=e.touches[0]; sx=t.clientX; sy=t.clientY;
+      },{passive:true});
+      window.addEventListener('touchmove', (e)=>{
+        if (sx===null) return;
+        const t=e.touches[0], dx=t.clientX-sx, dy=Math.abs(t.clientY-sy);
+        if (dy>40) return;
+        if (sx<24 && dx>40) toggleNav(true);
+        if (dx<-60) toggleNav(false);
+      },{passive:true});
+    })();
 
-  <p><strong>1. Datenschutz auf einen Blick</strong></p>
-  <p>Der Schutz Ihrer persönlichen Daten ist uns wichtig. Diese Website verarbeitet personenbezogene Daten nur im notwendigen Umfang. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.</p>
-
-  <p><strong>2. Verantwortlicher</strong><br>
-  Alexander Vöckt<br>
-  Sternenstraße 5, 79664 Wehr<br>
-  E-Mail: <a href="mailto:voeckt.alexander@web.de">voeckt.alexander@web.de</a></p>
-
-  <p><strong>3. Erhebung und Nutzung Ihrer Daten</strong><br>
-  Daten werden nur erhoben, wenn Sie uns diese über das Kontaktformular oder per E-Mail übermitteln. Diese Daten (Name, E-Mail-Adresse, Nachricht) werden ausschließlich zur Bearbeitung Ihres Anliegens verwendet.</p>
-
-  <p><strong>4. Hosting über GitHub Pages</strong><br>
-  Diese Website wird über GitHub Pages gehostet (GitHub Inc., USA). Beim Aufruf der Seite werden technisch bedingt Verbindungsdaten wie IP-Adresse, Browsertyp, Datum und Uhrzeit erfasst. Diese Daten dienen der technischen Bereitstellung und Sicherheit der Seite.</p>
-
-  <p><strong>5. Cookies und Analyse</strong><br>
-  Diese Website verwendet keine Cookies und keine externen Tracking-Tools.</p>
-
-  <p><strong>6. Ihre Rechte</strong><br>
-  Sie haben jederzeit das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten.</p>
-
-  <p><strong>7. Kontakt</strong><br>
-  Bei Fragen zum Datenschutz wenden Sie sich bitte an:<br>
-  Alexander Vöckt<br>
-  E-Mail: <a href="mailto:voeckt.alexander@web.de">voeckt.alexander@web.de</a>
-  </p>
-
-</main>
-
-<footer>
-  <p>© <span id="year"></span> Modern Ritualistic Tattoo</p>
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+    (function(){const y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();})();
+  </script>
 </body>
 </html>
