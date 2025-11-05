@@ -1,190 +1,239 @@
 /* ======================================
-   Modern Ritualistic Tattoo – Global Style
+   Modern Ritualistic Tattoo — Global Styles
    ====================================== */
 
-:root {
-  --gold: #d4af37;
-  --gold-light: #e0c46c;
+/* Fonts (Head + Body) */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap');
+
+/* Design-Variablen */
+:root{
   --bg: #000;
   --text: #f2f2f2;
-  --muted: #ccc;
-  --font-head: 'Cormorant Garamond', serif;
-  --font-body: 'Poppins', sans-serif;
+  --muted: #dcdcdc;
+  --gold: #d9b26d;
+  --gold-strong: #c9a253;
+  --gold-hover: #ffda8a;
+  --border: rgba(255,255,255,.08);
+  --shadow: 0 14px 32px rgba(0,0,0,.55);
 }
 
-/* === RESET === */
+/* Reset / Basis */
 *,
 *::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+*::after { box-sizing: border-box; }
+html, body { height:100%; margin:0; padding:0; }
+img { max-width:100%; height:auto; display:block; }
+a { color: var(--gold); text-decoration:none; }
+a:hover { color: var(--gold-hover); }
 
-html, body {
-  height: 100%;
-  background: var(--bg);
+/* Hintergrund (alle Seiten identisch) */
+body {
+  background: #000 url("assets/img/background_main.PNG") top center / cover no-repeat fixed;
   color: var(--text);
-  font-family: var(--font-body);
   overflow-x: hidden;
+  font-family: "Cormorant Garamond", serif;  /* Body-Text */
+  line-height: 1.6;
 }
-
-/* === Hintergrund / Banner einheitlich === */
-body.page-bg::before {
-  content: "";
+/* Bronze-Glow (aktiv, wenn page-bg gesetzt) */
+body.page-bg::before{
+  content:"";
   position: fixed;
   inset: 0;
   z-index: -2;
+  pointer-events: none;
   background:
-    radial-gradient(1200px 600px at 50% -10%, rgba(212,175,55,.08), transparent 60%),
-    url("assets/img/background_main.PNG") center top / cover no-repeat fixed;
-  opacity: .25;
+    radial-gradient(1200px 600px at 50% -10%, rgba(212,175,55,.08), transparent 60%);
+  opacity: .28;
 }
 
-/* === Header / Banner === */
-.site-header {
-  text-align: center;
-  padding: 10px 0 0;
+/* ===========================
+   Header / Logo / Navigation
+   =========================== */
+.site-header{
   position: relative;
-  z-index: 10;
+  z-index: 20;
+  padding: 10px 12px 0;
+  text-align: center;
   background: transparent;
 }
-
-.site-logo {
-  max-width: 520px;
+.site-logo{
+  display:block;
   width: min(80vw, 520px);
   height: auto;
-  display: block;
-  margin: 0 auto 0.5rem;
+  margin: .5rem auto .25rem;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,.55));
 }
 
-/* === Navigation === */
-.site-nav {
-  font-family: var(--font-head);
+/* Desktop-Navigation (>=900px) */
+.site-nav{
   text-align: center;
+  margin: 6px auto 10px;
+  font-family: "Cinzel", serif;        /* Headline-Font */
+  font-weight: 600;
+  letter-spacing: .3px;
   font-size: 1.05rem;
-  letter-spacing: 0.5px;
 }
-
-.site-nav a {
+.site-nav a{
   color: var(--gold);
   text-decoration: none;
   margin: 0 6px;
-  transition: color 0.3s;
+}
+.site-nav a:visited{ color: var(--gold); }
+.site-nav a[aria-current="page"]{
+  border-bottom: 2px solid var(--gold);
 }
 
-.site-nav a:hover {
-  color: var(--gold-light);
-}
-
-/* --- Burger Menü --- */
-.burger {
+/* Burger-Button (mobiles Menü) */
+.burger{
   position: absolute;
   right: 12px;
   top: 12px;
   width: 44px;
   height: 44px;
-  border: none;
+  border: 0;
   background: transparent;
   display: none;
+  padding: 0;
   cursor: pointer;
+  z-index: 30;
 }
+.burger img{ width:100%; height:100%; object-fit: contain; }
 
-.burger img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
+/* Mobiles Overlay-Menü */
+@media (max-width: 900px){
+  .burger{ display:block !important; }
 
-@media (max-width: 900px) {
-  .burger { display: block !important; }
-  .site-nav {
+  .site-nav{
     position: fixed;
-    left: 0;
-    right: 0;
-    top: 70px;
+    left: 0; right: 0; top: 72px;
     background: rgba(0,0,0,.92);
-    padding: 18px 12px;
+    padding: 14px 16px;
     transform: translateY(-120%);
     opacity: 0;
-    transition: all .28s ease;
-    border-bottom: 1px solid rgba(255,255,255,.08);
-    box-shadow: 0 10px 24px rgba(0,0,0,.45);
+    transition: transform .28s ease, opacity .28s ease;
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    z-index: 25;
+
+    /* Pipes in HTML unsichtbar, Links setzen Größe erneut */
+    font-size: 0;
+    -webkit-tap-highlight-color: transparent;
   }
-  body.nav-open .site-nav { transform: translateY(0); opacity: 1; }
-  .site-nav a { display: block; padding: 10px; border-bottom: 1px solid rgba(255,255,255,.06); }
-  .site-nav a:last-child { border: none; }
+  body.nav-open .site-nav{ transform: translateY(0); opacity: 1; }
+
+  .site-nav a,
+  .site-nav a:link,
+  .site-nav a:visited{
+    display: block;
+    font-size: 18px;         /* reaktiviert Textgröße */
+    line-height: 1.35;
+    padding: 12px 6px;
+    margin: 0;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+    color: var(--gold) !important;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: .2px;
+    font-family: "Cinzel", serif;
+  }
+  .site-nav a:last-child{ border-bottom: 0; }
+  .site-nav a:hover,
+  .site-nav a:focus{
+    color: var(--gold-hover) !important;
+    outline: none;
+  }
 }
 
-/* === Main-Content (zentriert) === */
-main {
+/* ===========================
+   Main-Layout (zentriert)
+   =========================== */
+main{
   text-align: center;
-  font-family: var(--font-head);
-  font-size: 1.15rem;
-  line-height: 1.7;
-  max-width: 950px;
+  max-width: 980px;
   margin: 0 auto;
-  padding: 2rem 1rem 4rem;
+  padding: 1.2rem 1rem 3rem;
 }
-
-main h2, main h1 {
+main h1, main h2, main h3{
+  font-family: "Cinzel", serif;
   color: var(--gold);
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  letter-spacing: .4px;
+  margin: .4rem 0 1rem;
+}
+main p{ margin: 0 auto 1.1rem; max-width: 900px; }
+
+/* ===========================
+   Hero-Video (nur index nutzt es)
+   =========================== */
+.hero{ padding: 0 0 1rem; background: transparent; }
+.hero-inner{ max-width: 1200px; margin: 0 auto; }
+.hero-video{
+  position: relative;
+  width: min(1000px, 92vw);
+  aspect-ratio: 16 / 9;
+  margin: 0 auto 18px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(.5px);
+}
+.hero-video video{
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
 }
 
-main p {
-  margin-bottom: 1.5rem;
-  color: var(--text);
-}
-
-/* === Galerie === */
-.gallery-alt {
+/* ===========================
+   Buttons
+   =========================== */
+.btn img.termin-button{
   display: block;
-  margin: 2rem auto;
+  margin: 18px auto 0;
+  width: 260px;
+  height: auto;
+  transition: transform .2s ease, filter .2s ease;
+}
+.btn img.termin-button:hover{
+  transform: scale(1.05);
+  filter: brightness(1.12);
+}
+
+/* ===========================
+   Galerie (alternierend links/rechts)
+   =========================== */
+.gallery-alt{
+  display: block;
+  margin: 1.6rem auto 2.2rem;
   max-width: 1100px;
 }
-.gallery-item {
+.gallery-item{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 3rem;
   gap: 2rem;
+  margin: 0 0 2.6rem;
 }
-.gallery-item img {
-  width: min(560px, 85vw);
+.gallery-item.left{ flex-direction: row; }
+.gallery-item.right{ flex-direction: row-reverse; }
+
+.gallery-item img{
+  width: min(560px, 86vw);
   border-radius: 8px;
-  box-shadow: 0 10px 25px rgba(0,0,0,.55);
-  transition: transform .3s;
+  box-shadow: 0 10px 28px rgba(0,0,0,.55);
+  transition: transform .25s ease;
 }
-.gallery-item img:hover {
-  transform: scale(1.03);
-}
-.gallery-item.left { flex-direction: row; }
-.gallery-item.right { flex-direction: row-reverse; }
-@media (max-width: 768px) {
-  .gallery-item { flex-direction: column !important; }
-  .gallery-item img { width: 95%; }
+.gallery-item img:hover{ transform: scale(1.03); }
+
+@media (max-width: 780px){
+  .gallery-item{ flex-direction: column !important; gap: 1.2rem; }
+  .gallery-item img{ width: 94vw; }
 }
 
-/* === Buttons === */
-.btn img.termin-button {
-  display: block;
-  margin: 20px auto;
-  width: 260px;
-  height: auto;
-  transition: transform 0.25s ease, filter 0.25s ease;
-}
-.btn img.termin-button:hover {
-  transform: scale(1.05);
-  filter: brightness(1.15);
-}
-
-/* === Footer === */
-footer {
+/* ===========================
+   Footer
+   =========================== */
+footer{
   text-align: center;
-  font-family: var(--font-body);
-  font-size: 0.9rem;
+  padding: 20px 10px 30px;
   color: var(--muted);
-  padding: 20px;
+  font-size: .95rem;
 }
