@@ -250,3 +250,46 @@ footer{
 .center{ text-align: center; }
 .hr-space{ margin: 28px 0; }
 .hidden{ display: none !important; }
+/* ===== PATCH: gleiches Banner & BG wie Home + kein horizontales Scrollen ===== */
+html, body { width:100%; overflow-x:hidden; }
+* { box-sizing:border-box; }
+img { max-width:100%; height:auto; display:block; }
+
+/* Hintergrund identisch zu Home */
+body{
+  background: #000 url("assets/img/background_main.PNG") top center / cover no-repeat;
+}
+@media (min-width:1024px){
+  body{ background-attachment: fixed; }
+}
+
+/* Banner-Logo überall gleich skalieren */
+.site-logo{
+  display:block;
+  width:min(85vw, 540px);
+  height:auto;
+  margin: 12px auto 8px;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,.55));
+}
+
+/* Galerie-Layout robust (links/rechts alternierend) */
+.gallery-alt{ display:block; margin: 0 auto; }
+.gallery-item{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:2rem; margin:2rem 0 2.5rem;
+}
+.gallery-item img{
+  width:min(560px, 88vw);
+  border-radius:6px;
+  box-shadow:0 10px 28px rgba(0,0,0,.45);
+}
+.gallery-item.left  { flex-direction:row; }
+.gallery-item.right { flex-direction:row-reverse; }
+.gallery-item::before,
+.gallery-item::after{ content:""; flex:1 1 40%; min-height:120px; }
+
+@media (max-width:720px){
+  .gallery-item{ flex-direction:column !important; align-items:center; gap:1.25rem; }
+  .gallery-item::before, .gallery-item::after{ display:none; }
+  .gallery-item img{ width:92vw; }
+}
