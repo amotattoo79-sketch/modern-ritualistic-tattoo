@@ -280,7 +280,7 @@ body::before{
     url("assets/img/background_main.png") center top / cover no-repeat fixed,
     #0c0c0c;
   transform:none;      /* keine Vergrößerung auf Unterseiten */
-  opacity:.9;
+  opacity:.0;
 }
 /* --- Seite: gemeinsamer Hintergrund auch auf Unterseiten --- */
 body.page-bg::before{
