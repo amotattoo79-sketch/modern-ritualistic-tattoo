@@ -275,3 +275,39 @@ body{
     font-size: 0.95rem;
   }
 }
+/* === HERO VIDEO (autoplay ohne Controls) === */
+.hero-video-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0 1rem 0;
+}
+
+.hero-video {
+  width: 85vw;                /* Größe responsiv */
+  max-width: 1080px;
+  aspect-ratio: 16 / 9;       /* sauberes 16:9-Verhältnis */
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+  background-color: transparent;
+  outline: none;
+}
+
+/* Kein sichtbarer Player-Overlay-Button */
+.hero-video::-webkit-media-controls,
+.hero-video::-webkit-media-controls-enclosure,
+.hero-video::-webkit-media-controls-panel {
+  display: none !important;
+  -webkit-appearance: none;
+}
+.hero-video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+
+/* Abstand zum nachfolgenden Text leicht reduziert */
+main, section {
+  margin-top: 1rem;
+}
