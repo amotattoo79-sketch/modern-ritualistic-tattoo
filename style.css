@@ -1,346 +1,252 @@
-/* === Grundlayout === */
-body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background-color: #000;
-  color: #f2f2f2;
-  margin: 0;
-  padding: 0;
-  background-image: url('assets/img/background_main.PNG');
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+/* ===========================
+   Modern Ritualistic Tattoo
+   Saubere, konsolidierte style.css
+   =========================== */
+
+/* ---------- Design-Variablen ---------- */
+:root{
+  --bg: #000000;
+  --panel: rgba(0,0,0,.72);
+  --panel-soft: rgba(0,0,0,.55);
+  --text: #f2f2f2;
+  --muted: #cfcfcf;
+  --gold: #d9b26d;
+  --gold-deep: #a87b00;
+  --gold-soft: #c59a4a;
+  --border: rgba(255,255,255,.08);
+  --shadow: 0 10px 28px rgba(0,0,0,.45);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --maxw: 980px;              /* zentraler Inhaltsbereich */
 }
 
-/* === Navigation === */
-header {
-  background-color: #000;
-  text-align: center;
-  padding: 20px 10px;
-}
+/* ---------- Reset / Baseline ---------- */
+*{ box-sizing: border-box; }
+html,body{ height: 100%; }
+html{ scroll-behavior: smooth; }
 
-header h1 {
-  color: #f2f2f2;
-  margin: 0;
-  font-size: 1.6rem;
-  font-weight: 700;
-}
-
-nav {
-  margin-top: 10px;
-}
-
-nav a {
-  color: #d9b26d;
-  text-decoration: none;
-  margin: 0 8px;
-  font-weight: 500;
-}
-
-nav a:hover,
-nav a.active {
-  border-bottom: 2px solid #d9b26d;
-}
-
-/* === Hero-Bereich === */
-.hero {
-  text-align: center;
-  padding: 100px 20px 80px;
-  background: rgba(0, 0, 0, 0.6); /* halbtransparent für Lesbarkeit */
-}
-
-.hero h2 {
-  font-size: 2.4rem;
-  color: #d9b26d;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-/* === Buttons === */
-.btn {
-  background: linear-gradient(90deg, #d9b26d, #a87b00);
-  color: #000;
-  padding: 14px 28px;
-  border: none;
-  border-radius: 6px;
-  font-weight: 700;
-  text-decoration: none;
-  display: inline-block;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  background: linear-gradient(90deg, #c59a4a, #7a5c00);
-  transform: translateY(-2px);
-}
-
-/* === Hauptinhalt === */
-main {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: 0 auto;
-  border-radius: 12px;
-}
-
-main h2 {
-  color: #fff;
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-}
-
-main p {
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-
-/* === Footer === */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #000;
-  color: #aaa;
-  font-size: 0.9rem;
-  border-top: 1px solid #222;
-  
-}
-/* ==== BACKGROUND & LAYERING FIX (oben unter Header sichtbar) ==== */
 body{
-  /* zeigt dein Pattern ganz oben hinter allem Content */
-  background: #000 url("assets/img/background_main.PNG") top center / cover no-repeat fixed;
-  background-attachment: fixed;
-  background-position: top center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  margin: 0;
+  color: var(--text);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+
+  /* Durchgehender Seitenhintergrund (wie auf Home) */
+  background: var(--bg) url("assets/img/background_main.PNG")
+              top center / cover no-repeat fixed;
 }
 
-/* Header bleibt sichtbar über dem Hintergrundbild */
+/* Bilder und Medien */
+img,svg,video{ max-width: 100%; height: auto; display: block; }
+
+/* Links */
+a{ color: var(--gold); text-decoration: none; }
+a:hover{ text-decoration: underline; }
+
+/* ---------- Header & Navigation ---------- */
 header{
-  background-color: rgba(0,0,0,0); /* transparent lassen; ggf. 0.6 für dunkler */
   position: relative;
   z-index: 10;
+  text-align: center;
+  padding: 18px 12px 8px;
+  background: transparent; /* Hintergrundbild soll sichtbar sein */
 }
 
-/* Hero/Banner liegt über dem Bild; leichte Abdunklung für Lesbarkeit */
-.hero{
-  position: relative;
-  z-index: 5;
-  background: rgba(0,0,0,0.40); /* gewünschte Lesbarkeit; auf 0 setzen wenn nicht gewollt */
-  padding-top: 140px;          /* Platz unter dem Header */
-  padding-bottom: 100px;
-}
-
-/* Falls es eine Section direkt nach dem Hero gibt, weicher Übergang */
-section, .content, main{
-  position: relative;
-  z-index: 5;
-}
-/* Banner Logo Style */
-.site-banner {
-  display: block;
-  margin: 0 auto 10px auto;
-  max-width: 280px;
-  height: auto;
-  object-fit: contain;
-}
-/* === GRAFISCHER TERMIN-BUTTON === */
-.cta-image {
-  display: inline-block;
-  width: 240px;           /* Desktopgröße */
-  height: auto;
-  margin-top: 10px;
-  transition: transform 0.25s ease, filter 0.25s ease;
-  cursor: pointer;
-}
-
-.cta-image:hover {
-  transform: translateY(-3px);
-  filter: brightness(1.1);
-}
-
-@media (max-width: 768px) {
-  .cta-image {
-    width: 180px;        /* Mobile Anpassung */
-  }
-}
-/* --- Termin Button (PNG) --- */
-.termin-button {
-  display: block;
-  margin: 30px auto;
-  width: 260px; /* optisch gute Größe, responsiv */
-  max-width: 80%;
-  height: auto;
-  transition: transform 0.25s ease-in-out, filter 0.25s ease-in-out;
-  cursor: pointer;
-}
-
-.termin-button:hover {
-  transform: scale(1.05);
-  filter: brightness(1.15);
-}
-/* Alternierende Galerie */
-.gallery-alt {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  margin-top: 2rem;
-}
-
-.gallery-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  width: 100%;
-}
-
-.gallery-item img {
-  width: 46%;
-  border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, .4);
-  transition: transform .3s ease, box-shadow .3s ease;
-}
-
-.gallery-item img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, .55);
-}
-
-/* Linke und rechte Ausrichtung */
-.gallery-item.left {
-  justify-content: flex-start;
-}
-.gallery-item.right {
-  justify-content: flex-end;
-}
-
-/* Mobile Darstellung */
-@media (max-width: 768px) {
-  .gallery-item {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  .gallery-item img {
-    width: 95%;
-  }
-}
-/* === Galerie: alternierendes, randbündiges Layout === */
-.gallery-alt{
-  display:block;
-  margin: 0;
-}
-.gallery-item{
-  max-width: 1100px;     /* große Collagen */
-  margin: 0 auto 2.25rem auto;
-}
-.gallery-item img{
-  width: 100%;
-  height: auto;
-  display: block;
-  border: 1px solid rgba(255,255,255,.08);
-  background: rgba(255,255,255,.03);
-  box-shadow: 0 10px 30px rgba(0,0,0,.45);
-}
-
-/* Randbündig links/rechts mit Textfläche daneben */
-.gallery-item.left  { margin-left: 0; margin-right: auto; }
-.gallery-item.right { margin-left: auto; margin-right: 0; }
-
-/* Platz für spätere Textblöcke (visuell Luft) */
-.gallery-item.left  { padding-right: 8vw; }
-.gallery-item.right { padding-left:  8vw; }
-
-/* Kleine Screens: mittig, aber mit alternierendem 'Versatz' */
-@media (max-width: 780px){
-  .gallery-item{ padding: 0 1rem; }
-  .gallery-item.left,
-  .gallery-item.right{ margin: 0 auto 1.75rem auto; }
-}
-
-/* Logo-Größe & Hintergrund: identisch mit Home */
+/* Banner-Logo oben */
 .site-logo{
-  display:block;
-  max-width: 520px;    /* wie Home */
-  width: min(80vw, 520px);
-  height: auto;
-  margin: .25rem auto 0;
-}
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  z-index:-2;
-  background:
-    radial-gradient(1200px 600px at 50% -10%, rgba(212,175,55,.08), transparent 60%),
-    url("assets/img/background_main.png") center top / cover no-repeat fixed,
-    #0c0c0c;
-  transform:none;      /* keine Vergrößerung auf Unterseiten */
-  opacity:.0;
-}
-/* --- Seite: gemeinsamer Hintergrund auch auf Unterseiten --- */
-body.page-bg::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  z-index:-2;
-  background:
-    radial-gradient(1200px 600px at 50% -10%, rgba(212,175,55,.08), transparent 60%),
-    url("assets/img/background_main.PNG") center/cover no-repeat;
-  background-attachment: fixed;
-  opacity: .28;           /* wie Home */
-  pointer-events:none;
-}
-
-/* Logo-Deckel (wie Home). Falls bereits vorhanden, dieser Block darf die Werte bestätigen. */
-.site-logo{
-  display:block;
-  max-width:min(540px, 85vw);
-  height:auto;
-  margin: 1.2rem auto .5rem;
+  width: min(86vw, 520px);
+  margin: 4px auto 10px;
   filter: drop-shadow(0 6px 18px rgba(0,0,0,.55));
 }
 
-/* --- Galerie: alternierende Ausrichtung --- */
-.gallery-alt{
-  display:block;
+/* Hauptnavigation */
+nav{ margin: 6px 0 0; }
+nav a{
+  color: var(--gold);
+  font-weight: 600;
+  padding: 6px 6px;
+  display: inline-block;
+}
+nav a[aria-current="page"],
+nav a.active{
+  border-bottom: 2px solid var(--gold);
+}
+
+/* ---------- Hero / Intro ---------- */
+.hero{
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  padding: 120px 18px 90px;
+  background: rgba(0,0,0,.38); /* leichte Abdunklung für Lesbarkeit */
+  backdrop-filter: saturate(110%) blur(0px);
+}
+
+/* Hero-Typo */
+.hero h2{
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 5.5vw, 3.4rem);
+  font-weight: 800;
+  color: var(--gold);
+}
+.hero p{
+  margin: 0 0 28px;
+  font-size: clamp(1rem, 2.6vw, 1.25rem);
+  color: var(--text);
+}
+
+/* Bronze-HR */
+.hr-bronze{
+  height: 2px;
+  border: none;
+  margin: 18px auto 24px;
+  width: min(86%, 720px);
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: .9;
+}
+
+/* ---------- Call-to-Action (PNG-Button) ---------- */
+/* <a class="cta" href="..."><img class="termin-button" src="assets/img/Terminbutton1.PNG" alt="Termin vereinbaren"></a> */
+
+.termin-button{
+  display: block;
+  margin: 12px auto 0;
+  width: clamp(180px, 42vw, 280px);
+  height: auto;
+  transition: transform .22s ease, filter .22s ease;
+  cursor: pointer;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,.5));
+}
+.termin-button:hover{
+  transform: translateY(-2px);
+  filter: brightness(1.1) drop-shadow(0 10px 24px rgba(0,0,0,.55));
+}
+
+/* ---------- Hauptinhalte / Panels ---------- */
+.content,
+main{
+  position: relative;
+  z-index: 5;
+  width: min(92vw, var(--maxw));
   margin: 0 auto;
+  padding: 56px 20px;
+  background: var(--panel);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.content.narrow{ width: min(90vw, 860px); }
+
+main h2, .content h2{
+  margin: 0 0 16px;
+  font-size: clamp(1.4rem, 3.4vw, 1.9rem);
+  font-weight: 800;
+  color: #ffffff;
+}
+main p, .content p{ margin: 0 0 14px; }
+
+/* Kleinere, zurückhaltende Texte */
+.muted{ color: var(--muted); }
+
+/* ---------- Standard-Button (Fallback) ---------- */
+.btn{
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 800;
+  color: #000;
+  background: linear-gradient(90deg, var(--gold), var(--gold-deep));
+  box-shadow: 0 10px 22px rgba(0,0,0,.35);
+  transition: transform .18s ease, filter .18s ease;
+}
+.btn:hover{
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+/* ---------- Galerie: alternierendes, randbündiges Layout ---------- */
+/* HTML-Struktur (Beispiel):
+<section class="gallery-alt">
+  <div class="gallery-item left"><img src="assets/img/Tattoo1.PNG" alt=""></div>
+  <div class="gallery-item right"><img src="assets/img/Tattoo2.PNG" alt=""></div>
+  ...
+</section>
+*/
+
+.gallery-alt{
+  position: relative;
+  z-index: 5;
+  width: min(94vw, 1200px);
+  margin: 28px auto 0;
 }
 .gallery-item{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:2rem;
-  margin:2rem 0 2.5rem;
-}
-.gallery-item img{
-  width:min(560px, 88vw);
-  height:auto;
-  border-radius:6px;
-  box-shadow:0 10px 28px rgba(0,0,0,.45);
-  display:block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 0 0 2.4rem 0;
 }
 
-/* Links anliegend: Bild links, freie Fläche rechts für späteren Text */
-.gallery-item.left{ flex-direction: row; }
-/* Rechts anliegend: Bild rechts, freie Fläche links */
+/* Bildgröße & Stil */
+.gallery-item img{
+  width: min(560px, 88vw);
+  height: auto;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.03);
+  box-shadow: var(--shadow);
+}
+
+/* Links anliegend / Rechts anliegend */
+.gallery-item.left{  flex-direction: row; }
 .gallery-item.right{ flex-direction: row-reverse; }
 
-/* Optional: „freie“ Seite leicht andeuten (Platzhalter für zukünftige Textblöcke) */
+/* Optionaler „Luft“-Platz für spätere Textblöcke */
 .gallery-item::before,
 .gallery-item::after{
-  content:"";
-  flex:1 1 40%;
-  min-height: 120px;      /* sorgt für spürbaren Platz */
+  content: "";
+  flex: 1 1 40%;
+  min-height: 120px;
 }
 
-/* Mobile: sauber untereinander, weiterhin Platz für Text unter dem Bild */
-@media (max-width: 720px){
-  .gallery-item{ flex-direction:column !important; align-items:center; }
-  .gallery-item::before, .gallery-item::after{ display:none; }
-  .gallery-item img{ width:92vw; }
+/* ---------- Footer ---------- */
+footer{
+  text-align: center;
+  padding: 24px 12px 36px;
+  color: #aaaaaa;
+  font-size: .95rem;
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,.65));
 }
+
+/* ---------- Responsive Breakpoints ---------- */
+@media (max-width: 1024px){
+  .hero{ padding: 110px 16px 80px; }
+}
+
+@media (max-width: 780px){
+  nav{ line-height: 1.9; }
+  .hero{ padding: 90px 14px 70px; }
+
+  .content, main{
+    width: min(94vw, var(--maxw));
+    padding: 44px 16px;
+    border-radius: 10px;
+  }
+
+  /* Galerie mobil: untereinander, zentriert – Luft über ::before/::after entfällt */
+  .gallery-item{
+    flex-direction: column !important;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 1.9rem;
+  }
+  .gallery-item::before,
+  .gallery-item::after{ display: none; }
+  .gallery-item img{ width: 92vw; }
+}
+
+/* ---------- Kleine Hilfsklassen ---------- */
+.center{ text-align: center; }
+.hr-space{ margin: 28px 0; }
+.hidden{ display: none !important; }
