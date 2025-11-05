@@ -201,7 +201,30 @@ body{
   text-align: center;
   font-family: "Cinzel Decorative", "Uncial Antiqua", "IM Fell English SC", serif;
   font-weight: 700;
-  font-size: clamp(30px, 3.8vw, 44px);
+  font-size: clamp(30px, 3.8vw, 44px);/* === Zentrierung des Haupttextes unter dem Video === */
+.hero-text {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #fff;
+  font-size: 1.05rem;
+  padding: 0 1rem;
+}
+
+/* Optional: etwas Abstand zum Video und zum Button */
+.hero-text h2 {
+  text-align: center;
+  font-family: 'Cinzel Decorative', serif; /* mythische Schrift */
+  font-size: 1.8rem;
+  color: #d9b26d;
+  margin-bottom: 0.8rem;
+}
+
+.hero-text p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
   letter-spacing: 1px;
   color: #d9b26d;
   text-shadow:
