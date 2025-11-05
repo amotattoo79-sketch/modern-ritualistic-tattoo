@@ -1,99 +1,144 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Modern Ritualistic Tattoo</title>
-  <!-- Cache-Buster, damit die neue CSS sicher geladen wird -->
-  <link rel="stylesheet" href="style.css?v=11">
-</head>
-<body>
 
-  <header>
-   <img src="assets/img/banner_logo.PNG" alt="Modern Ritualistic Tattoo" class="site-banner">
-  <script>
-  // Jahr im Footer aktualisieren (falls Element vorhanden)
-  const y = document.getElementById('year');
-  if (y) y.textContent = new Date().getFullYear();
+  <link rel="stylesheet" href="style.css?v=burger2">
 
-  // Burger-Menü
-  const burgerBtn = document.getElementById('burgerBtn');
-  const siteNav   = document.getElementById('siteNav');
-  const body      = document.body;
-
-  function toggleNav(open) {
-    const willOpen = (open !== undefined) ? open : !body.classList.contains('nav-open');
-    body.classList.toggle('nav-open', willOpen);
-    if (burgerBtn) burgerBtn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
-  }
-
-  if (burgerBtn) {
-    burgerBtn.addEventListener('click', () => toggleNav());
-  }
-
-  // Schließen bei Klick außerhalb der Navigation
-  document.addEventListener('click', (e) => {
-    if (!body.classList.contains('nav-open')) return;
-    if (!siteNav.contains(e.target) && !burgerBtn.contains(e.target)) {
-      toggleNav(false);
+  <style>
+    @media (max-width: 900px){
+      .site-header .burger{display:block!important;}
+      .site-header{position:relative; z-index:20;}
+      .site-nav{
+        position:fixed; left:0; right:0; top:72px;
+        background:rgba(0,0,0,.92);
+        padding:14px 16px;
+        transform:translateY(-120%); opacity:0;
+        transition:transform .28s ease, opacity .28s ease;
+        border-bottom:1px solid rgba(255,255,255,.08);
+        box-shadow:0 10px 24px rgba(0,0,0,.45);
+        z-index:25;
+      }
+      body.nav-open .site-nav{transform:translateY(0); opacity:1;}
+      .site-nav a{display:block; padding:10px 6px; margin:0; border-bottom:1px solid rgba(255,255,255,.06);}
+      .site-nav a:last-child{border-bottom:0;}
     }
-  });
 
-  // Einfache Touch-Gesten (öffnen vom linken Rand, schließen per Wisch nach links)
-  let sx = null, sy = null;
-  window.addEventListener('touchstart', (e) => {
-    const t = e.touches[0];
-    sx = t.clientX; sy = t.clientY;
-  }, {passive:true});
+    .hero-video{
+      position:relative;
+      width:min(1000px, 92vw);
+      aspect-ratio:16/9;
+      margin: 0 auto 18px;
+      border-radius:14px;
+      overflow:hidden;
+      box-shadow:0 14px 32px rgba(0,0,0,.55);
+      backdrop-filter: blur(0.5px);
+    }
+    .hero-video video{
+      position:absolute; inset:0;
+      width:100%; height:100%;
+      object-fit:cover;
+    }
 
-  window.addEventListener('touchmove', (e) => {
-    if (sx === null) return;
-    const t = e.touches[0];
-    const dx = t.clientX - sx;
-    const dy = Math.abs(t.clientY - sy);
-    if (dy > 40) return;                // vertikale Bewegungen ignorieren
-    if (sx < 24 && dx > 40) toggleNav(true);  // vom linken Rand wischen => öffnen
-    if (dx < -60) toggleNav(false);          // nach links wischen => schließen
-  }, {passive:true});
-</script>
+    .termin-button{ 
+      display:block; 
+      margin:18px auto 0; 
+      transform:scale(0.85); 
+      transform-origin:center; 
+    }
+  </style>
+</head>
+
+<body class="page-bg">
+  <!-- HEADER -->
+  <header class="site-header">
+    <img src="assets/img/banner_logo.PNG" alt="Modern Ritualistic Tattoo" class="site-logo">
+
+    <button class="burger" id="burgerBtn" aria-label="Menü öffnen" aria-expanded="false" style="position:absolute; right:12px; top:12px; width:44px; height:44px; padding:0; border:0; background:transparent; display:none;">
+      <img src="assets/img/icons/Menubutton1.PNG" alt="Menü" style="width:100%; height:100%; object-fit:contain;">
+    </button>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html" aria-current="page">Home</a> |
+      <a href="philosophie.html">Philosophie</a> |
+      <a href="angebote.html">Angebote & Preise</a> |
+      <a href="gallery.html">Galerie</a> |
+      <a href="contact.html">Kontakt</a> |
+      <a href="booking.html">Termin</a> |
+      <a href="impressum.html">Impressum</a> |
+      <a href="datenschutz.html">Datenschutz</a>
+    </nav>
   </header>
 
-    <!--  Hero Video (ritual_intro.MP4) -->
-  <div class="hero-video-wrapper">
-    <video autoplay muted loop playsinline>
-      <source src="assets/video/ritual_intro.MP4" type="video/mp4">
-      Dein Browser unterstützt kein HTML5-Video.
-    </video>
-  </div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+
+      <!-- VIDEO ersetzt Text "Ink Beyond Skin" -->
+      <div class="hero-video">
+        <video
+          src="assets/video/ritual_intro.MP4"
+          autoplay
+          muted
+          playsinline
+          loop
+          preload="metadata">
+        </video>
+      </div>
+
+    </div>
   </section>
 
+  <!-- CONTENT -->
   <main class="content narrow">
     <h3>Modern Ritualistic Tattoo</h3>
-    <p>
-      In einer Welt, die immer schneller, lauter und oberflächlicher wird, schaffen wir Raum für Tiefe.
-      Bei Modern Ritualistic Tattooing geht es nicht nur um Tätowierungen – sondern um Spiritualität, Intention, Bewusstsein und Transformation.
-    </p>
-    <p>
-      Jede Linie, jeder Schatten, jedes Symbol entsteht mit Bedeutung.
-      Unsere Arbeit verbindet Kunst, Ritual und Präzision zu einem bewussten Prozess, der weit über die Haut hinausgeht.
-      Ein Tattoo ist hier kein Konsumgut, sondern ein Moment, ein Übergang, ein sichtbares Stück innerer Entwicklung.
-    </p>
-    <p>
-      Wir glauben, dass Tätowierungen Schutz, Erinnerung und Erneuerung tragen können.
-      Darum gestalten wir jede Session individuell – achtsam, respektvoll und mit Fokus auf deine Energie.
-    </p>
+    <p>In einer Welt, die immer schneller, lauter und oberflächlicher wird, schaffen wir Raum für Tiefe. Bei Modern Ritualistic Tattooing geht es nicht nur um Tätowierungen – sondern um Spiritualität, Intention, Bewusstsein und Transformation.</p>
+
+    <!-- Termin-Button jetzt unter dem Text -->
+    <a class="btn" href="booking.html" style="background:none; padding:0; border:0;">
+      <img src="assets/img/buttons/Terminbutton1.PNG" alt="Termin vereinbaren" class="termin-button">
+    </a>
   </main>
-<a href="booking.html">
-    <img src="assets/img/buttons/Terminbutton1.PNG" alt="Termin vereinbaren" class="cta-image">
-  </a>
-</p>
-    </div>
+
+  <!-- FOOTER -->
   <footer>
     <p>© <span id="year"></span> Modern Ritualistic Tattoo</p>
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    (function(){var y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();})();
+
+    const burgerBtn = document.getElementById('burgerBtn');
+    const siteNav   = document.getElementById('siteNav');
+    const body      = document.body;
+
+    function toggleNav(open){
+      const willOpen = (open!==undefined) ? open : !body.classList.contains('nav-open');
+      body.classList.toggle('nav-open', willOpen);
+      if (burgerBtn) burgerBtn.setAttribute('aria-expanded', willOpen ? 'true':'false');
+    }
+
+    if (burgerBtn){
+      burgerBtn.addEventListener('click', ()=>toggleNav());
+    }
+
+    document.addEventListener('click', (e)=>{
+      if (!body.classList.contains('nav-open')) return;
+      if (!siteNav.contains(e.target) && !burgerBtn.contains(e.target)) toggleNav(false);
+    });
+
+    let sx=null, sy=null;
+    window.addEventListener('touchstart', (e)=>{const t=e.touches[0]; sx=t.clientX; sy=t.clientY;},{passive:true});
+    window.addEventListener('touchmove', (e)=>{
+      if (sx===null) return;
+      const t=e.touches[0], dx=t.clientX-sx, dy=Math.abs(t.clientY-sy);
+      if (dy>40) return;
+      if (sx<24 && dx>40) toggleNav(true);
+      if (dx<-60) toggleNav(false);
+    },{passive:true});
   </script>
 </body>
 </html>
