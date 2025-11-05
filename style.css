@@ -108,18 +108,22 @@ nav a.active{
 /* ---------- Call-to-Action (PNG-Button) ---------- */
 /* <a class="cta" href="..."><img class="termin-button" src="assets/img/Terminbutton1.PNG" alt="Termin vereinbaren"></a> */
 
-.termin-button{
+/* === TERMIN-BUTTON — volle Größe & perfekt zentriert === */
+.termin-button {
   display: block;
-  margin: 12px auto 0;
-  width: clamp(180px, 42vw, 280px);
+  margin: 35px auto 45px auto;
+  width: 300px;                /* wieder ursprüngliche Größe */
   height: auto;
-  transition: transform .22s ease, filter .22s ease;
+  max-width: 85%;
+  transition: transform 0.25s ease-in-out, filter 0.25s ease-in-out;
   cursor: pointer;
-  filter: drop-shadow(0 6px 18px rgba(0,0,0,.5));
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.6));
 }
-.termin-button:hover{
-  transform: translateY(-2px);
-  filter: brightness(1.1) drop-shadow(0 10px 24px rgba(0,0,0,.55));
+
+.termin-button:hover {
+  transform: scale(1.05);
+  filter: brightness(1.15) drop-shadow(0 8px 12px rgba(0,0,0,0.7));
+}55));
 }
 
 /* ---------- Hauptinhalte / Panels ---------- */
