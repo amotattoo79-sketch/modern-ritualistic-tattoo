@@ -7,11 +7,14 @@
   <title>Modern Ritualistic Tattoo</title>
 
   <link rel="stylesheet" href="style.css?v=burger2">
+  <!-- Mystischer Font nur fürs Menü (optional auch global nutzbar) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
     @media (max-width: 900px){
       .site-header .burger{display:block!important;}
       .site-header{position:relative; z-index:20;}
+
       .site-nav{
         position:fixed; left:0; right:0; top:72px;
         background:rgba(0,0,0,.92);
@@ -21,10 +24,37 @@
         border-bottom:1px solid rgba(255,255,255,.08);
         box-shadow:0 10px 24px rgba(0,0,0,.45);
         z-index:25;
+
+        /* Pipes „|“ im mobilen Overlay unsichtbar machen */
+        font-size:0;
+        -webkit-tap-highlight-color: transparent;
       }
+
       body.nav-open .site-nav{transform:translateY(0); opacity:1;}
-      .site-nav a{display:block; padding:10px 6px; margin:0; border-bottom:1px solid rgba(255,255,255,.06);}
+
+      /* Menülinks im Overlay – gold & mystisch */
+      .site-nav a,
+      .site-nav a:link,
+      .site-nav a:visited{
+        display:block;
+        font-size:18px;              /* hebt font-size:0 der .site-nav wieder auf */
+        line-height:1.35;
+        padding:12px 6px;
+        margin:0;
+        border-bottom:1px solid rgba(255,255,255,.06);
+        color:#d9b26d !important;    /* Gold */
+        text-decoration:none;
+        font-weight:600;
+        letter-spacing:.2px;
+        font-family:"Cinzel Decorative", serif;
+      }
       .site-nav a:last-child{border-bottom:0;}
+
+      .site-nav a:hover,
+      .site-nav a:focus{
+        color:#ffda8a !important;    /* helleres Gold beim Hover/Focus */
+        outline:none;
+      }
     }
 
     .hero-video{
@@ -146,4 +176,4 @@
     },{passive:true});
   </script>
 </body>
-</html>
+</html>p
