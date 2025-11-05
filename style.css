@@ -311,3 +311,134 @@ body{
 main, section {
   margin-top: 1rem;
 }
+/* === HERO VIDEO (autoplay, kein Player, zentriert, groß) === */
+.hero {
+  background: transparent;
+  padding: 0.5rem 0 0;   /* wenig Luft oberhalb des Videos */
+}
+
+.hero-video-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0 0;    /* kleiner Abstand nach oben */
+}
+
+.hero-video{
+  display: block;
+  width: min(92vw, 1120px);   /* groß & responsiv */
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 10px 40px rgba(0,0,0,.65);
+  background-color: transparent;
+  outline: none;
+}
+
+/* Safari/iOS: sichtbare Controls & Overlay-Play-Button ausblenden */
+.hero-video::-webkit-media-controls,
+.hero-video::-webkit-media-controls-enclosure,
+.hero-video::-webkit-media-controls-panel {
+  display: none !important;
+  -webkit-appearance: none;
+}
+.hero-video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+
+/* ---- Mystische Typo & Zentrierung für den Info-Block ---- */
+.mystic-heading{
+  font-family: "Uncial Antiqua", system-ui, serif;
+  font-weight: 400;
+  letter-spacing: .5px;
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  color: #d9b26d;
+  text-align: center;
+  margin: 1.1rem 0 .35rem 0;
+  text-shadow: 0 2px 6px rgba(0,0,0,.55);
+}
+
+.mystic-text{
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.05rem, 2.8vw, 1.25rem);
+  line-height: 1.6;
+  color: #f3f3f3;
+  text-shadow: 0 2px 6px rgba(0,0,0,.45);
+}
+.center{ text-align: center; }
+
+/* Content-Container transparenter & ohne dicken Block-Hintergrund */
+.content.narrow{
+  background: rgba(0,0,0,.25);  /* sehr leicht – wirkt nicht wie „Block“ */
+  max-width: 900px;
+  margin: 0 auto 2rem auto;
+  padding: 1rem .9rem 1.2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(2px);
+}
+
+/* Termin-Button groß und zentriert */
+.termin-button{
+  display: block;
+  width: min(640px, 92vw);     /* groß – wie von dir gewünscht */
+  height: auto;
+  margin: 1.2rem auto 0 auto;
+  transform: translateZ(0);
+  transition: transform .2s ease, filter .2s ease;
+}
+.termin-button:hover{
+  transform: scale(1.03);
+  filter: brightness(1.08);
+}
+
+/* Burger sichtbar & oben rechts positioniert */
+.menu-toggle{
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+  cursor: pointer;
+  z-index: 25;
+}
+.menu-icon{
+  width: 40px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,.6));
+}
+
+/* Overlay-Menü (bestehendes beibehalten, nur robust machen) */
+.menu-overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.80);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .75rem;
+  z-index: 20;
+  backdrop-filter: blur(2px);
+}
+.menu-overlay.open{ display: flex; }
+.menu-overlay a{
+  color: #d9b26d;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+.menu-overlay hr{
+  border: 0;
+  height: 1px;
+  width: min(90vw, 680px);
+  background: linear-gradient(90deg, transparent, #d9b26d44, transparent);
+}
+
+/* Mobile Feinschliff */
+@media (max-width: 760px){
+  .hero-video{ width: 94vw; }
+  .menu-icon{ width: 36px; }
+}
