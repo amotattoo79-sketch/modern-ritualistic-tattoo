@@ -2,143 +2,109 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Modern Ritualistic Tattoo – Home</title>
 
-  <title>Modern Ritualistic Tattoo</title>
+  <!-- Fonts: Grundschrift + mystische Headline -->
+  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=burger2">
-
-  <style>
-    @media (max-width: 900px){
-      .site-header .burger{display:block!important;}
-      .site-header{position:relative; z-index:20;}
-      .site-nav{
-        position:fixed; left:0; right:0; top:72px;
-        background:rgba(0,0,0,.92);
-        padding:14px 16px;
-        transform:translateY(-120%); opacity:0;
-        transition:transform .28s ease, opacity .28s ease;
-        border-bottom:1px solid rgba(255,255,255,.08);
-        box-shadow:0 10px 24px rgba(0,0,0,.45);
-        z-index:25;
-      }
-      body.nav-open .site-nav{transform:translateY(0); opacity:1;}
-      .site-nav a{display:block; padding:10px 6px; margin:0; border-bottom:1px solid rgba(255,255,255,.06);}
-      .site-nav a:last-child{border-bottom:0;}
-    }
-
-    .hero-video{
-      position:relative;
-      width:min(1000px, 92vw);
-      aspect-ratio:16/9;
-      margin: 0 auto 18px;
-      border-radius:14px;
-      overflow:hidden;
-      box-shadow:0 14px 32px rgba(0,0,0,.55);
-      backdrop-filter: blur(0.5px);
-    }
-    .hero-video video{
-      position:absolute; inset:0;
-      width:100%; height:100%;
-      object-fit:cover;
-    }
-
-    .termin-button{ 
-      display:block; 
-      margin:18px auto 0; 
-      transform:scale(0.85); 
-      transform-origin:center; 
-    }
-  </style>
+  <!-- CSS mit Cachebust -->
+  <link rel="stylesheet" href="style.css?v=home-vid-06">
 </head>
+<body class="page-index">
 
-<body class="page-bg">
-  <!-- HEADER -->
   <header class="site-header">
+    <!-- Banner-Logo -->
     <img src="assets/img/banner_logo.PNG" alt="Modern Ritualistic Tattoo" class="site-logo">
 
-    <button class="burger" id="burgerBtn" aria-label="Menü öffnen" aria-expanded="false" style="position:absolute; right:12px; top:12px; width:44px; height:44px; padding:0; border:0; background:transparent; display:none;">
-      <img src="assets/icons/Menubutton1.PNG" alt="Menü" style="width:100%; height:100%; object-fit:contain;">
-    </button>
-
-    <nav class="site-nav" id="siteNav">
-      <a href="index.html" aria-current="page">Home</a> |
-      <a href="philosophie.html">Philosophie</a> |
-      <a href="angebote.html">Angebote & Preise</a> |
-      <a href="gallery.html">Galerie</a> |
-      <a href="contact.html">Kontakt</a> |
-      <a href="booking.html">Termin</a> |
-      <a href="impressum.html">Impressum</a> |
-      <a href="datenschutz.html">Datenschutz</a>
+    <!-- Desktop-Navi (ohne |) -->
+    <nav class="site-nav" aria-label="Hauptnavigation">
+      <ul class="menu">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="philosophie.html">Philosophie</a></li>
+        <li><a href="angebote.html">Angebote & Preise</a></li>
+        <li><a href="gallery.html">Galerie</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+        <li><a href="booking.html">Termin</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+      </ul>
+      <!-- Burger -->
+      <button class="menu-toggle" aria-controls="mobileMenu" aria-expanded="false">
+        <img src="assets/icons/Menubutton1.PNG" alt="Menü öffnen" width="36" height="36">
+      </button>
     </nav>
+
+    <!-- Mobile-Overlay-Menü -->
+    <div id="mobileMenu" class="mobile-menu" hidden>
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="philosophie.html">Philosophie</a></li>
+        <li><a href="angebote.html">Angebote & Preise</a></li>
+        <li><a href="gallery.html">Galerie</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+        <li><a href="booking.html">Termin</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+      </ul>
+      <button class="menu-close" aria-label="Menü schließen">×</button>
+    </div>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO mit Video (ersetzt den vorherigen Textblock) -->
   <section class="hero">
     <div class="hero-inner">
-
-      <!-- VIDEO ersetzt Text "Ink Beyond Skin" -->
       <div class="hero-video">
         <video
+          class="video"
           src="assets/video/ritual_intro.MP4"
-          autoplay
-          muted
           playsinline
+          muted
           loop
-          preload="metadata">
-        </video>
+          controls
+          poster=""
+        ></video>
       </div>
-
     </div>
   </section>
 
-  <!-- CONTENT -->
+  <!-- Content-Block -->
   <main class="content narrow">
-    <h3>Modern Ritualistic Tattoo</h3>
-    <p>In einer Welt, die immer schneller, lauter und oberflächlicher wird, schaffen wir Raum für Tiefe. Bei Modern Ritualistic Tattooing geht es nicht nur um Tätowierungen – sondern um Spiritualität, Intention, Bewusstsein und Transformation.</p>
+    <h3 class="cta-caption">Modern Ritualistic Tattoo</h3>
+    <p>
+      In einer Welt, die immer schneller, lauter und oberflächlicher wird, schaffen wir Raum für Tiefe.
+      Bei Modern Ritualistic Tattooing geht es nicht nur um Tätowierungen – sondern um Spiritualität,
+      Intention, Bewusstsein und Transformation.
+    </p>
 
-    <!-- Termin-Button jetzt unter dem Text -->
-    <a class="btn" href="booking.html" style="background:none; padding:0; border:0;">
-      <img src="assets/img/buttons/Terminbutton1.PNG" alt="Termin vereinbaren" class="termin-button">
-    </a>
+    <!-- Termin-Button (PNG) – 10% größer & zentriert -->
+    <p class="center">
+      <a href="booking.html" class="termin-link" aria-label="Termin vereinbaren">
+        <img src="assets/img/buttons/Terminbutton1.PNG" class="termin-button" alt="Termin vereinbaren">
+      </a>
+    </p>
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <p>© <span id="year"></span> Modern Ritualistic Tattoo</p>
   </footer>
 
   <script>
-    (function(){var y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();})();
+    // Jahr
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-    const burgerBtn = document.getElementById('burgerBtn');
-    const siteNav   = document.getElementById('siteNav');
-    const body      = document.body;
+    // Burger-Menü
+    const toggle = document.querySelector('.menu-toggle');
+    const overlay = document.getElementById('mobileMenu');
+    const closeBtn = document.querySelector('.menu-close');
 
-    function toggleNav(open){
-      const willOpen = (open!==undefined) ? open : !body.classList.contains('nav-open');
-      body.classList.toggle('nav-open', willOpen);
-      if (burgerBtn) burgerBtn.setAttribute('aria-expanded', willOpen ? 'true':'false');
-    }
+    function openMenu(){ overlay.hidden = false; document.body.classList.add('no-scroll'); toggle.setAttribute('aria-expanded','true'); }
+    function closeMenu(){ overlay.hidden = true; document.body.classList.remove('no-scroll'); toggle.setAttribute('aria-expanded','false'); }
 
-    if (burgerBtn){
-      burgerBtn.addEventListener('click', ()=>toggleNav());
-    }
-
-    document.addEventListener('click', (e)=>{
-      if (!body.classList.contains('nav-open')) return;
-      if (!siteNav.contains(e.target) && !burgerBtn.contains(e.target)) toggleNav(false);
-    });
-
-    let sx=null, sy=null;
-    window.addEventListener('touchstart', (e)=>{const t=e.touches[0]; sx=t.clientX; sy=t.clientY;},{passive:true});
-    window.addEventListener('touchmove', (e)=>{
-      if (sx===null) return;
-      const t=e.touches[0], dx=t.clientX-sx, dy=Math.abs(t.clientY-sy);
-      if (dy>40) return;
-      if (sx<24 && dx>40) toggleNav(true);
-      if (dx<-60) toggleNav(false);
-    },{passive:true});
+    toggle.addEventListener('click', () => overlay.hidden ? openMenu() : closeMenu());
+    closeBtn.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeMenu(); });
+    window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
   </script>
 </body>
 </html>
