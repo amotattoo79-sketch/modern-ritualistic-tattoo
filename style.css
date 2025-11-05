@@ -196,3 +196,18 @@ body{
 @media (min-width:1100px){
   .hero-media{ width:1100px; }
 }
+/* === Mystischer Titelstil für "Modern Ritualistic Tattoo" === */
+.section-title {
+  text-align: center;
+  font-family: "Cinzel Decorative", "Uncial Antiqua", "IM Fell English SC", serif;
+  font-weight: 700;
+  font-size: clamp(30px, 3.8vw, 44px);
+  letter-spacing: 1px;
+  color: #d9b26d;
+  text-shadow:
+    0 0 6px rgba(255, 180, 80, 0.3),
+    0 0 12px rgba(217, 178, 109, 0.5),
+    0 0 22px rgba(180, 120, 20, 0.35);
+  margin: 20px auto 12px;
+  line-height: 1.2;
+}
