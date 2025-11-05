@@ -229,3 +229,56 @@ section, .content, main{
     width: 95%;
   }
 }
+/* === Galerie: alternierendes, randbündiges Layout === */
+.gallery-alt{
+  display:block;
+  margin: 0;
+}
+.gallery-item{
+  max-width: 1100px;     /* große Collagen */
+  margin: 0 auto 2.25rem auto;
+}
+.gallery-item img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid rgba(255,255,255,.08);
+  background: rgba(255,255,255,.03);
+  box-shadow: 0 10px 30px rgba(0,0,0,.45);
+}
+
+/* Randbündig links/rechts mit Textfläche daneben */
+.gallery-item.left  { margin-left: 0; margin-right: auto; }
+.gallery-item.right { margin-left: auto; margin-right: 0; }
+
+/* Platz für spätere Textblöcke (visuell Luft) */
+.gallery-item.left  { padding-right: 8vw; }
+.gallery-item.right { padding-left:  8vw; }
+
+/* Kleine Screens: mittig, aber mit alternierendem 'Versatz' */
+@media (max-width: 780px){
+  .gallery-item{ padding: 0 1rem; }
+  .gallery-item.left,
+  .gallery-item.right{ margin: 0 auto 1.75rem auto; }
+}
+
+/* Logo-Größe & Hintergrund: identisch mit Home */
+.site-logo{
+  display:block;
+  max-width: 520px;    /* wie Home */
+  width: min(80vw, 520px);
+  height: auto;
+  margin: .25rem auto 0;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  background:
+    radial-gradient(1200px 600px at 50% -10%, rgba(212,175,55,.08), transparent 60%),
+    url("assets/img/background_main.png") center top / cover no-repeat fixed,
+    #0c0c0c;
+  transform:none;      /* keine Vergrößerung auf Unterseiten */
+  opacity:.9;
+}
