@@ -368,3 +368,11 @@ img, video, canvas, svg{
     transform: skewX(-6deg);
   }
 }
+/* Rezensionen / Zitate – leicht andere Schrift */
+.text-block.italic{
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  opacity: 0.95;
+}
