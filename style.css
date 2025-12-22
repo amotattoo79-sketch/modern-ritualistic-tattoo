@@ -356,3 +356,15 @@ img, video, canvas, svg{
   max-width: 100%;
   height: auto;
 }
+/* Zitate / Rezensionen – sichtbar kursiv */
+.text-block.italic{
+  font-style: italic;
+  opacity: 0.9;                 /* verstärkt Wahrnehmung */
+}
+
+/* Falls die Schrift keine echte Italic hat */
+@supports not (font-synthesis: none){
+  .text-block.italic{
+    transform: skewX(-6deg);
+  }
+}
