@@ -265,3 +265,58 @@ main::before, .page-content::before {
   border-radius: 12px;
   z-index: -1;
 }
+/* Layout-Grundlage */
+.intro {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+.intro-title {
+  text-align: left; /* falls vorher zentriert */
+}
+
+/* Textblöcke */
+.text-block {
+  width: min(720px, 92vw);
+  margin: 32px 0;
+  text-align: left;          /* NICHT zentriert */
+  line-height: 1.6;
+}
+
+/* links / rechts alternierend */
+.text-block.left {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.text-block.right {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* Scroll-Reveal (Startzustand) */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 600ms ease, transform 600ms ease;
+  will-change: opacity, transform;
+}
+
+/* Optional: kleine Richtungstendenz */
+.reveal.left { transform: translate(-14px, 18px); }
+.reveal.right { transform: translate(14px, 18px); }
+
+/* Sichtbar */
+.reveal.is-visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Barrierefreiheit */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
