@@ -304,13 +304,15 @@ html, body {
 }
 
 /* =========================
-   SCROLL REVEAL: langsam & soft
+   SCROLL REVEAL: sehr langsam, ruhig, kontrolliert
    (JS fügt .is-visible hinzu)
    ========================= */
 .reveal{
   opacity: 0;
-  transform: translateY(34px);
-  transition: opacity 1.6s ease, transform 1.6s ease;
+  transform: translateY(46px);
+  transition:
+    opacity 2.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 2.8s cubic-bezier(0.22, 1, 0.36, 1);
   will-change: opacity, transform;
 }
 
@@ -319,7 +321,16 @@ html, body {
   transform: translateY(0);
 }
 
-/* Mobile: wenn du willst, Blöcke etwas näher zusammen */
+/* Optional: minimale Staffelung links/rechts */
+.intro .text-block:nth-of-type(odd){
+  transition-delay: 0.15s;
+}
+
+.intro .text-block:nth-of-type(even){
+  transition-delay: 0.35s;
+}
+
+/* Mobile: etwas weniger Abstand */
 @media (max-width: 600px){
   .text-block{
     margin: 42px 0;
