@@ -411,7 +411,7 @@ img, video, canvas, svg{
 }
 /* Fokus-Text – deutlich größer */
 .focus-text{
-  font-size: 1.6em;   /* ≈ 3–4 Nummern größer */
+  font-size: 1.3em;   /* ≈ 3–4 Nummern größer */
   font-weight: 600;
   display: block;
   margin: 40px 0;
