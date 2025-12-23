@@ -29,14 +29,7 @@
       position:absolute; inset:0;
       width:100%; height:100%;
       object-fit:cover;
-    }
-
-    .termin-button{ 
-      display:block; 
-      margin:18px auto 0; 
-      transform:scale(0.85); 
-      transform-origin:center; 
-    }
+    
   </style>
 </head>
 
@@ -105,14 +98,61 @@ als <strong>Zeichen</strong>, das nicht nur dekoriert, sondern auch wirkt, <stro
     <br> <span class="focus-text"><strong>Beginne deine Ritualistic Journey Heute! </strong><br> </span>
 
     <div class="cta-wrapper">
-  <a class="btn" href="booking.html">
-    <img
-      src="assets/img/buttons/Terminbutton1.PNG"
-      alt="Termin buchen"
+  <a href="#fragebogen" class="btn btn-primary">
+  Jetzt teilnehmen & 50 € Gutschein sichern
+</a>
       loading="lazy"
     >
   </a>
 </div>
+    <section id="fragebogen" class="text-block reveal">
+  <h2>Dein Ritual beginnt hier</h2>
+
+  <p>
+    Beantworte ein paar kurze Fragen.  
+    Als Dank erhältst du einen <strong>50 € Gutschein</strong>  
+    und nimmst automatisch an der Verlosung  
+    einer <strong>kostenlosen Full Ritual Session</strong> teil.
+  </p>
+
+  <form action="https://formsubmit.co/DEINE_EMAIL@DOMAIN.DE" method="POST">
+    
+    <!-- Schutz -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="Neue Ritual-Anfrage (Landingpage)">
+    <input type="hidden" name="_template" value="table">
+
+    <!-- Fragen -->
+    <label>Name</label>
+    <input type="text" name="Name" required>
+
+    <label>E-Mail</label>
+    <input type="email" name="Email" required>
+
+    <label>Was soll dieses Ritual in deinem Leben verankern?</label>
+    <textarea name="Intention" rows="4" required></textarea>
+
+    <label>Hattest du bereits ritualistische Erfahrungen?</label>
+    <select name="Erfahrung">
+      <option>Nein</option>
+      <option>Ja – spirituell</option>
+      <option>Ja – therapeutisch</option>
+      <option>Ja – beides</option>
+    </select>
+
+    <label>Warum möchtest du teilnehmen?</label>
+    <textarea name="Motivation" rows="4"></textarea>
+
+    <button type="submit" class="btn btn-primary">
+      Teilnahme abschicken
+    </button>
+  </form>
+</section>
+    <p class="small">
+  Mit dem Absenden erklärst du dich einverstanden,  
+  dass deine Angaben zur Bearbeitung deiner Anfrage  
+  und zur Durchführung des Gewinnspiels verwendet werden.
+</p>
      <main class="intro">
 <h2 class="intro-text">
   ACHTUNG!<br>
