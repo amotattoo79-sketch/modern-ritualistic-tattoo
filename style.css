@@ -397,3 +397,15 @@ img, video, canvas, svg{
   letter-spacing: 0.02em;
   line-height: 1.7;
 }
+/* ==== FLIESSTEXT: garantiert NICHT in Caps ==== */
+.intro .text-block,
+.intro .text-block *{
+  text-transform: none !important;
+
+  /* Small-caps / OpenType Caps sicher deaktivieren */
+  font-variant: normal !important;
+  font-variant-caps: normal !important;
+  font-feature-settings: normal !important;
+
+  color: #E6E0D6;
+}
