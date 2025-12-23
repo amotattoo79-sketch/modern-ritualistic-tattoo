@@ -389,3 +389,11 @@ img, video, canvas, svg{
   line-height: 1.65;
   font-size: clamp(16px, 3.8vw, 19px);
 }
+/* === FLIESSTEXT: NORMAL SCHREIBWEISE === */
+.text-block {
+  text-transform: none !important;
+  color: #E6E0D6;
+  font-variant: normal;
+  letter-spacing: 0.02em;
+  line-height: 1.7;
+}
