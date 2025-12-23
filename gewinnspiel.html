@@ -4,6 +4,136 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <title>Modern Ritualistic Tattoo</title>
+
+  <link rel="stylesheet" href="style.css?v=burger2">
+  <!-- Mystischer Font nur fürs Menü (optional auch global nutzbar) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    @media (max-width: 900px){
+      .site-header .burger{display:block!important;}
+      .site-header{position:relative; z-index:20;}
+
+      .site-nav{
+        position:fixed; left:0; right:0; top:72px;
+        background:rgba(0,0,0,.92);
+        padding:14px 16px;
+        transform:translateY(-120%); opacity:0;
+        transition:transform .28s ease, opacity .28s ease;
+        border-bottom:1px solid rgba(255,255,255,.08);
+        box-shadow:0 10px 24px rgba(0,0,0,.45);
+        z-index:25;
+
+        /* Pipes „|“ im mobilen Overlay unsichtbar machen */
+        font-size:0;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      body.nav-open .site-nav{transform:translateY(0); opacity:1;}
+
+      /* Menülinks im Overlay – gold & mystisch */
+      .site-nav a,
+      .site-nav a:link,
+      .site-nav a:visited{
+        display:block;
+        font-size:18px;              /* hebt font-size:0 der .site-nav wieder auf */
+        line-height:1.35;
+        padding:12px 6px;
+        margin:0;
+        border-bottom:1px solid rgba(255,255,255,.06);
+        color:#d9b26d !important;    /* Gold */
+        text-decoration:none;
+        font-weight:600;
+        letter-spacing:.2px;
+        font-family:"Cinzel Decorative", serif;
+      }
+      .site-nav a:last-child{border-bottom:0;}
+
+      .site-nav a:hover,
+      .site-nav a:focus{
+        color:#ffda8a !important;    /* helleres Gold beim Hover/Focus */
+        outline:none;
+      }
+    }
+
+    .hero-video{
+      position:relative;
+      width:min(1000px, 92vw);
+      aspect-ratio:16/9;
+      margin: 0 auto 18px;
+      border-radius:14px;
+      overflow:hidden;
+      box-shadow:0 14px 32px rgba(0,0,0,.55);
+      backdrop-filter: blur(0.5px);
+    }
+    .hero-video video{
+      position:absolute; inset:0;
+      width:100%; height:100%;
+      object-fit:cover;
+    }
+
+    .termin-button{ 
+      display:block; 
+      margin:18px auto 0; 
+      transform:scale(0.85); 
+      transform-origin:center; 
+    }
+  </style>
+</head>
+
+<body class="page-bg">
+  <!-- HEADER -->
+  <header class="site-header">
+    <img src="assets/img/banner_logo.PNG" alt="Modern Ritualistic Tattoo" class="site-logo">
+
+
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+
+      <!-- VIDEO ersetzt Text "Ink Beyond Skin" -->
+      <div class="hero-video">
+        <video
+          src="assets/video/ritual_intro.MP4"
+          autoplay
+          muted
+          playsinline
+          loop
+          preload="metadata">
+        </video>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+   <!-- TEXTBLOCK -->
+  <main class="intro">
+<h2 class="intro-text">
+  Ein Zeichen.<br>
+ <br> Ein Ritual.<br> 
+    <br> Eine Verankerung.<br>
+  </h2>
+<br>
+  <section class="text-block reveal">
+<span class="focus-text">  <strong>Du Spürst, dass Symbole Macht tragen</strong> </span>
+    </section>
+    <section class="text-block reveal">
+    und dass wahre <strong>Transformation</strong> bewusst beginnt?
+  </section>
+    <br>
+<section class="text-block reveal">
+  <span class="focus-text"> <strong> Dann bist du hier richtig!</strong> </span>
+ </section>
+    <br> <!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Dein Ritual – Modern Ritualistic Tattoo</title>
 
   <link rel="stylesheet" href="style.css?v=landing1">
