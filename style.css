@@ -376,3 +376,16 @@ img, video, canvas, svg{
   letter-spacing: 0.02em;
   opacity: 0.95;
 }
+/* =========================
+   FLIESSTEXT – Inhaltstexte
+   ========================= */
+
+.text-block,
+.text-block p{
+  color: #E6E0D6;
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: 400;
+  line-height: 1.65;
+  font-size: clamp(16px, 3.8vw, 19px);
+}
