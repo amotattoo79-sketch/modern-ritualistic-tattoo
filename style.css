@@ -474,3 +474,34 @@ img, video, canvas, svg{
   transform: scale(1.04);
   filter: drop-shadow(0 0 40px rgba(255,210,120,0.9));
 }
+/* =========================
+   REVEAL ANIMATION – FIX
+   ========================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.9s ease-out,
+    transform 0.9s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: links / rechts */
+.reveal.left {
+  transform: translateX(-40px);
+}
+
+.reveal.right {
+  transform: translateX(40px);
+}
+
+.reveal.left.active,
+.reveal.right.active {
+  transform: translateX(0);
+
