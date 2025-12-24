@@ -75,14 +75,14 @@
 <body class="page-bg">
 
 <!-- HEADER -->
-<header class="site-header">
-  <a href="index.html" class="logo-link" aria-label="Zur Startseite">
-    <img src="assets/img/banner_logo.PNG" alt="Modern Ritualistic Tattoo" class="site-logo">
-  </a>
+<script>
+  const burger = document.getElementById('burgerBtn');
+  const nav = document.getElementById('siteNav');
 
-  <button class="burger" id="burgerBtn" aria-label="Menü öffnen" aria-expanded="false">
-    <img src="assets/icons/Menubutton1.PNG" alt="Menü">
-  </button>
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('open');
+  });
+</script>
 
   <nav class="site-nav" id="siteNav">
     <a href="index.html">Home</a> |
