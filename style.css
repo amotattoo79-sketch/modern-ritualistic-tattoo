@@ -505,3 +505,80 @@ img, video, canvas, svg{
 .reveal.right.active {
   transform: translateX(0);
 
+/* =========================
+   REVEAL (Scroll-In Effekt)
+   ========================= */
+.reveal{
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .55s ease, transform .55s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible{
+  opacity: 1;
+  transform: none;
+}
+
+/* Optional: links/rechts Varianten */
+.reveal.from-left{ transform: translateX(-22px); }
+.reveal.from-right{ transform: translateX(22px); }
+.reveal.from-left.is-visible,
+.reveal.from-right.is-visible{ transform:none; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ transition:none; transform:none; opacity:1; }
+}
+
+/* =========================
+   BURGER NAV (Mobile Overlay)
+   ========================= */
+.burger{
+  display:none;
+  background:transparent;
+  border:0;
+  padding:0;
+  cursor:pointer;
+}
+
+@media (max-width: 900px){
+  .burger{ display:block; }
+
+  .site-nav{
+    position:fixed;
+    left:0; right:0;
+    top:72px;
+    background:rgba(0,0,0,.92);
+    padding:14px 16px;
+    transform:translateY(-120%);
+    opacity:0;
+    transition:transform .28s ease, opacity .28s ease;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    box-shadow:0 10px 24px rgba(0,0,0,.45);
+    z-index:25;
+
+    /* Pipes “|” unsichtbar (weil du sie im HTML hast) */
+    font-size:0;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body.nav-open .site-nav{
+    transform:translateY(0);
+    opacity:1;
+  }
+
+  .site-nav a,
+  .site-nav a:link,
+  .site-nav a:visited{
+    display:block;
+    font-size:18px; /* hebt font-size:0 wieder auf */
+    line-height:1.35;
+    padding:12px 6px;
+    border-bottom:1px solid rgba(255,255,255,.06);
+    color:#d9b26d !important;
+    text-decoration:none;
+    font-weight:600;
+    letter-spacing:.2px;
+  }
+  .site-nav a:last-child{ border-bottom:0; }
+}
