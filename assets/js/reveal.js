@@ -19,3 +19,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   items.forEach((el) => observer.observe(el));
 });
+document.querySelectorAll('.reveal').forEach(el => el.classList.add('active'));
