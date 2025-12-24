@@ -1,19 +1,25 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const items = document.querySelectorAll(".reveal");
+(() => {
+  const els = Array.from(document.querySelectorAll('.reveal'));
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target); // nur 1x animieren
-        }
-      });
-    },
-    {
-      root: null,
-      threshold: 0.15,
-      rootMargin: "0px 0px -10% 0px",
-    }
-  );
+  // Falls nix da ist: raus
+  if (!els.length) return;
 
+  const show = (el) => el.classList.add('is-visible');
+
+  // Fallback: alte Browser -> alles sichtbar
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(show);
+    return;
+  }
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        show(entry.target);
+        io.unobserve(entry.target); // nur einmal "rein"
+      }
+    });
+  }, { threshold: 0.12 });
+
+  els.forEach((el) => io.observe(el));
+})();
