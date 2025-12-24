@@ -416,3 +416,28 @@ img, video, canvas, svg{
   display: block;
   margin: 40px 0;
 }
+.img-submit{
+  background:none;
+  border:none;
+  padding:0;
+  margin:30px auto 0;
+  display:block;
+  cursor:pointer;
+}
+
+.img-submit img{
+  max-width:260px;        /* Größe anpassbar */
+  width:100%;
+  height:auto;
+  display:block;
+  transition:transform .2s ease, filter .2s ease;
+}
+
+.img-submit:hover img{
+  transform:scale(1.04);
+  filter:brightness(1.08);
+}
+
+.img-submit:active img{
+  transform:scale(0.98);
+}
