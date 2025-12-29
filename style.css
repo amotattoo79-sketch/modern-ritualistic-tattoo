@@ -589,7 +589,7 @@ img, video, canvas, svg{
 .ritual-image,
 .reveal-image {
   width: 60%;              /* 3/5 Größe */
-  max-width: 520px;        /* harte Obergrenze */
+  max-width: 270;        /* harte Obergrenze */
   height: auto;
   display: block;
   margin: 48px auto;       /* zentriert */
@@ -607,10 +607,10 @@ img, video, canvas, svg{
 }
 
 /* Mobile Anpassung */
-@media (max-width: 900px) {
+@media (max-width: 270px) {
   .ritual-image,
   .reveal-image {
-    width: 90%;
+    width: 60%;
     max-width: none;
   }
 }
