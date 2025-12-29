@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.PNG">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.PNG">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO / Social (FRAGEBOGEN) -->
+  <title>Fragebogen – Deine Anfrage | Modern Ritualistic Tattoo</title>
+  <meta name="description" content="Dieser Fragebogen ist der erste Schritt. Er hilft, Intention, Timing und Rahmen sauber zu klären – damit das Ritual wirklich passt.">
+  <link rel="canonical" href="https://modern-ritualistic-tattoo.com/fragebogen.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Modern Ritualistic Tattoo">
+  <meta property="og:title" content="Fragebogen – Deine Anfrage | Modern Ritualistic Tattoo">
+  <meta property="og:description" content="Ein bewusster Start: Der Fragebogen hilft, Intention und Rahmen zu klären – damit das Ritual wirklich passt.">
+  <meta property="og:url" content="https://modern-ritualistic-tattoo.com/fragebogen.html">
+  <meta property="og:image" content="https://modern-ritualistic-tattoo.com/assets/img/og.PNG">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fragebogen – Deine Anfrage | Modern Ritualistic Tattoo">
+  <meta name="twitter:description" content="Der erste Schritt: Intention & Rahmen klären – damit das Ritual wirklich passt.">
+  <meta name="twitter:image" content="https://modern-ritualistic-tattoo.com/assets/img/og.PNG">
+
+  <link rel="stylesheet" href="style.css?v=fragebogen1">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body{
+      background:#000;
+      color:#E6E0D6;
+      margin:0;
+      font-family:serif;
+    }
+
+    /* HEADER / LOGO */
+    .site-header{
+      position:relative;
+      z-index:20;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 16px;
+    }
+    .logo-link{display:inline-flex;align-items:center;}
+    .site-logo{height:54px;width:auto;display:block;}
+
+    /* HERO VIDEO */
+    .hero-video{
+      position:relative;
+      width:min(1000px, 92vw);
+      aspect-ratio:16/9;
+      margin: 0 auto 18px;
+      border-radius:14px;
+      overflow:hidden;
+      box-shadow:0 14px 32px rgba(0,0,0,.55);
+      backdrop-filter: blur(0.5px);
+    }
+    .hero-video video{
+      position:absolute; inset:0;
+      width:100%; height:100%;
+      object-fit:cover;
+    }
+
+    /* LAYOUT */
+    .landing-wrap{
+      max-width:820px;
+      margin:0 auto;
+      padding:60px 20px 120px;
+    }
+
+    h1{
+      font-family:'Cinzel Decorative', serif;
+      text-align:center;
+      font-size:clamp(30px,5vw,44px);
+      margin:0 0 22px;
+      line-height:1.15;
+    }
+
+    .subline{
+      text-align:center;
+      opacity:.85;
+      line-height:1.7;
+      margin:0 auto 36px;
+      max-width:720px;
+    }
+
+    form{
+      display:grid;
+      gap:28px;
+      margin-top:28px;
+    }
+
+    label{
+      font-size:15px;
+      opacity:.85;
+    }
+
+    input, textarea, select{
+      width:100%;
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.18);
+      border-radius:10px;
+      padding:14px 16px;
+      color:#E6E0D6;
+      font-size:15px;
+      font-family:inherit;
+      box-sizing:border-box;
+    }
+
+    textarea{
+      resize:vertical;
+      min-height:120px;
+    }
+
+    .form-submit-wrap{
+      display:flex;
+      justify-content:center;
+      margin-top:14px;
+    }
+
+    button.image-submit{
+      background:transparent;
+      border:0;
+      padding:0;
+      margin:0;
+      cursor:pointer;
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    button.image-submit img{
+      width:min(420px, 92vw);
+      height:auto;
+      display:block;
+    }
+
+    .privacy{
+      font-size:12px;
+      opacity:.7;
+      text-align:center;
+      margin-top:42px;
+      line-height:1.65;
+      max-width:760px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+    .info-block{
+      margin-top:60px;
+    }
+
+    .info-block h2{
+      font-family:'Cinzel Decorative', serif;
+      font-size:clamp(18px,3.2vw,24px);
+      margin:0 0 14px;
+      text-align:center;
+    }
+
+    .info-block p{
+      opacity:.85;
+      line-height:1.75;
+      margin:0 0 14px;
+    }
+
+    footer{
+      padding:30px 16px;
+      text-align:center;
+      opacity:.7;
+    }
+  </style>
+</head>
+
+<body class="page-bg">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html" class="logo-link" aria-label="Zur Startseite">
+      <img src="assets/img/banner_logo.PNG" alt="Modern Ritualistic Tattoo" class="site-logo">
+    </a>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-video">
+        <video
+          src="assets/video/ritual_intro.MP4"
+          autoplay
+          muted
+          playsinline
+          loop
+          preload="metadata">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="landing-wrap">
+
+    <h1>Nicht jeder ist bereit für ein Zeichen.<br><br><strong>Dein</strong> Fragebogen beginnt hier.</h1>
+
+    <section class="text-block reveal subline">
+      Bevor wir tätowieren, klären wir das Fundament: <strong>Intention</strong>, <strong>Timing</strong> und <strong>Rahmen</strong>.<br>
+      Dieser Fragebogen hilft, dich wirklich zu verstehen – damit das Zeichen später nicht nur gut aussieht,<br>
+      sondern <strong>stimmig</strong> ist und in deinem Leben <strong>richtig sitzt</strong>.
+    </section>
+
+    <form action="https://formsubmit.co/amotattoo79@gmail.com" method="POST">
+
+      <!-- FormSubmit Optionen -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="Neue Anfrage (Fragebogen)">
+      <input type="hidden" name="_template" value="table">
+
+      <label>Dein Name</label>
+      <input type="text" name="Name" required>
+
+      <label>Deine E-Mail-Adresse</label>
+      <input type="email" name="E-Mail" required>
+
+      <label>1. Wie möchtest du dich nach diesem Ritual fühlen?</label>
+      <textarea name="Gefühl nach Ritual" required></textarea>
+
+      <label>2. Was soll dieses Ritual in deinem Leben markieren oder verändern?</label>
+      <textarea name="Veränderung" required></textarea>
+
+      <label>3. Gab es einen Moment, in dem dir klar wurde, dass ein gewöhnliches Tattoo nicht ausreicht?</label>
+      <textarea name="Schlüsselmoment"></textarea>
+
+      <label>4. Was fehlt dir aktuell – trotz allem, was du bisher getan hast?</label>
+      <textarea name="Was fehlt"></textarea>
+
+      <label>5. Welche Bedeutung haben Symbole für dich persönlich?</label>
+      <textarea name="Bedeutung Symbole"></textarea>
+
+      <label>6. Gibt es etwas, das du bewusst tragen möchtest – oder etwas, das du hinter dir lassen willst?</label>
+      <textarea name="Tragen oder Loslassen"></textarea>
+
+      <label>7. Hast du bereits Erfahrungen mit Ritualen oder bewussten Übergängen gemacht?</label>
+      <select name="Ritual-Erfahrung">
+        <option>Nein</option>
+        <option>Ja – spirituell</option>
+        <option>Ja – therapeutisch</option>
+        <option>Ja – beides</option>
+      </select>
+
+      <label>8. Was spricht dich am Gedanken eines rituellen Tattoos am meisten an?</label>
+      <textarea name="Warum Ritual Tattoo"></textarea>
+
+      <label>9. Warum ist jetzt der richtige Zeitpunkt für diesen Schritt?</label>
+      <textarea name="Zeitpunkt"></textarea>
+
+      <label>10. Bist du bereit, dir Zeit, Präsenz und Ernsthaftigkeit für diesen Prozess zu nehmen?</label>
+      <select name="Bereitschaft">
+        <option>Ja</option>
+        <option>Ich bin unsicher</option>
+      </select>
+
+      <div class="form-submit-wrap">
+        <button type="submit" class="image-submit" aria-label="Fragebogen absenden">
+          <img src="assets/img/Formular.PNG" alt="Fragebogen absenden">
+        </button>
+      </div>
+    </form>
+
+    <p class="privacy">
+      Deine Anfrage ist der erste Schritt. Wenn es passt, melde ich mich persönlich mit den nächsten Schritten.<br>
+      Hinweis: Alle Rituale folgen einer bewussten, festen Struktur und werden durch ein professionell erarbeitetes Hygienekonzept sicher durchgeführt – im Studio oder Outdoor.<br><br>
+      Mit dem Absenden erklärst du dich einverstanden, dass deine Angaben zur Bearbeitung deiner Anfrage und zur Kontaktaufnahme verwendet werden.
+    </p>
+
+    <section id="datenschutz-hinweise" class="text-block reveal info-block">
+      <h2>Datenschutz & Hinweise</h2>
+
+      <p>
+        <strong>Zweck:</strong> Deine Angaben dienen ausschließlich dazu, deine Anfrage zu prüfen, dich zu kontaktieren
+        und – wenn es passt – den nächsten Schritt im Prozess vorzubereiten.
+      </p>
+
+      <p>
+        <strong>Übermittlung:</strong> Die Formularübermittlung erfolgt über den Dienst „FormSubmit“.
+        Dabei werden die eingegebenen Daten an den Dienstleister übertragen, damit sie per E-Mail zugestellt werden können.
+      </p>
+
+      <p>
+        <strong>Keine Weitergabe:</strong> Es erfolgt keine Weitergabe deiner Daten an Dritte, außer es ist zur technischen
+        Zustellung des Formulars erforderlich.
+      </p>
+
+      <p class="small">
+        Weitere Informationen findest du in der <a href="datenschutz.html">Datenschutzerklärung</a>.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Modern Ritualistic Tattoo</p>
+  </footer>
+
+  <!-- Reveal -->
+  <script src="assets/js/reveal.js"></script>
+
+  <!-- Year -->
+  <script>
+    (function(){
+      const y=document.getElementById('year');
+      if(y) y.textContent=new Date().getFullYear();
+    })();
+  </script>
+
+  <!-- Local SEO: Studio Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TattooParlor",
+    "name": "Modern Ritualistic Tattoo",
+    "url": "https://modern-ritualistic-tattoo.com/",
+    "image": "https://modern-ritualistic-tattoo.com/assets/img/og.PNG",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Sternenstraße 5",
+      "postalCode": "79664",
+      "addressLocality": "Wehr",
+      "addressRegion": "Baden-Württemberg",
+      "addressCountry": "DE"
+    },
+    "areaServed": "DE",
+    "priceRange": "€€€",
+    "sameAs": [
+      "https://www.instagram.com/amotattoatelier",
+      "https://www.tiktok.com/@amotattoo79"
+    ]
+  }
+  </script>
+
+</body>
+</html>
