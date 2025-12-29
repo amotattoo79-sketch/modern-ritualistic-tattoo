@@ -582,21 +582,35 @@ img, video, canvas, svg{
   }
   .site-nav a:last-child{ border-bottom:0; }
 }
-.inline-media{
-  max-width: 260px;      /* max Bildgröße */
-  margin: 22px 0;
-}
+/* =========================
+   Ritual / Beispiel Bilder
+   ========================= */
 
-.inline-media img{
-  width: 60%;
+.ritual-image,
+.reveal-image {
+  width: 60%;              /* 3/5 Größe */
+  max-width: 520px;        /* harte Obergrenze */
   height: auto;
   display: block;
+  margin: 48px auto;       /* zentriert */
 }
 
-.inline-media.left{ margin-right: auto; }
-.inline-media.right{ margin-left: auto; }
+/* Links / Rechts Varianten */
+.image-left {
+  margin-left: 0;
+  margin-right: auto;
+}
 
-/* Mobile: immer zentriert */
-@media (max-width: 700px){
-  .inline-media{ margin-left: auto; margin-right: auto; max-width: 220px; }
+.image-right {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* Mobile Anpassung */
+@media (max-width: 900px) {
+  .ritual-image,
+  .reveal-image {
+    width: 90%;
+    max-width: none;
+  }
 }
