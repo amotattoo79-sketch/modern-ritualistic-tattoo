@@ -582,3 +582,21 @@ img, video, canvas, svg{
   }
   .site-nav a:last-child{ border-bottom:0; }
 }
+.inline-media{
+  max-width: 260px;      /* max Bildgröße */
+  margin: 22px 0;
+}
+
+.inline-media img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.inline-media.left{ margin-right: auto; }
+.inline-media.right{ margin-left: auto; }
+
+/* Mobile: immer zentriert */
+@media (max-width: 700px){
+  .inline-media{ margin-left: auto; margin-right: auto; max-width: 220px; }
+}
