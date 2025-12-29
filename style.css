@@ -588,7 +588,7 @@ img, video, canvas, svg{
 }
 
 .inline-media img{
-  width: 100%;
+  width: 60%;
   height: auto;
   display: block;
 }
