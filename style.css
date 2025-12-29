@@ -615,3 +615,36 @@ img, video, canvas, svg{
     max-width: 320px !important;
   }
 }
+/* ===============================
+   INLINE MEDIA – SYMBOLBEISPIELE
+   =============================== */
+
+.inline-media{
+  display: block;
+  width: 100%;
+}
+
+.inline-media img{
+  width: 60% !important;      /* exakt 3/5 */
+  max-width: 420px !important;
+  height: auto !important;
+  display: block;
+}
+
+/* links / rechts Ausrichtung */
+.inline-media.left img{
+  margin: 40px auto 40px 0;
+}
+
+.inline-media.right img{
+  margin: 40px 0 40px auto;
+}
+
+/* Mobile Feinschliff */
+@media (max-width: 700px){
+  .inline-media img{
+    width: 85% !important;
+    max-width: 320px !important;
+    margin: 32px auto !important;
+  }
+}
