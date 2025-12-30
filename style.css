@@ -648,3 +648,18 @@ img, video, canvas, svg{
     margin: 32px auto !important;
   }
 }
+/* ===== Banner Logo (Link-Version, gleiche Größe wie Index) ===== */
+.banner-logo-link{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+}
+
+.banner-logo-link img{
+  width:100%;
+  max-width:965px;     /* exakt wie gewünscht */
+  height:auto;
+  display:block;
+  margin:0 auto;       /* echte Zentrierung */
+}
