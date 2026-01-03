@@ -663,3 +663,21 @@ img, video, canvas, svg{
   display:block;
   margin:0 auto;       /* echte Zentrierung */
 }
+.cta-aufnahmepruefung{
+  display:flex;
+  justify-content:center;
+  margin:60px 0;
+}
+
+.cta-aufnahmepruefung img{
+  width:min(420px, 90vw);
+  height:auto;
+  display:block;
+  cursor:pointer;
+  transition:transform .25s ease, opacity .25s ease;
+}
+
+.cta-aufnahmepruefung img:hover{
+  transform:scale(1.03);
+  opacity:.95;
+}
