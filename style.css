@@ -681,3 +681,21 @@ img, video, canvas, svg{
   transform:scale(1.03);
   opacity:.95;
 }
+.cta-ablauf{
+  display:flex;
+  justify-content:center;
+  margin:60px 0;
+}
+
+.cta-ablauf img{
+  width:min(420px, 90vw);
+  height:auto;
+  display:block;
+  cursor:pointer;
+  transition:transform .25s ease, opacity .25s ease;
+}
+
+.cta-ablauf img:hover{
+  transform:scale(1.03);
+  opacity:.95;
+}
