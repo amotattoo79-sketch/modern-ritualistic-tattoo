@@ -93,11 +93,25 @@
       object-fit:cover;
     }
 
-    .termin-button{
-      display:block;
-      margin:18px auto 0;
-      transform:scale(0.85);
-      transform-origin:center;
+    /* Minimal: klarere CTA-Zeile ohne Designbruch */
+    .cta-row{
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin:16px 0 0;
+    }
+
+    /* Kundenbild 2: zentriert, leicht rechts gewichtet */
+    .inline-media-centered-right{
+      display:flex;
+      justify-content:center;
+      margin: 24px 0;
+    }
+    .inline-media-centered-right img{
+      max-width:100%;
+      height:auto;
+      transform: translateX(6%);
     }
   </style>
 </head>
@@ -133,7 +147,6 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
-
       <div class="hero-video">
         <video
           src="assets/video/ritual_intro.MP4"
@@ -144,95 +157,104 @@
           preload="metadata">
         </video>
       </div>
-
     </div>
   </section>
 
   <!-- CONTENT -->
   <main class="intro">
 
-    <!-- VERBESSERTER HERO-TEXT (Vera-tauglich: klar, entmystifiziert, scanbar) -->
-    <h2 class="intro-text">
+    <!-- 1) KERN (kurz, klar, wiederholbar) -->
+    <h1 class="intro-text" style="margin-top:0;">
       Ein Zeichen.<br><br>
       Ein Ritual.<br><br>
       Eine Verankerung.
-    </h2>
-
-    <br>
+    </h1>
 
     <section class="text-block reveal">
-      Ein rituelles Tattoo ist kein Motivkauf –<br>
-      es ist eine <strong>klar strukturierte Schwelle</strong>, die eine bewusste Entscheidung <strong>im Körper verankert</strong>.
+      Ein rituelles Tattoo ist kein Motivkauf.<br>
+      Es ist ein <strong>klar strukturierter Prozess</strong>, der eine bewusste Entscheidung <strong>im Körper verankert</strong>.
     </section>
-
-    <br>
 
     <section class="text-block reveal">
-      Symbole wirken nicht durch Show.<br>
-      Sie wirken durch <strong>Aufmerksamkeit</strong>, <strong>Bedeutung</strong> und <strong>Wiederholung</strong>.
+      Symbole wirken nicht durch „Glauben“.<br>
+      Sie wirken durch <strong>Bedeutung</strong>, <strong>Aufmerksamkeit</strong> und <strong>Wiederholung</strong>.
     </section>
-
-    <br>
 
     <section class="text-block reveal">
-      Wenn du spürst, dass ein Zeichen mehr ist als Dekoration –<br>
-      und dass echte Veränderung <strong>bewusst beginnt</strong>,
-      <span class="focus-text"><strong>dann bist du hier richtig.</strong></span>
+      <span class="focus-text"><strong>Merksatz:</strong></span>
+      Ritual = Struktur + Präsenz + körperliche Verankerung.
     </section>
 
-    <br>
+    <!-- 2) ZWEI KLARE WEGE (Decision-Entlastung) -->
+    <section class="text-block reveal">
+      Wähle den passenden Einstieg:
+    </section>
 
-    <!-- 3-Schritte (Vera: Landkarte + Orientierung) -->
+    <div class="cta-row">
+      <a href="fragebogen.html" class="cta-fragebogen" aria-label="Zur Aufnahmeprüfung">
+        <img src="assets/img/aufnahmepruefung.PNG" alt="Aufnahmeprüfung – Fragebogen" loading="lazy">
+      </a>
+      <a href="booking.html" class="cta-fragebogen" aria-label="Termin anfragen (Vorgespräch / nächster Schritt)">
+        <img src="assets/img/termin.PNG" alt="Termin anfragen" loading="lazy">
+      </a>
+    </div>
+
+    <!-- 3) LANDKARTE (Orientierung statt Mystik) -->
     <h2 class="intro-text">So läuft es ab (3 Schritte)</h2>
-
     <section class="text-block reveal">
       <strong>1) Aufnahmeprüfung</strong> – passt dein Thema zu Ritual & Prozess?<br>
       <strong>2) Vorgespräch</strong> – Klarheit, Rahmen, Designrichtung.<br>
       <strong>3) Ritualtag</strong> – Ritualstruktur + Tattoo als Verankerung.
     </section>
 
-    <br>
+    <!-- 4) DOPPEL-CHECKLISTE (Vera: scanbar, aktivierend) -->
+    <h2 class="intro-text">Kurz-Check</h2>
 
-    <!-- CTA (bestehendes Asset behalten) -->
     <section class="text-block reveal">
-      <span class="focus-text"><strong>Beginne hier:</strong></span>
+      <span class="focus-text"><strong>Bin ich geeignet?</strong></span><br>
+      • Du willst <strong>Bedeutung</strong>, nicht nur Look.<br>
+      • Du magst <strong>Struktur</strong> mehr als Improvisation.<br>
+      • Du bist bereit, ehrlich zu prüfen, worum es dir wirklich geht.
     </section>
 
-    <a href="fragebogen.html" class="cta-fragebogen" aria-label="Zur Aufnahmeprüfung">
-      <img src="assets/img/aufnahmepruefung.PNG" alt="Aufnahmeprüfung – Fragebogen" loading="lazy">
-    </a>
+    <section class="text-block reveal">
+      <span class="focus-text"><strong>Was bekomme ich konkret?</strong></span><br>
+      • Ein <strong>individuelles Zeichen</strong> (aus deiner Intention entwickelt).<br>
+      • Eine <strong>geführte Ritualstruktur</strong> (klar, wiederholbar).<br>
+      • Ein <strong>Tattoo</strong> als körperliche Verankerung.<br>
+      • <strong>Aftercare</strong> + Hinweise für die Zeit danach.
+    </section>
 
-    <br><br>
+    <!-- 5) 60-SEKUNDEN TOOL (aktive Beteiligung) -->
+    <h2 class="intro-text">60-Sekunden-Test</h2>
+    <section class="text-block reveal">
+      Schreibe spontan <strong>10 Wörter</strong> zu:<br>
+      <span class="focus-text"><strong>„Wofür soll das Zeichen stehen?“</strong></span><br>
+      Ohne nachdenken. Ohne bewerten.<br><br>
+      Wenn dir nicht 10 Wörter kommen: Thema noch unscharf → dafür ist die Aufnahmeprüfung da.
+    </section>
 
-    <!-- POSITIONIERUNG (entschärft, klarer, weniger Überclaim) -->
+    <!-- 6) POSITIONIERUNG (präzise, ohne Überclaim) -->
     <h2 class="intro-text">Wichtig</h2>
 
     <section class="text-block reveal">
-      Wir machen nicht „einfach nur Tattoos“.
-      Wir arbeiten mit einem <strong>klaren, wiederholbaren Prozess</strong> – damit aus deinem Thema ein Zeichen wird,
-      das <strong>passt</strong> und nicht nur gut aussieht.
+      Das hier ist kein „Tattoo von der Stange“.<br>
+      Wir arbeiten mit einem <strong>wiederholbaren Rahmen</strong>, damit Bedeutung nicht nur behauptet, sondern <strong>übersetzt</strong> wird.
     </section>
 
     <section class="text-block reveal">
-      Andere reden über Bedeutung. Wir machen sie <strong>konkret</strong>:
-      Wir klären dein Thema, reduzieren es auf das Wesentliche und übersetzen es in eine <strong>symbolisch präzise Form</strong>.
+      Wir machen aus deinem Thema eine <strong>klare Aussage</strong> – und aus der Aussage eine <strong>symbolisch präzise Form</strong>.<br>
+      Weniger Deko. Mehr Aussage.
     </section>
 
     <section class="text-block reveal">
-      Wir achten darauf, wie <strong>Kontext</strong> die <strong>Wahrnehmung</strong> beeinflusst –
-      und warum ein Ritual Übergänge markiert: nicht durch „Magie“, sondern durch <strong>Struktur</strong> und <strong>Präsenz</strong>.
+      Wir achten auf Kontext: Umgebung, Abfolge, Aufmerksamkeit.<br>
+      Nicht als Show – sondern damit der Moment <strong>merkbar</strong> wird.
     </section>
 
-    <section class="text-block reveal">
-      Wenn du nur ein Motiv willst, ist das hier wahrscheinlich nicht dein Ort.
-      Wenn du ein Zeichen willst, das eine Entscheidung <strong>trägt</strong>, dann schon.
-    </section>
-
-    <br>
-
+    <!-- 7) WEITERE INFOS (bestehende Buttons behalten) -->
     <h2 class="intro-text">
-      Du ahnst, dass hier mehr geschieht als nur ein Tattoo – hast aber trotzdem noch <strong>Fragen</strong>?<br>
-      Dann klicke auf
+      Du willst Details zum Ablauf?
     </h2>
 
     <div class="cta-wrapper">
@@ -245,34 +267,31 @@
       </a>
     </div>
 
-    <br><br>
-
-    <!-- REZENSIONEN (bestehende Struktur behalten) -->
+    <!-- 8) REZENSIONEN (leicht strukturierter Einstieg + Bild 2 zentriert) -->
     <h2 class="intro-text">Kundenrezensionen</h2>
-    <br><br>
+
+    <section class="text-block reveal">
+      Drei kurze Stimmen – ohne Storytelling, ohne Nebel:
+    </section>
 
     <div class="inline-media reveal">
-      <img src="assets/img/Beispiel1.PNG" alt="Symbolbeispiel – Innere Kraft">
+      <img src="assets/img/Beispiel1.PNG" alt="Kundenbeispiel 1 – Ritual Tattoo">
     </div>
     <section class="text-block reveal italic">
       "Das Tattoo – und vor allem das <strong>Ritual</strong> – haben mir geholfen, <strong>ruhig</strong> zu bleiben und neue <strong>Möglichkeiten</strong> zu erkennen.
       Es war <strong>mehr als ein Tattoo</strong>, es hat einen <strong>wichtigen Moment markiert</strong>."
     </section>
 
-    <br><br>
-
     <div class="inline-media-centered-right reveal">
-      <img src="assets/img/Beispiel2.PNG" alt="Symbolbeispiel – Innere Kraft">
+      <img src="assets/img/Beispiel2.PNG" alt="Kundenbeispiel 2 – Ritual Tattoo">
     </div>
     <section class="text-block reveal italic">
       "Ich habe mir ein <strong>ritualistisches Tattoo</strong> stechen lassen, um <strong>innere Stärke</strong> zu finden und klarer <strong>meinen eigenen Weg</strong> zu gehen.
       Schon kurze Zeit nach der Session haben sich <strong>Dinge</strong> in meinem Leben spürbar <strong>verändert</strong>."
     </section>
 
-    <br><br>
-
     <div class="inline-media reveal">
-      <img src="assets/img/Beispiel3.PNG" alt="Symbolbeispiel – Konzentration">
+      <img src="assets/img/Beispiel3.PNG" alt="Kundenbeispiel 3 – Ritual Tattoo">
     </div>
     <section class="text-block reveal italic">
       "Das Ritual selbst hat mir <strong>sehr geholfen</strong>, mich auf diesen <strong>Prozess</strong> einzulassen.
@@ -280,11 +299,25 @@
       Für mich war <strong>es nicht einfach ein Tattoo</strong>, sondern eine echte <strong>Unterstützung</strong> in einer <strong>wichtigen Phase</strong>."
     </section>
 
+    <!-- 9) FINAL CTA (Wiederholung + nächste Handlung) -->
+    <h2 class="intro-text">Nächster Schritt</h2>
+    <section class="text-block reveal">
+      <span class="focus-text"><strong>Ritual = Struktur + Präsenz + körperliche Verankerung.</strong></span><br>
+      Wenn du dich wiedererkennst: starte mit der Aufnahmeprüfung.
+    </section>
+
+    <div class="cta-row">
+      <a href="fragebogen.html" class="cta-fragebogen" aria-label="Zur Aufnahmeprüfung (Start)">
+        <img src="assets/img/aufnahmepruefung.PNG" alt="Aufnahmeprüfung – Start" loading="lazy">
+      </a>
+      <a href="contact.html" class="cta-fragebogen" aria-label="Kontakt (kurze Frage)">
+        <img src="assets/img/kontakt.PNG" alt="Kontakt" loading="lazy">
+      </a>
+    </div>
+
   </main>
 
   <script src="assets/js/reveal.js"></script>
-
-  <br><br>
 
   <!-- FOOTER -->
   <footer>
