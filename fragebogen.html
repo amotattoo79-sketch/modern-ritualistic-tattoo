@@ -10,15 +10,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- SEO / Social (FRAGEBOGEN) -->
-  <title>Fragebogen – Deine Anfrage | Modern Ritualistic Tattoo</title>
-  <meta name="description" content="Dieser Fragebogen ist der erste Schritt. Er hilft, Intention, Timing und Rahmen sauber zu klären – damit das Ritual wirklich passt.">
+  <title>Aufnahmeprüfung – Deine Anfrage | Modern Ritualistic Tattoo</title>
+  <meta name="description" content="Die Aufnahmeprüfung ist der erste Schritt. Sie klärt Intention, Timing und Rahmen – damit das Ritual wirklich passt.">
   <link rel="canonical" href="https://modern-ritualistic-tattoo.com/fragebogen.html">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Modern Ritualistic Tattoo">
-  <meta property="og:title" content="Fragebogen – Deine Anfrage | Modern Ritualistic Tattoo">
-  <meta property="og:description" content="Ein bewusster Start: Der Fragebogen hilft, Intention und Rahmen zu klären – damit das Ritual wirklich passt.">
+  <meta property="og:title" content="Aufnahmeprüfung – Deine Anfrage | Modern Ritualistic Tattoo">
+  <meta property="og:description" content="Ein bewusster Start: Die Aufnahmeprüfung klärt Intention und Rahmen – damit das Ritual wirklich passt.">
   <meta property="og:url" content="https://modern-ritualistic-tattoo.com/fragebogen.html">
   <meta property="og:image" content="https://modern-ritualistic-tattoo.com/assets/img/og.PNG">
   <meta property="og:image:width" content="1200">
@@ -26,7 +26,7 @@
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Fragebogen – Deine Anfrage | Modern Ritualistic Tattoo">
+  <meta name="twitter:title" content="Aufnahmeprüfung – Deine Anfrage | Modern Ritualistic Tattoo">
   <meta name="twitter:description" content="Der erste Schritt: Intention & Rahmen klären – damit das Ritual wirklich passt.">
   <meta name="twitter:image" content="https://modern-ritualistic-tattoo.com/assets/img/og.PNG">
 
@@ -51,7 +51,6 @@
       padding:14px 16px;
     }
 
-    /* Banner-Link: zentriert + Größe wie Index */
     .banner-logo-link{
       display:block;
       margin:0 auto;
@@ -65,7 +64,6 @@
       margin:0 auto;
     }
 
-    /* Burger Button (wie auf funktionierenden Seiten) */
     .burger{
       background:transparent;
       border:0;
@@ -76,7 +74,6 @@
     }
     .burger img{width:48px;height:auto;display:block;}
 
-    /* NAV (Mobile Overlay) — wichtig, damit es wie die anderen Seiten funktioniert */
     @media (max-width: 900px){
       .site-header{justify-content:space-between;}
 
@@ -104,12 +101,9 @@
         border-bottom:1px solid rgba(255,255,255,.08);
         box-shadow:0 10px 24px rgba(0,0,0,.45);
         z-index:25;
-
-        /* Pipes „|“ im mobilen Overlay unsichtbar machen */
         font-size:0;
         -webkit-tap-highlight-color: transparent;
       }
-
       body.nav-open .site-nav{transform:translateY(0); opacity:1;}
 
       .site-nav a,
@@ -136,24 +130,6 @@
       }
     }
 
-    /* HERO VIDEO */
-    .hero-video{
-      position:relative;
-      width:min(1000px, 92vw);
-      aspect-ratio:16/9;
-      margin: 0 auto 18px;
-      border-radius:14px;
-      overflow:hidden;
-      box-shadow:0 14px 32px rgba(0,0,0,.55);
-      backdrop-filter: blur(0.5px);
-    }
-    .hero-video video{
-      position:absolute; inset:0;
-      width:100%; height:100%;
-      object-fit:cover;
-    }
-
-    /* LAYOUT */
     .landing-wrap{
       max-width:820px;
       margin:0 auto;
@@ -163,28 +139,46 @@
     h1{
       font-family:'Cinzel Decorative', serif;
       text-align:center;
-      font-size:clamp(30px,5vw,44px);
-      margin:0 0 22px;
+      font-size:clamp(28px,5vw,44px);
+      margin:0 0 18px;
       line-height:1.15;
     }
 
     .subline{
       text-align:center;
-      opacity:.85;
-      line-height:1.7;
-      margin:0 auto 36px;
-      max-width:720px;
+      opacity:.86;
+      line-height:1.75;
+      margin:0 auto 26px;
+      max-width:760px;
+    }
+
+    .divider{
+      height:1px;
+      background:rgba(255,255,255,.12);
+      margin:28px auto;
+      max-width:760px;
+    }
+
+    .badge{
+      display:inline-block;
+      border:1px solid rgba(217,178,109,.55);
+      color:#d9b26d;
+      padding:8px 12px;
+      border-radius:999px;
+      font-family:'Cinzel Decorative', serif;
+      font-size:13px;
+      letter-spacing:.2px;
     }
 
     form{
       display:grid;
-      gap:28px;
-      margin-top:28px;
+      gap:22px;
+      margin-top:18px;
     }
 
     label{
       font-size:15px;
-      opacity:.85;
+      opacity:.9;
     }
 
     input, textarea, select{
@@ -201,13 +195,28 @@
 
     textarea{
       resize:vertical;
-      min-height:120px;
+      min-height:110px;
     }
+
+    .checkrow{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      padding:10px 12px;
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:10px;
+      background:rgba(255,255,255,.04);
+    }
+    .checkrow input{
+      width:auto;
+      margin-top:3px;
+    }
+    .checkrow strong{display:block;}
 
     .form-submit-wrap{
       display:flex;
       justify-content:center;
-      margin-top:14px;
+      margin-top:10px;
     }
 
     button.image-submit{
@@ -229,9 +238,9 @@
 
     .privacy{
       font-size:12px;
-      opacity:.7;
+      opacity:.72;
       text-align:center;
-      margin-top:42px;
+      margin-top:36px;
       line-height:1.65;
       max-width:760px;
       margin-left:auto;
@@ -239,7 +248,7 @@
     }
 
     .info-block{
-      margin-top:60px;
+      margin-top:54px;
     }
 
     .info-block h2{
@@ -291,21 +300,28 @@
 
 <main class="landing-wrap">
 
-  <h1>Bist du bereit für dein Zeichen?<br><br>
-    <br><strong>Deine</strong> Initiation beginnt mit ein paar <strong>wichtigen</strong> Fragen!.</h1>
-  <br><br><br>
+  <h1>Aufnahmeprüfung.<br><br><strong>Kein</strong> Formular.</h1>
 
   <section class="text-block reveal subline">
-    Bevor wir tättowieren, klären wir das Fundament: <strong>Intention</strong>, <strong>Timing</strong> und <strong>Rahmen</strong>.<br>
-    <br> Dieser Fragebogen hilft, dich wirklich zu verstehen – damit das Zeichen später nicht nur gut aussieht,<br>
-    sondern <strong>stimmig</strong> ist und in deinem Leben <strong>richtig sitzt</strong>.
+    Bevor wir tätowieren, klären wir das Fundament:<br>
+    <strong>Intention</strong>, <strong>Timing</strong>, <strong>Rahmen</strong>.<br><br>
+    <strong>Du bewirbst dich.</strong> Wir prüfen. Dann entscheiden wir.
   </section>
 
-  <br>
+  <div class="divider"></div>
+
+  <section class="text-block reveal subline" style="text-align:center;">
+    <span class="badge">Danke</span><br><br>
+    Wenn du die Aufnahmeprüfung abschickst, erhältst du einen <strong>50 € Gutschein</strong>.<br>
+    Zusätzlich nimmst du an der Verlosung einer <strong>Full Ritual Session</strong> teil.<br>
+    <span style="opacity:.8;">Das ist kein Lockmittel. Es ist ein Dank für ernsthafte Antworten.</span>
+  </section>
+
+  <div class="divider"></div>
 
   <form action="https://formsubmit.co/amotattoo79@gmail.com" method="POST">
     <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="Neue Anfrage (Fragebogen)">
+    <input type="hidden" name="_subject" value="Neue Anfrage (Aufnahmeprüfung)">
     <input type="hidden" name="_template" value="table">
 
     <label>Dein Name</label>
@@ -314,97 +330,84 @@
     <label>Deine E-Mail-Adresse</label>
     <input type="email" name="E-Mail" required>
 
-    <label>1. Wie möchtest du dich nach diesem Ritual fühlen?</label>
-    <textarea name="Gefühl nach Ritual" required></textarea>
+    <label>1) <strong>Wofür soll das Zeichen stehen?</strong><br><span style="opacity:.8;">1–3 Sätze. Kein Roman.</span></label>
+    <textarea name="Wofür steht das Zeichen" required></textarea>
 
-    <label>2. Was soll dieses Ritual in deinem Leben markieren oder verändern?</label>
-    <textarea name="Veränderung" required></textarea>
+    <label>2) <strong>Was soll dieses Ritual markieren?</strong><br><span style="opacity:.8;">Anfang · Ende · Schwelle · Entscheidung</span></label>
+    <textarea name="Was soll markiert werden" required></textarea>
 
-    <label>3. Gab es einen Moment, in dem dir klar wurde, dass ein gewöhnliches Tattoo nicht ausreicht?</label>
-    <textarea name="Schlüsselmoment"></textarea>
+    <label>3) <strong>Woran merkst du danach im Alltag, dass es „sitzt“?</strong></label>
+    <textarea name="Woran merkst du dass es sitzt" required></textarea>
 
-    <label>4. Was fehlt dir aktuell – trotz allem, was du bisher getan hast?</label>
-    <textarea name="Was fehlt"></textarea>
+    <label>4) <strong>Warum reicht ein gewöhnliches Tattoo nicht?</strong><br><span style="opacity:.8;">Kurz. Direkt. Ohne Story.</span></label>
+    <textarea name="Warum nicht gewöhnlich" required></textarea>
 
-    <label>5. Welche Bedeutung haben Symbole für dich persönlich?</label>
-    <textarea name="Bedeutung Symbole"></textarea>
+    <label>5) <strong>Was bist du bereit zu geben?</strong><br><span style="opacity:.8;">Zeit · Präsenz · Ernsthaftigkeit</span></label>
+    <textarea name="Was bist du bereit zu geben" required></textarea>
 
-    <label>6. Gibt es etwas, das du bewusst tragen möchtest – oder etwas, das du hinter dir lassen willst?</label>
-    <textarea name="Tragen oder Loslassen"></textarea>
+    <label>6) <strong>Was muss ich über dich wissen, um „Ja“ sagen zu können?</strong><br><span style="opacity:.8;">Grenzen, Ängste, Erwartungen – alles, was wichtig ist.</span></label>
+    <textarea name="Was muss ich wissen" required></textarea>
 
-    <label>7. Hast du bereits Erfahrungen mit Ritualen oder bewussten Übergängen gemacht?</label>
-    <select name="Ritual-Erfahrung">
-      <option>Nein</option>
-      <option>Ja – spirituell</option>
-      <option>Ja – therapeutisch</option>
-      <option>Ja – beides</option>
-    </select>
+    <div class="checkrow">
+      <input type="checkbox" name="Gate_Auswahl" required>
+      <div>
+        <strong>Ich akzeptiere den Auswahlprozess.</strong>
+        Absage ist möglich – und Teil der Qualität.
+      </div>
+    </div>
 
-    <label>8. Was spricht dich am Gedanken eines rituellen Tattoos am meisten an?</label>
-    <textarea name="Warum Ritual Tattoo"></textarea>
-
-    <label>9. Warum ist jetzt der richtige Zeitpunkt für diesen Schritt?</label>
-    <textarea name="Zeitpunkt"></textarea>
-
-    <label>10. Bist du bereit, dir Zeit, Präsenz und Ernsthaftigkeit für diesen Prozess zu nehmen?</label>
-    <select name="Bereitschaft">
-      <option>Ja</option>
-      <option>Ich bin unsicher</option>
-    </select>
+    <div class="checkrow">
+      <input type="checkbox" name="Gate_Ernst" required>
+      <div>
+        <strong>Ich gehe das ernsthaft an.</strong>
+        Ich nehme mir Zeit, Präsenz und Ruhe für diesen Prozess.
+      </div>
+    </div>
 
     <div class="form-submit-wrap">
       <button type="submit" class="image-submit">
-        <img src="assets/img/Formular.PNG" alt="Teilnahme abschicken">
+        <img src="assets/img/Formular.PNG" alt="Aufnahmeprüfung abschicken">
       </button>
     </div>
   </form>
 
   <p class="privacy">
-    Deine Anfrage ist der erste Schritt. Wenn es passt, melde ich mich persönlich mit den nächsten Schritten.<br>
-    Hinweis: Alle Rituale folgen einer bewussten, festen Struktur und werden durch ein professionell erarbeitetes Hygienekonzept sicher durchgeführt – im Studio oder Outdoor.<br><br>
-    Mit dem Absenden erklärst du dich einverstanden, dass deine Angaben zur Bearbeitung deiner Anfrage und zur Kontaktaufnahme verwendet werden.
+    Deine Angaben dienen der Prüfung deiner Anfrage und der Kontaktaufnahme.<br>
+    Übermittlung via „FormSubmit“ (E-Mail-Zustellung).<br>
+    Weitere Infos in der <a href="datenschutz.html">Datenschutzerklärung</a>.
   </p>
 
-  <section class="text-block reveal">Du spürst, dass das Ritual mehr ist als nur ein Wort? Hast aber trotzdem noch fragen?
-Dann klicke, auf
-</section>
+  <div class="divider"></div>
 
+  <section class="text-block reveal" style="text-align:center;">
+    Du willst den Ablauf im Detail?
+  </section>
 
-<div class="cta-ablauf">
-  <a href="ablauf_outdoor.html" aria-label="Ritueller Ablauf Outdoor">
-    <img src="assets/img/ablauf_outdoor.PNG"
-         alt="Ritueller Ablauf Outdoor"
-         loading="lazy">
-  </a>
-</div>
-<div class="cta-ablauf">
-  <a href="ablauf_indoor.html" aria-label="Ritueller Ablauf Indoor">
-    <img src="assets/img/ablauf_indoor.PNG"
-         alt="Ritueller Ablauf Indoor"
-         loading="lazy">
-  </a>
-</div>
+  <div class="cta-ablauf">
+    <a href="ablauf_outdoor.html" aria-label="Ritueller Ablauf Outdoor">
+      <img src="assets/img/ablauf_outdoor.PNG" alt="Ritueller Ablauf Outdoor" loading="lazy">
+    </a>
+  </div>
+
+  <div class="cta-ablauf">
+    <a href="ablauf_indoor.html" aria-label="Ritueller Ablauf Indoor">
+      <img src="assets/img/ablauf_indoor.PNG" alt="Ritueller Ablauf Indoor" loading="lazy">
+    </a>
+  </div>
 
   <section id="datenschutz-hinweise" class="text-block reveal info-block">
     <h2>Datenschutz & Hinweise</h2>
 
     <p>
-      <strong>Zweck:</strong> Deine Angaben dienen ausschließlich dazu, deine Anfrage zu prüfen, dich zu kontaktieren
-      und – wenn es passt – den nächsten Schritt im Prozess vorzubereiten.
+      <strong>Zweck:</strong> Prüfung deiner Anfrage, Kontaktaufnahme und Vorbereitung des nächsten Schritts.
     </p>
 
     <p>
-      <strong>Übermittlung:</strong> Die Formularübermittlung erfolgt über den Dienst „FormSubmit“.
-      Dabei werden die eingegebenen Daten an den Dienstleister übertragen, damit sie per E-Mail zugestellt werden können.
+      <strong>Übermittlung:</strong> Die Formularübermittlung erfolgt über „FormSubmit“ (E-Mail-Zustellung).
     </p>
 
     <p>
-      <strong>Keine Weitergabe:</strong> Es erfolgt keine Weitergabe deiner Daten an Dritte, außer es ist zur technischen
-      Zustellung des Formulars erforderlich.
-    </p>
-
-    <p class="small">
-      Weitere Informationen findest du in der <a href="datenschutz.html">Datenschutzerklärung</a>.
+      <strong>Keine Weitergabe:</strong> Keine Weitergabe an Dritte, außer technisch für die Zustellung erforderlich.
     </p>
   </section>
 
@@ -414,10 +417,8 @@ Dann klicke, auf
   <p>© <span id="year"></span> Modern Ritualistic Tattoo</p>
 </footer>
 
-<!-- Reveal -->
 <script src="assets/js/reveal.js"></script>
 
-<!-- Year -->
 <script>
 (function(){
   const y=document.getElementById('year');
@@ -425,7 +426,6 @@ Dann klicke, auf
 })();
 </script>
 
-<!-- Burger Menu (FEHLTE) -->
 <script>
 (function(){
   const burgerBtn = document.getElementById('burgerBtn');
@@ -462,7 +462,6 @@ Dann klicke, auf
 })();
 </script>
 
-<!-- Local SEO: Studio Structured Data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
