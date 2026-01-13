@@ -742,3 +742,10 @@ h2 {
 .merksatz .focus-text {
   display: inline-block;
 }
+.faq-question {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px; /* Abstand zwischen Text und + */
+}
