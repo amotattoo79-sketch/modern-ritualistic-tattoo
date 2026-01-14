@@ -756,3 +756,9 @@ main.intro .termin-button {
   display: block;
   margin: 0 auto;
 }
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;          /* erzwingt einheitlich links */
+}
