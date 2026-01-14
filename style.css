@@ -762,3 +762,26 @@ main.intro .termin-button {
   justify-content: space-between;
   text-align: left;          /* erzwingt einheitlich links */
 }
+.page-footnote{
+  text-align:center;
+  margin: 32px auto 0;
+  width: min(980px, 92vw);
+  padding: 14px 12px 18px;
+  border-top: 1px solid rgba(255,255,255,.10);
+}
+
+.page-footnote .footnote-line{
+  margin: 8px 0 0;
+  font-size: 0.95rem;
+}
+
+.footnote-link{
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+.footnote-link:hover{
+  text-decoration-thickness: 2px;
+}
