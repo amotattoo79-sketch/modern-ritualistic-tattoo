@@ -749,3 +749,10 @@ h2 {
   align-items: center;
   gap: 12px; /* Abstand zwischen Text und + */
 }
+main.intro .termin-button {
+  width: 200%;
+  max-width: 840px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
