@@ -36,14 +36,13 @@
     <p>© <span id="year"></span> Modern Ritualistic Tattoo</p>
   </footer>
 
-  <!-- Gemeinsamer Burger-Scriptblock -->
-  <script>
-    (function(){
-      const burgerBtn = document.getElementById('burgerBtn');
-      const siteNav   = document.getElementById('siteNav');
-      const body      = document.body;
-      if(!burgerBtn || !siteNav) return;
+  <<script>
+  (function(){
+    const burgerBtn = document.getElementById('burgerBtn');
+    const siteNav   = document.getElementById('siteNav');
+    const body      = document.body;
 
+    if(burgerBtn && siteNav){
       function toggleNav(open){
         const willOpen = (open!==undefined) ? open : !body.classList.contains('nav-open');
         body.classList.toggle('nav-open', willOpen);
@@ -62,17 +61,19 @@
       let sx=null, sy=null;
       window.addEventListener('touchstart', (e)=>{
         const t=e.touches[0]; sx=t.clientX; sy=t.clientY;
-      },{passive:true});
+      }, {passive:true});
+
       window.addEventListener('touchmove', (e)=>{
         if (sx===null) return;
         const t=e.touches[0], dx=t.clientX-sx, dy=Math.abs(t.clientY-sy);
         if (dy>40) return;
         if (sx<24 && dx>40) toggleNav(true);
         if (dx<-60) toggleNav(false);
-      },{passive:true});
-    })();
+      }, {passive:true});
+    }
 
-    (function(){const y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();})();
-  </script>
-</body>
-</html>
+    // Jahr (wenn ihr es nutzen wollt)
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  })();
+</script>
