@@ -792,3 +792,31 @@ body.page-bg .intro .text-block{
   margin-right: auto;
   text-align: center;
 }
+/* --- FIX: echte Zentrierung der Textblöcke (überschreibt style.css Offsets) --- */
+.ac-hero-inner .text-block,
+.module-body .text-block,
+main.intro .text-block{
+  width: min(920px, 92vw) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  text-align: center !important;
+}
+
+/* Falls style.css Textblöcke als "inline" oder mit Floats behandelt */
+.ac-hero-inner .text-block,
+.module-body .text-block,
+main.intro .text-block{
+  display: block !important;
+  float: none !important;
+}
+
+/* --- FIX: feine weiße Rahmen um die Blöcke entfernen --- */
+.ac-hero,
+.denkanker,
+.module,
+.pill,
+.ac-toc a{
+  border: 0 !important;
+}
