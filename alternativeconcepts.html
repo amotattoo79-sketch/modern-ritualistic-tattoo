@@ -95,6 +95,7 @@
       gap:10px;
       justify-content:center;
       flex-wrap:wrap;
+      text-align:center;
     }
     .ac-toc a{
       border:1px solid rgba(255,255,255,.10);
@@ -107,6 +108,7 @@
       font-weight:700;
       letter-spacing:.2px;
       box-shadow:0 10px 20px rgba(0,0,0,.25);
+      display:inline-block;
     }
     .ac-toc a:hover{color:#ffda8a !important;}
 
@@ -148,9 +150,10 @@
     .grid2{
       display:grid;
       grid-template-columns: 1fr 1fr;
-      gap:14px;
-      margin-top:14px;
-      justify-items:stretch;
+      gap:18px;
+      margin-top:16px;
+      justify-items:center; /* FIX: echte Zentrierung der Karten im Grid */
+      align-items:stretch;
     }
     @media (max-width: 860px){
       .grid2{grid-template-columns:1fr;}
@@ -160,21 +163,23 @@
       border:1px solid rgba(255,255,255,.10);
       background:rgba(0,0,0,.26);
       border-radius:14px;
-      padding:14px 14px;
+      padding:16px 16px;
       text-align:left;
       margin:0 auto;
       box-shadow:0 10px 22px rgba(0,0,0,.25);
+      width:100%;
+      max-width: 430px; /* FIX: gleichmäßige Breite -> wirkt sauber zentriert */
     }
     .pill strong{color:#ffda8a;}
-    .pill ul{margin:10px 0 0 18px;}
-    .pill li{margin: 6px 0;}
+    .pill ul{margin:12px 0 0 18px; padding:0;}
+    .pill li{margin: 10px 0; line-height:1.45;} /* FIX: entzerre Listen ohne Layout zu sprengen */
 
     .kpi-row{
       display:flex;
-      gap:10px;
+      gap:12px;
       justify-content:center;
       flex-wrap:wrap;
-      margin-top:16px;
+      margin-top:18px;
     }
     .kpi{
       border:1px solid rgba(255,255,255,.10);
@@ -270,30 +275,33 @@
     <div class="hero-inner">
       <div class="ac-hero reveal">
         <div class="ac-hero-inner">
-          <h1 class="intro-text" style="margin:0;"></h1>
-            <h3 class="intro-text" style="margin:0;">
-  Räume, die Veränderung ermöglichen –<br><br>
-ohne Menschen formen zu wollen.
-</h3>
 
-<br>
+          <h3 class="intro-text" style="margin:0;">
+            Räume, die Veränderung ermöglichen –<br><br>
+            ohne Menschen formen zu wollen.
+          </h3>
 
-<section class="text-block" style="margin-bottom:0;">
-  Umsetzbare Business-Module für <strong>Gemeinschaft</strong>, <strong>Praxis</strong> und <strong>nachhaltige Wertschöpfung</strong>.<br>
-  Kein Workshop-Zirkus. Kein Coaching-Theater.
-</section> <br>
-            <br>
-            <br>
+          <br>
+
+          <section class="text-block" style="margin-bottom:0;">
+            Umsetzbare Business-Module für <strong>Gemeinschaft</strong>, <strong>Praxis</strong> und <strong>nachhaltige Wertschöpfung</strong>.<br><br>
+            Kein Workshop-Zirkus. Kein Coaching-Theater.
+          </section>
+
+          <br><br>
 
           <div class="ac-toc" aria-label="Sprungmarken">
-            <a href="#m1">Modul 1: Events & Retreats</a> <br>
-            <a href="#m2">Modul 2: Online-Kurse</a> <br>
-            <a href="#m3">Modul 3: Permakultur</a> <br>
+            <a href="#m1">Modul 1: Events & Retreats</a>
+            <a href="#m2">Modul 2: Online-Kurse</a>
+            <a href="#m3">Modul 3: Permakultur</a>
             <a href="#m4">Modul 4: Ritualized Access</a>
           </div>
+
         </div>
       </div>
-<br>
+
+      <br>
+
       <div class="denkanker reveal">
         <h3>Denkanker</h3>
         <p>
@@ -310,16 +318,14 @@ ohne Menschen formen zu wollen.
     <h2 class="intro-text"><br>Rahmen (damit es funktioniert)</h2>
 
     <section class="text-block reveal">
-      <strong>Keine Gurus.</strong> Keine Heilsversprechen. Keine religiösen Narrative.<br>
+      <strong>Keine Gurus.</strong> Keine Heilsversprechen. Keine religiösen Narrative.<br><br>
       Stattdessen: <strong>Handwerk</strong>, <strong>Natur</strong>, <strong>Alltag</strong>, <strong>Gemeinschaft</strong>.
     </section>
 
     <div class="spacer-lg"></div>
 
     <section class="text-block reveal">
-      Die Module sind so gebaut, dass man klein starten kann:<br>
-      <br>
-      <br>
+      Die Module sind so gebaut, dass man klein starten kann:<br><br>
       1 Event → 1 Serie → 1 Retreat → Produktlinie → Archiv.
     </section>
 
@@ -330,38 +336,44 @@ ohne Menschen formen zu wollen.
       <div class="module-head">
         <h2 class="module-title">Modul 1 – Events & Retreats</h2>
         <p class="module-sub">
-          Mehrtägiges, modulares Präsenzformat<br>
+          Mehrtägiges, modulares Präsenzformat<br><br>
           <strong>Tag 1–3 Event · Tag 4–5 Retreat</strong>
         </p>
       </div>
-<br>
+
+      <br>
+
       <div class="module-body">
 
         <section class="text-block">
-          Dieses Modul ist der <strong>Hauptumsatztreiber</strong>.<br>
+          Dieses Modul ist der <strong>Hauptumsatztreiber</strong>.<br><br>
           Jeder Tag ist einzeln buchbar – mit klarer Progression.
         </section>
-<br>
+
         <br>
+
         <div class="grid2">
 
           <div class="pill">
             <strong>Struktur & Preise</strong>
+            <br>
             <ul>
               <li><strong>Tag 1:</strong> Einstieg & Grundlagen – 120 €</li>
               <li><strong>Tag 2:</strong> Vertiefung & Praxis – 120 €</li>
               <li><strong>Tag 3:</strong> Fortgeschrittene Kurse – 130 €</li>
               <li><strong>Kombiticket (Tag 1–3):</strong> 370 €</li>
               <li><strong>Retreat Tag 4–5:</strong> +100 € pro Tag</li>
-            </ul><br>
+            </ul>
+            <br>
             <div class="micro-note">
               Retreat = nur Vertiefung, keine Einführung
             </div>
           </div>
-<br>
+
           <div class="pill">
             <strong>Kursformate (Rotation)</strong>
-            <ul><br>
+            <br>
+            <ul>
               <li>Dreadpflege & Fehleranalyse</li>
               <li>Mal- & Ausdruckskurse (Material, Körper, Fläche)</li>
               <li>Töpfern & Arbeiten mit Ton</li>
@@ -369,36 +381,40 @@ ohne Menschen formen zu wollen.
               <li>Einfaches Kochen & Versorgung in Gruppen</li>
               <li>Repair & Upcycling (Textil, Leder)</li>
             </ul>
-            <div class="micro-note"><br>
-              <br>
+            <br>
+            <div class="micro-note">
               Keine Wiederholung – jedes Event neu kombinierbar
             </div>
           </div>
 
         </div>
-<br>
+
+        <br><br>
+
         <div class="grid2">
 
           <div class="pill">
             <strong>Warum diese Vielfalt?</strong>
-            <ul><br>
+            <br>
+            <ul>
               <li>Physische Ergebnisse statt Theorie</li>
               <li>Unterschiedliche Zugänge für unterschiedliche Menschen</li>
               <li>Hoher Content- & Wiederkehrwert</li>
               <li>Skalierbar ohne Abnutzung</li>
             </ul>
-          </div><br>
+          </div>
 
           <div class="pill">
             <strong>Ertrag & Wirkung</strong>
-            <ul><br>
+            <br>
+            <ul>
               <li>Ticketumsatz</li>
               <li>Retreat-Upsell</li>
               <li>Produktverkauf vor Ort</li>
               <li>Community-Bindung</li>
             </ul>
           </div>
-<br>
+
         </div>
 
       </div>
@@ -414,27 +430,33 @@ ohne Menschen formen zu wollen.
           Niedrigschwellig · Saisonal · Konsequent bodenständig
         </p>
       </div>
-<br>
+
+      <br>
+
       <div class="module-body">
 
         <section class="text-block">
-          Modul 2 ist <strong>kein</strong> Hauptumsatzträger.<br>
+          Modul 2 ist <strong>kein</strong> Hauptumsatzträger.<br><br>
           Es dient als <strong>Einstieg</strong> und <strong>Filter</strong>.
         </section>
-<br>
+
+        <br>
+
         <div class="grid2">
 
           <div class="pill">
             <strong>Kursstruktur</strong>
+            <br>
             <ul>
               <li>4 Online-Kurse pro Jahr</li>
               <li>Je eine Jahreszeit</li>
               <li>Fokus: <strong>regionales Räucherwerk</strong></li>
             </ul>
           </div>
-<br>
+
           <div class="pill">
             <strong>Inhalte</strong>
+            <br>
             <ul>
               <li>Welche Pflanzen wachsen hier?</li>
               <li>Ernte & Trocknung</li>
@@ -442,21 +464,25 @@ ohne Menschen formen zu wollen.
               <li>Kein Ritual, keine Heilsversprechen</li>
             </ul>
           </div>
-<br>
+
         </div>
+
+        <br><br>
 
         <div class="grid2">
 
           <div class="pill">
             <strong>Preis</strong>
+            <br>
             <ul>
               <li>40 € pro Kurs</li>
               <li>Einzeln buchbar</li>
             </ul>
           </div>
-<br>
+
           <div class="pill">
             <strong>Ziel</strong>
+            <br>
             <ul>
               <li>Qualifizierte Teilnehmer für Events</li>
               <li>Vertrauensaufbau</li>
@@ -471,167 +497,179 @@ ohne Menschen formen zu wollen.
 
     <br><br>
 
- <!-- MODUL 3 -->
-<section id="m3" class="module reveal">
-  <div class="module-head">
-    <h2 class="module-title">Modul 3 – Permakultur & Autarkie</h2>
-    <p class="module-sub">
-      Infrastruktur statt Idealismus
-    </p>
-  </div>
-  <br>
+    <!-- MODUL 3 -->
+    <section id="m3" class="module reveal">
+      <div class="module-head">
+        <h2 class="module-title">Modul 3 – Permakultur & Autarkie</h2>
+        <p class="module-sub">
+          Infrastruktur statt Idealismus
+        </p>
+      </div>
 
-  <div class="module-body">
+      <br>
 
-    <section class="text-block">
-      Dieses Modul reduziert Kosten,<br>
-      stärkt Unabhängigkeit<br>
-      und schafft reale Werte.
+      <div class="module-body">
+
+        <section class="text-block">
+          Dieses Modul reduziert Kosten,<br>
+          stärkt Unabhängigkeit<br>
+          und schafft reale Werte.
+        </section>
+
+        <br><br>
+
+        <div class="grid2">
+
+          <div class="pill">
+            <strong>Schwerpunkte</strong>
+            <br>
+            <ul>
+              <li>Permakultur-Grundlagen</li>
+              <li>Essbare & heilende Pflanzen</li>
+              <li>Haltbarmachung</li>
+              <li>Kreislaufsysteme</li>
+            </ul>
+          </div>
+
+          <div class="pill">
+            <strong>Nutzen</strong>
+            <br>
+            <ul>
+              <li>Versorgung von Retreats</li>
+              <li>Kostensenkung</li>
+              <li>Bildungsangebot</li>
+              <li>Langfristige Stabilität</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <br><br>
+
+        <!-- 3-TAGE-KURS (INTEGRIERT) -->
+        <div class="grid2">
+
+          <div class="pill">
+            <strong>3-Tage-Praxis­kurs – Permakultur & Selbstversorgung</strong>
+            <br>
+            <ul>
+              <li><strong>Tag 1:</strong> Ökologisches Gärtnern · Artenvielfalt · Samen bis Ernte</li>
+              <li><strong>Tag 2:</strong> Erde verstehen · Kompostierung · eigener Dünger</li>
+              <li><strong>Tag 3:</strong> Haltbarmachung · Lebensmittel­sicherheit · Vorrat</li>
+            </ul>
+            <br>
+            <div class="micro-note">
+              Geschlossener Kurs · klare Progression · keine Theorie-Sammlung
+            </div>
+          </div>
+
+          <div class="pill">
+            <strong>Outcome (warum es wirkt)</strong>
+            <br>
+            <ul>
+              <li>Teilnehmende können ein Versorgungssystem <strong>selbst starten</strong></li>
+              <li>Stabilere Erträge durch <strong>Mischkultur</strong> statt Monokultur</li>
+              <li>Unabhängigkeit durch <strong>samenfeste</strong> alte & regionale Sorten</li>
+              <li>Wertschöpfung durch <strong>Vorrat</strong> (nicht nur Ernte)</li>
+            </ul>
+            <br>
+            <div class="micro-note">
+              Ethnobotanik als Praxis: bewährte regionale Pflanzen, kein Kitsch
+            </div>
+          </div>
+
+        </div>
+
+        <br><br>
+
+        <div class="grid2">
+
+          <div class="pill">
+            <strong>Tag 1 – Ökologisches Gärtnern & Artenvielfalt</strong>
+            <br>
+            <ul>
+              <li>Vom Samen bis zur Ernte: Wachstumsphasen & Pflege-Logik</li>
+              <li>Mischkultur, Fruchtfolge, Begleitpflanzen</li>
+              <li>Warum Artenvielfalt Schädlinge reduziert und Bestäubung stärkt</li>
+              <li>Alte & regionale Sorten: robust, anpassungsfähig, samenfest</li>
+              <li>Welche Sorten ethnobotanisch besonders geeignet sind (Mitteleuropa-fokussiert)</li>
+            </ul>
+            <br>
+            <div class="micro-note">
+              Ziel: resiliente Pflanzenwahl statt „High-Performance“-Züchtung
+            </div>
+          </div>
+
+          <div class="pill">
+            <strong>Tag 2 – Erde, Kompost & eigener Dünger</strong>
+            <br>
+            <ul>
+              <li>Was ist „Erde“ eigentlich? Humus, Bodenleben, Struktur</li>
+              <li>Kompost: Aufbau, Schichtung, Temperatur, Reifegrad erkennen</li>
+              <li>Mulchsysteme & Nährstoffkreisläufe</li>
+              <li>Eigene Düngerproduktion: Pflanzenjauchen, Komposttee, Mineralien sinnvoll</li>
+              <li>Fehlerbilder & schnelle Korrektur (ohne Chemie)</li>
+            </ul>
+            <br>
+            <div class="micro-note">
+              Ziel: Boden wird zur Infrastruktur – weniger Arbeit, mehr Ertrag
+            </div>
+          </div>
+
+        </div>
+
+        <br><br>
+
+        <div class="grid2">
+
+          <div class="pill">
+            <strong>Tag 3 – Haltbarmachung & Lebensmittel­sicherheit</strong>
+            <br>
+            <ul>
+              <li>Einkochen, Fermentieren, Trocknen – jeweils mit Praxis</li>
+              <li>Woran erkenne ich, ob Lebensmittel noch gut sind?</li>
+              <li>Hygiene-Standards & häufige Fehler (Schimmel, Gärgase, Dichtheit)</li>
+              <li>Vorratshaltung ohne Technik-Abhängigkeit</li>
+              <li>Was gehört in einen realistischen Grundvorrat?</li>
+            </ul>
+            <br>
+            <div class="micro-note">
+              Ziel: Versorgung über Monate – nicht nur „Sommer-Erntegefühl“
+            </div>
+          </div>
+
+          <div class="pill">
+            <strong>Abschluss & Übergabe (Tag 3)</strong>
+            <br>
+            <ul>
+              <li>Jede Person erhält ein <strong>Starter-Paket</strong></li>
+              <li>Ausgewählte <strong>Samen</strong> (alte & regionale Sorten)</li>
+              <li><strong>Steckzwiebeln</strong> für den sofortigen Start</li>
+              <li>Kurze Anleitung: Startplan für Zuhause</li>
+            </ul>
+            <br>
+            <div class="micro-note">
+              Lernen endet nicht beim Kurs – es wird direkt implementiert
+            </div>
+          </div>
+
+        </div>
+        <!-- /3-TAGE-KURS -->
+
+        <br><br>
+
+        <div class="kpi-row">
+          <div class="kpi">Autarkie</div>
+          <div class="kpi">Kostenreduktion</div>
+          <div class="kpi">Wertschöpfung</div>
+          <div class="kpi">Bildung</div>
+        </div>
+
+        <br>
+
+      </div>
     </section>
 
-    <br>
-
-    <div class="grid2">
-
-      <div class="pill">
-        <strong>Schwerpunkte</strong>
-        <ul>
-          <li>Permakultur-Grundlagen</li>
-          <li>Essbare & heilende Pflanzen</li>
-          <li>Haltbarmachung</li>
-          <li>Kreislaufsysteme</li>
-        </ul>
-      </div>
-
-      <br>
-
-      <div class="pill">
-        <strong>Nutzen</strong>
-        <ul>
-          <li>Versorgung von Retreats</li>
-          <li>Kostensenkung</li>
-          <li>Bildungsangebot</li>
-          <li>Langfristige Stabilität</li>
-        </ul>
-      </div>
-
-      <br>
-
-    </div>
-
-    <br>
-
-    <!-- 3-TAGE-KURS (INTEGRIERT) -->
-    <div class="grid2">
-
-      <div class="pill">
-        <strong>3-Tage-Praxis­kurs – Permakultur & Selbstversorgung</strong>
-        <ul>
-          <li><strong>Tag 1:</strong> Ökologisches Gärtnern · Artenvielfalt · Samen bis Ernte</li>
-          <li><strong>Tag 2:</strong> Erde verstehen · Kompostierung · eigener Dünger</li>
-          <li><strong>Tag 3:</strong> Haltbarmachung · Lebensmittel­sicherheit · Vorrat</li>
-        </ul>
-        <div class="micro-note">
-          Geschlossener Kurs · klare Progression · keine Theorie-Sammlung
-        </div>
-      </div>
-
-      <div class="pill">
-        <strong>Outcome (warum es wirkt)</strong>
-        <ul>
-          <li>Teilnehmende können ein Versorgungssystem <strong>selbst starten</strong></li>
-          <li>Stabilere Erträge durch <strong>Mischkultur</strong> statt Monokultur</li>
-          <li>Unabhängigkeit durch <strong>samenfeste</strong> alte & regionale Sorten</li>
-          <li>Wertschöpfung durch <strong>Vorrat</strong> (nicht nur Ernte)</li>
-        </ul>
-        <div class="micro-note">
-          Ethnobotanik als Praxis: bewährte regionale Pflanzen, kein Kitsch
-        </div>
-      </div>
-
-    </div>
-
-    <br>
-
-    <div class="grid2">
-
-      <div class="pill">
-        <strong>Tag 1 – Ökologisches Gärtnern & Artenvielfalt</strong>
-        <ul>
-          <li>Vom Samen bis zur Ernte: Wachstumsphasen & Pflege-Logik</li>
-          <li>Mischkultur, Fruchtfolge, Begleitpflanzen</li>
-          <li>Warum Artenvielfalt Schädlinge reduziert und Bestäubung stärkt</li>
-          <li>Alte & regionale Sorten: robust, anpassungsfähig, samenfest</li>
-          <li>Welche Sorten ethnobotanisch besonders geeignet sind (Mitteleuropa-fokussiert)</li>
-        </ul>
-        <div class="micro-note">
-          Ziel: resiliente Pflanzenwahl statt „High-Performance“-Züchtung
-        </div>
-      </div>
-
-      <div class="pill">
-        <strong>Tag 2 – Erde, Kompost & eigener Dünger</strong>
-        <ul>
-          <li>Was ist „Erde“ eigentlich? Humus, Bodenleben, Struktur</li>
-          <li>Kompost: Aufbau, Schichtung, Temperatur, Reifegrad erkennen</li>
-          <li>Mulchsysteme & Nährstoffkreisläufe</li>
-          <li>Eigene Düngerproduktion: Pflanzenjauchen, Komposttee, Mineralien sinnvoll</li>
-          <li>Fehlerbilder & schnelle Korrektur (ohne Chemie)</li>
-        </ul>
-        <div class="micro-note">
-          Ziel: Boden wird zur Infrastruktur – weniger Arbeit, mehr Ertrag
-        </div>
-      </div>
-
-    </div>
-
-    <br>
-
-    <div class="grid2">
-
-      <div class="pill">
-        <strong>Tag 3 – Haltbarmachung & Lebensmittel­sicherheit</strong>
-        <ul>
-          <li>Einkochen, Fermentieren, Trocknen – jeweils mit Praxis</li>
-          <li>Woran erkenne ich, ob Lebensmittel noch gut sind?</li>
-          <li>Hygiene-Standards & häufige Fehler (Schimmel, Gärgase, Dichtheit)</li>
-          <li>Vorratshaltung ohne Technik-Abhängigkeit</li>
-          <li>Was gehört in einen realistischen Grundvorrat?</li>
-        </ul>
-        <div class="micro-note">
-          Ziel: Versorgung über Monate – nicht nur „Sommer-Erntegefühl“
-        </div>
-      </div>
-
-      <div class="pill">
-        <strong>Abschluss & Übergabe (Tag 3)</strong>
-        <ul>
-          <li>Jede Person erhält ein <strong>Starter-Paket</strong></li>
-          <li>Ausgewählte <strong>Samen</strong> (alte & regionale Sorten)</li>
-          <li><strong>Steckzwiebeln</strong> für den sofortigen Start</li>
-          <li>Kurze Anleitung: Startplan für Zuhause</li>
-        </ul>
-        <div class="micro-note">
-          Lernen endet nicht beim Kurs – es wird direkt implementiert
-        </div>
-      </div>
-
-    </div>
-    <!-- /3-TAGE-KURS -->
-
-    <br>
-
-    <div class="kpi-row">
-      <div class="kpi">Autarkie</div>
-      <div class="kpi">Kostenreduktion</div>
-      <div class="kpi">Wertschöpfung</div>
-      <div class="kpi">Bildung</div>
-    </div>
-
-    <br>
-
-  </div>
-</section>
     <br><br>
 
     <!-- MODUL 4 (NEU) -->
@@ -639,31 +677,36 @@ ohne Menschen formen zu wollen.
       <div class="module-head">
         <h2 class="module-title">Modul 4 – Ritualized Access</h2>
         <p class="module-sub">
-          Hochkuratiertes Präsenz-Format · Invitation Only<br>
+          Hochkuratiertes Präsenz-Format · Invitation Only<br><br>
           <strong>Übergangsraum statt Workshop.</strong>
         </p>
       </div>
-<br>
+
+      <br>
+
       <div class="module-body">
 
         <section class="text-block">
-          <strong>Ritualized Access</strong> ist kein Retreat, kein Coaching und kein Lehrformat.<br>
+          <strong>Ritualized Access</strong> ist kein Retreat, kein Coaching und kein Lehrformat.<br><br>
           Es ist der <strong>zeitlich begrenzte Zugang</strong> zu einem Ort,
           der bewusst als <strong>Übergangsraum</strong> gehalten wird.
-        </section><br>
+        </section>
 
-        <div class="spacer-lg"></div>
+        <br><br>
 
-  <br>      <section class="text-block">
-          <strong>Kein Programm.</strong> Keine Inhalte. Keine Anleitung.<br>
+        <section class="text-block">
+          <strong>Kein Programm.</strong> Keine Inhalte. Keine Anleitung.<br><br>
           Stattdessen: <strong>Präsenz</strong>, <strong>Rhythmus</strong>, <strong>Reduktion</strong> – in einem klar geführten Setting.
         </section>
+
+        <br>
 
         <div class="grid2">
 
           <div class="pill">
             <strong>Was dieses Format ist</strong>
-  <br>          <ul>
+            <br>
+            <ul>
               <li>2–3 Tage Psyland</li>
               <li>Max. 6–8 Personen</li>
               <li>Klare Haus- & Raumregeln</li>
@@ -673,7 +716,8 @@ ohne Menschen formen zu wollen.
           </div>
 
           <div class="pill">
-     <br>       <strong>Was dieses Format nicht ist</strong>
+            <strong>Was dieses Format nicht ist</strong>
+            <br>
             <ul>
               <li>Kein Retreat</li>
               <li>Kein Coaching</li>
@@ -685,23 +729,28 @@ ohne Menschen formen zu wollen.
 
         </div>
 
+        <br><br>
+
         <div class="grid2">
 
           <div class="pill">
             <strong>Tagesrahmen (Beispiel)</strong>
+            <br>
             <ul>
-        <br>      <li><strong>Morgen:</strong> stiller Start (30–45 Min)</li>
+              <li><strong>Morgen:</strong> stiller Start (30–45 Min)</li>
               <li><strong>Mittag:</strong> Essen / Walk / einfache Handarbeit</li>
               <li><strong>Nachmittag:</strong> moderierter Check-in-Kreis (60 Min)</li>
               <li><strong>Abend:</strong> Feuer · Musik · Tea-Space (Gastgeber präsent)</li>
             </ul>
+            <br>
             <div class="micro-note">
               Keine Lehre · keine „Transformation“ · keine Inszenierung
             </div>
           </div>
-<br>
+
           <div class="pill">
             <strong>Preis</strong>
+            <br>
             <ul>
               <li>2 Tage: <strong>2.500–3.500 €</strong></li>
               <li>3 Tage: <strong>3.500–5.000 €</strong></li>
@@ -709,25 +758,30 @@ ohne Menschen formen zu wollen.
               <li>Teilnahme nur nach Auswahl</li>
             </ul>
           </div>
-<br>
+
         </div>
+
+        <br><br>
 
         <div class="grid2">
 
           <div class="pill">
             <strong>Arbeitslast (Plattform)</strong>
+            <br>
             <ul>
               <li>Anwesend sein</li>
               <li>Raum halten</li>
               <li>Keine Lehrverpflichtung</li>
             </ul>
+            <br>
             <div class="micro-note">
               Präsenz ist das Produktmerkmal
             </div>
           </div>
-<br>
+
           <div class="pill">
             <strong>Operator-Aufgaben</strong>
+            <br>
             <ul>
               <li>Auswahl der Teilnehmer</li>
               <li>Zahlung, Verträge, Ablauf</li>
@@ -737,37 +791,48 @@ ohne Menschen formen zu wollen.
           </div>
 
         </div>
-<br>
+
+        <br><br>
+
         <div class="kpi-row" aria-label="Kernoutput">
           <div class="kpi">High-Ticket</div>
           <div class="kpi">Wenig Volumen</div>
           <div class="kpi">Hohe Marge</div>
           <div class="kpi">Einladung</div>
         </div>
-<br>
+
+        <br>
+
       </div>
     </section>
 
     <div class="ac-divider"></div>
-<br>
+
+    <br>
+
     <h2 class="intro-text"><br>Abrechnungsmodell</h2>
 
     <section class="text-block reveal">
-      Operatives Risiko bei mir.<br>
-      Abrechnung ausschließlich auf Gewinnbasis.<br>
+      Operatives Risiko bei mir.<br><br>
+      Abrechnung ausschließlich auf Gewinnbasis.<br><br>
       <strong>35 % Operator · 65 % Plattform.</strong>
     </section>
-<br>
+
+    <br>
+
     <div class="spacer-lg"></div>
 
     <h2 class="intro-text"><br>Nächster Schritt</h2>
 
     <section class="text-block reveal">
-<br>      Wenn das passt: kurzer Call.<br>
+      <br>
+      Wenn das passt: kurzer Call.<br><br>
       <strong>20 Minuten</strong> – Pilotformat festziehen, Timeline & Verantwortlichkeiten klären.
     </section>
 
-<br>    <div class="cta-row">
+    <br>
+
+    <div class="cta-row">
       <a href="contact.html" class="cta-fragebogen" aria-label="Kontakt aufnehmen">
         <img src="assets/img/kontakt.PNG" alt="Kontakt" loading="lazy">
       </a>
