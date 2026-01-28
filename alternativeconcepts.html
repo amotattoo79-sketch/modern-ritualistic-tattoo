@@ -11,907 +11,328 @@
 
   <!-- SEO / Social -->
   <title>Alternative Concepts – Business-Module für Lifestyle & Community</title>
-  <meta name="description" content="Drei fertige Business-Module: (1) Events & Retreats (2) Praxis-Workshops (3) Produkte & Archiv. Klarer Ablauf, Ressourcen, Hürden, Monetarisierung. Keine Gurus. Praxis & Gemeinschaft.">
+  <meta name="description" content="Modulare Business-Formate: Events & Retreats · Online-Kurse · Permakultur. Praxisnah, skalierbar, ohne Guru-Narrativ.">
   <link rel="canonical" href="https://modern-ritualistic-tattoo.com/alternativeconcepts.html">
-
-  <!-- Open Graph / Social Preview -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Modern Ritualistic Tattoo">
-  <meta property="og:title" content="Alternative Concepts – Business-Module für Lifestyle & Community">
-  <meta property="og:description" content="Umsetzungsfertig: Events/Retreats, Praxis-Workshops, Produkte/Archiv. Klar. Bodennah. Profitabel.">
-  <meta property="og:url" content="https://modern-ritualistic-tattoo.com/alternativeconcepts.html">
-  <meta property="og:image" content="https://modern-ritualistic-tattoo.com/assets/img/og.PNG">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-
-  <!-- Twitter / X -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Alternative Concepts – Business-Module">
-  <meta name="twitter:description" content="Drei fertige Business-Module: Events/Retreats · Workshops · Produkte/Archiv.">
-  <meta name="twitter:image" content="https://modern-ritualistic-tattoo.com/assets/img/og.PNG">
 
   <link rel="stylesheet" href="style.css?v=burger2">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-    @media (max-width: 900px){
-      .site-header .burger{display:block!important;}
-      .site-header{position:relative; z-index:20;}
+    /* GENERELLE RUHE & RHYTHMUS */
+    .module{ margin:48px auto; }
+    .module + .module{ margin-top:64px; }
+    .module-body{ padding:24px 26px 30px; }
+    .pill{ padding:18px 18px; }
+    .pill ul{ margin-left:22px; }
 
-      .site-nav{
-        position:fixed; left:0; right:0; top:72px;
-        background:rgba(0,0,0,.92);
-        padding:14px 16px;
-        transform:translateY(-120%); opacity:0;
-        transition:transform .28s ease, opacity .28s ease;
-        border-bottom:1px solid rgba(255,255,255,.08);
-        box-shadow:0 10px 24px rgba(0,0,0,.45);
-        z-index:25;
-        font-size:0;
-        -webkit-tap-highlight-color: transparent;
-      }
-      body.nav-open .site-nav{transform:translateY(0); opacity:1;}
+    .text-block{ text-align:center; max-width:760px; margin:0 auto 14px; }
+    .module-body .text-block{ margin-bottom:22px; }
 
-      .site-nav a,
-      .site-nav a:link,
-      .site-nav a:visited{
-        display:block;
-        font-size:18px;
-        line-height:1.35;
-        padding:12px 6px;
-        margin:0;
-        border-bottom:1px solid rgba(255,255,255,.06);
-        color:#d9b26d !important;
-        text-decoration:none;
-        font-weight:600;
-        letter-spacing:.2px;
-        font-family:"Cinzel Decorative", serif;
-      }
-      .site-nav a:last-child{border-bottom:0;}
-      .site-nav a:hover,
-      .site-nav a:focus{color:#ffda8a !important; outline:none;}
-    }
+    .grid2{ gap:18px; }
+    .kpi-row{ margin-top:22px; }
 
-    /* HERO (hochwertig, ruhig, visuell) */
-    .ac-hero{
-      width:min(1020px, 92vw);
-      margin: 0 auto 12px;
-      border-radius:16px;
-      overflow:hidden;
-      border:1px solid rgba(255,255,255,.10);
-      background: linear-gradient(135deg, rgba(0,0,0,.65), rgba(0,0,0,.28));
-      box-shadow:0 18px 44px rgba(0,0,0,.55);
-    }
-    .ac-hero-inner{
-      padding: 20px 18px 18px;
+    .module-sub,
+    .module-head p{ text-align:center; }
+
+    .micro-note{
+      margin-top:10px;
+      opacity:.8;
+      font-size:14px;
       text-align:center;
     }
 
-    /* Mini-Navigation (Scanbarkeit) */
-    .ac-toc{
-      width:min(920px, 92vw);
-      margin: 12px auto 0;
-      display:flex;
-      gap:10px;
-      justify-content:center;
-      flex-wrap:wrap;
-    }
-    .ac-toc a{
-      border:1px solid rgba(255,255,255,.10);
-      padding:10px 12px;
-      border-radius:999px;
-      text-decoration:none;
-      color:#d9b26d !important;
-      background:rgba(0,0,0,.28);
-      font-family:"Cinzel Decorative", serif;
-      font-weight:700;
-      letter-spacing:.2px;
-      box-shadow:0 10px 20px rgba(0,0,0,.25);
-    }
-    .ac-toc a:hover{color:#ffda8a !important;}
+    .ac-divider{ margin:60px auto; }
 
-    /* Karten: wie Business-Module */
-    .module{
-      width:min(920px, 92vw);
-      margin: 18px auto;
-      border:1px solid rgba(255,255,255,.10);
-      background:rgba(0,0,0,.34);
-      border-radius:16px;
-      box-shadow:0 16px 34px rgba(0,0,0,.45);
-      overflow:hidden;
-    }
+    /* VISUELLE STRAFFUNG */
     .module-head{
-      padding: 18px 16px 10px;
-      text-align:center;
-      border-bottom:1px solid rgba(255,255,255,.08);
-      background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,0));
+      padding:26px 20px 18px;
     }
+
     .module-title{
-      margin:0;
-      font-family:"Cinzel Decorative", serif;
-      letter-spacing:.3px;
-      color:#d9b26d;
-      font-size: clamp(22px, 4vw, 30px);
-    }
-    .module-sub{
-      margin:8px 0 0;
-      opacity:.95;
-    }
-
-    .module-body{
-      padding: 14px 16px 18px;
-    }
-
-    .grid2{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:12px;
-      margin-top:12px;
-    }
-    @media (max-width: 860px){
-      .grid2{grid-template-columns:1fr;}
-    }
-
-    .pill{
-      border:1px solid rgba(255,255,255,.10);
-      background:rgba(0,0,0,.26);
-      border-radius:14px;
-      padding:12px 12px;
-    }
-    .pill strong{color:#ffda8a;}
-    .pill ul{margin:10px 0 0 18px;}
-    .pill li{margin: 6px 0;}
-
-    .kpi-row{
-      display:flex;
-      gap:10px;
-      justify-content:center;
-      flex-wrap:wrap;
-      margin-top:12px;
-    }
-    .kpi{
-      border:1px solid rgba(255,255,255,.10);
-      background:rgba(0,0,0,.25);
-      border-radius:999px;
-      padding:10px 12px;
-      font-family:"Cinzel Decorative", serif;
-      font-weight:700;
-      letter-spacing:.2px;
-      color:#d9b26d;
-    }
-
-    .ac-divider{
-      width:min(920px, 92vw);
-      margin: 22px auto;
-      border-top:1px solid rgba(255,255,255,.10);
-      opacity:.9;
-    }
-
-    /* Mini-"Birkenbihl": Denkanker / Knackpunkte */
-    .denkanker{
-      width:min(920px, 92vw);
-      margin: 14px auto 0;
-      border:1px solid rgba(255,255,255,.10);
-      background:rgba(0,0,0,.30);
-      border-radius:16px;
-      padding:14px 14px;
-      box-shadow:0 14px 30px rgba(0,0,0,.35);
-    }
-    .denkanker h3{
-      margin:0 0 8px 0;
-      font-family:"Cinzel Decorative", serif;
-      color:#d9b26d;
-      text-align:center;
-      font-size: clamp(18px, 3.3vw, 24px);
-    }
-    .denkanker p{margin:0; text-align:center; opacity:.95;}
-
-    .cta-row{
-      display:flex;
-      gap:12px;
-      justify-content:center;
-      flex-wrap:wrap;
-      margin:16px 0 0;
+      margin-bottom:6px;
     }
   </style>
 </head>
 
 <body class="page-bg">
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <a href="index.html" class="banner-logo-link" aria-label="Zur Startseite">
-      <img src="assets/img/banner_logo.PNG" alt="Modern Ritualistic Tattoo" width="965" height="508">
-    </a>
+<header class="site-header">
+  <a href="index.html" class="banner-logo-link">
+    <img src="assets/img/banner_logo.PNG" alt="Modern Ritualistic Tattoo">
+  </a>
+</header>
 
-    <button class="burger" id="burgerBtn" aria-label="Menü öffnen" aria-expanded="false"
-      style="position:absolute; right:12px; top:12px; width:44px; height:44px; padding:0; border:0; background:transparent; display:none;">
-      <img src="assets/icons/Menubutton1.PNG" alt="Menü" style="width:100%; height:100%; object-fit:contain;">
-    </button>
+<section class="hero">
+  <div class="hero-inner">
 
-    <nav class="site-nav" id="siteNav">
-      <a href="index.html">Home</a> |
-      <a href="ritual.html">Ritual</a> |
-      <a href="angebote.html">Leistungen & Preise</a> |
-      <a href="fragebogen.html">Aufnahmeprüfung</a> |
-      <a href="booking.html">Termin</a> |
-      <a href="philosophie.html">Philosophie</a> |
-      <a href="gallery.html">Momentaufnahmen</a> |
-      <a href="faq.html">FAQ</a> |
-      <a href="contact.html">Kontakt</a> |
-      <a href="datenschutz.html">Datenschutz</a> |
-      <a href="impressum.html">Impressum</a>
-    </nav>
-  </header>
+    <div class="ac-hero reveal">
+      <div class="ac-hero-inner">
+        <h1 class="intro-text">
+          Alternative Concepts<br><br>
+          Umsetzbare Business-Module
+        </h1>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="ac-hero reveal">
-        <div class="ac-hero-inner">
-          <h1 class="intro-text" style="margin:0;">
-            Alternative Concepts<br><br>
-            Business-Module für Lifestyle & Community
-          </h1>
+        <br>
+        <section class="text-block">
+          <strong>Keine Idee.</strong><br>
+          Ein fertiges, logisch aufgebautes System.
+        </section>
 
-          <br>
-          <section class="text-block" style="margin-bottom:0;">
-            <strong>Kein „Ideenpapier“.</strong><br>
-            Drei Module, die du <em>testen</em>, <em>replizieren</em> und <em>skalieren</em> kannst.
-          </section>
-
-          <div class="kpi-row" aria-label="Kernprinzipien">
-            <div class="kpi">Praxis</div>
-            <div class="kpi">Gemeinschaft</div>
-            <div class="kpi">Wiederkehr</div>
-            <div class="kpi">Marge</div>
-          </div>
-
-          <div class="ac-toc" aria-label="Sprungmarken">
-            <a href="#m1">Modul 1: Events & Retreats</a>
-            <a href="#m2">Modul 2: Praxis-Workshops</a>
-            <a href="#m3">Modul 3: Permakultur & Autarkie</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="denkanker reveal">
-        <h3>Denkanker</h3>
-        <p>
-          Menschen kaufen nicht „Content“.<br>
-          Sie kaufen <strong>Raum</strong>, <strong>Rhythmus</strong> und <strong>Zugehörigkeit</strong>.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTENT -->
-  <main class="intro">
-
-    <h2 class="intro-text"><br>Rahmen (damit es funktioniert)</h2>
-
-    <section class="text-block reveal">
-      <strong>Keine Gurus.</strong> Keine Heilsversprechen. Keine religiösen Narrative.<br>
-      Stattdessen: <strong>Handwerk</strong>, <strong>Natur</strong>, <strong>Alltag</strong>, <strong>Gemeinschaft</strong>.
-    </section>
-
-    <section class="text-block reveal">
-      Die Module sind so gebaut, dass man klein starten kann:<br>
-      1 Event → 1 Serie → 1 Retreat → Produktlinie → Archiv.
-    </section>
-
-    <div class="ac-divider"></div>
-
-    <!-- MODUL 1 -->
-    <section id="m1" class="module reveal">
-      <div class="module-head">
-        <h2 class="module-title">Modul 1 – Alternative Lifestyle Events & Retreats</h2>
-        <p class="module-sub">
-          <strong>1 Tag</strong> (Prototyp) · <strong>3–5 Tage</strong> (Tiefe & Marge)<br>
-          Kuratiert. Intim. Wiederholbar.
-        </p>
-      </div>
-
-      <div class="module-body">
-        <div class="grid2">
-          <div class="pill">
-            <strong>Was bekommt der Teilnehmer konkret?</strong>
-            <ul>
-              <li><strong>Dreadlife Clinic</strong>: Pflege/Erhalt, Fehlerdiagnose, Routine (hands-on)</li>
-              <li><strong>Naturhandwerk</strong>: Seile/Schnüre aus Naturfasern <em>oder</em> Repair/Upcycling (Outcome: ein fertiges Stück)</li>
-              <li><strong>Pflanzen & Räuchern</strong>: Mischungen herstellen + Anwendung (Raum/Objekt/Kleidung)</li>
-              <li><strong>Gemeinschaft</strong>: gemeinsames Kochen, Essen, Austausch (ohne Gruppen-Therapie)</li>
-              <li><strong>Abendformat</strong>: Musik/Feuer/Tee – ruhig, nicht showig</li>
-            </ul>
-          </div>
-
-          <div class="pill">
-            <strong>Warum diese Inhalte?</strong>
-            <ul>
-              <li>Sie erzeugen <strong>Ergebnis</strong> (nicht nur Stimmung).</li>
-              <li>Sie sind <strong>nicht peinlich-esoterisch</strong>, aber sinnstiftend.</li>
-              <li>Sie sind <strong>foto-/video-fähig</strong> (Content), ohne inszeniert zu wirken.</li>
-              <li>Sie lassen sich modular skalieren: <em>Day → Retreat</em>.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="grid2">
-          <div class="pill">
-            <strong>Ablauf (1-Tages-Event – Blueprint)</strong>
-            <ul>
-              <li>09:30 Ankommen · Regeln · Setting</li>
-              <li>10:00 Block 1: Dreadlife Clinic (Praxis)</li>
-              <li>13:00 Essen (gemeinsam, simpel)</li>
-              <li>14:30 Block 2: Pflanzen & Räuchern (Mischen + Anwenden)</li>
-              <li>16:30 Block 3: Naturhandwerk (Outcome)</li>
-              <li>18:00 Austausch + Closing</li>
-            </ul>
-            <div class="micro-note">
-              <em>Retreat = gleicher Bauplan, nur tiefer + mehr Praxiszeit.</em>
-            </div>
-          </div>
-
-          <div class="pill">
-            <strong>Ressourcen (was wir benötigen)</strong>
-            <ul>
-              <li>Location: Hof/Space/Kulturort (Innenraum + Außenbereich)</li>
-              <li>Küche/Essenslogistik (simpel, pflanzenbasiert)</li>
-              <li>Material-Kits (Dreads + Pflanzen + Handwerk)</li>
-              <li>2–3 Modelle für Dread-Clinic (Qualitätssicherung)</li>
-              <li>Haftung/AGB/Refund-Regeln (Standard)</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="grid2">
-          <div class="pill">
-            <strong>Monetarisierung (realistisch)</strong>
-            <ul>
-              <li>Event: <strong>40–90 €</strong> Ticket</li>
-              <li>Retreat: <strong>350–900 €</strong> je nach Komfort</li>
-              <li>Vendor-Fees (max. 8–12, kuratiert)</li>
-              <li>Bundles/Produkte vor Ort</li>
-              <li>Sponsoring (nachhaltige Brands, später)</li>
-            </ul>
-          </div>
-
-          <div class="pill">
-            <strong>Hürden (und wie wir sie lösen)</strong>
-            <ul>
-              <li><strong>„Markt-Vibe“</strong> → harte Kuratierung, wenige Anbieter, klare Ästhetik</li>
-              <li><strong>Orga-Overkill</strong> → klein starten (80–120 Pers.), feste Slots</li>
-              <li><strong>Qualitätsrisiko</strong> → Operator leitet (ich), klare Abläufe</li>
-              <li><strong>Wetter</strong> → Indoor-Backup</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="kpi-row" aria-label="Kernoutput">
-          <div class="kpi">Cashflow</div>
-          <div class="kpi">Community</div>
-          <div class="kpi">Content</div>
-          <div class="kpi">Produktabsatz</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MODUL 2 -->
-    <section id="m2" class="module reveal">
-      <div class="module-head">
-        <h2 class="module-title">Modul 2 – Bodenständige Praxis-Workshops</h2>
-        <p class="module-sub">
-          Wiederkehr statt Hype.<br>
-          <strong>Erfahrung</strong> statt Glaubenssystem.
-        </p>
-      </div>
-
-      <div class="module-body">
-        <div class="grid2">
-          <div class="pill">
-            <strong>Konkrete Workshop-Reihe (4er Serie – Jahreszeitenlogik)</strong>
-            <ul>
-              <li><strong>Frühling:</strong> Beifuß & Wacholder · Übergänge & Raum (Mischen + Anwenden)</li>
-              <li><strong>Sommer:</strong> Fichte/Kiefer · Atem & Erdung (Harze/Kräuter + Praxis)</li>
-              <li><strong>Herbst:</strong> Salbei (heimisch) · Reinigung & Ordnung (ohne Dogma)</li>
-              <li><strong>Winter:</strong> Lavendel · Nervensystem & Ruhe (Routinen + Körperwahrnehmung)</li>
-            </ul>
-            <div class="micro-note">
-              <em>Keine Heilsversprechen.</em> Wir arbeiten mit Sinneswahrnehmung, Materialkunde, Anwendung.
-            </div>
-          </div>
-
-          <div class="pill">
-            <strong>Warum genau diese Pflanzen?</strong>
-            <ul>
-              <li>Regional/zugänglich, rechtlich unproblematisch</li>
-              <li>Praktisch erfahrbar (Geruch, Wirkung im Raum, Alltagstauglichkeit)</li>
-              <li>Traditionell genutzt – ohne religiöses Framing</li>
-              <li>Ideal für Serien (Wiederkehr & Bindung)</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="grid2">
-          <div class="pill">
-            <strong>Material (was wir benötigen)</strong>
-            <ul>
-              <li>Kräuter/Harze (qualitätsgesichert)</li>
-              <li>Räucherschalen (Ton/Speckstein), Sieb oder Kohle</li>
-              <li>Mörser, Gläser, Papier, Etiketten (Mischungen)</li>
-              <li>1-seitige Handouts (Routinen + Mischungslogik)</li>
-            </ul>
-          </div>
-
-          <div class="pill">
-            <strong>Monetarisierung</strong>
-            <ul>
-              <li>Einzelworkshop: <strong>60–150 €</strong></li>
-              <li>Serie/Paket: Preisvorteil + Verbindlichkeit</li>
-              <li>Material-Kits (Startersets)</li>
-              <li>Brücke zu Modul 3 (Archiv + Produkte)</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="grid2">
-          <div class="pill">
-            <strong>Hürden (und wie wir sie lösen)</strong>
-            <ul>
-              <li><strong>„Esoterik-Kitsch“</strong> → Sprache: Material, Praxis, Alltag</li>
-              <li><strong>Erwartung „Heilung“</strong> → klare Regeln, kein Versprechen</li>
-              <li><strong>Überforderung</strong> → kleine Gruppen (8–15), Outcome-First</li>
-            </ul>
-          </div>
-
-          <div class="pill">
-            <strong>Birkenbihl-Note (10%)</strong>
-            <ul>
-              <li><strong>Aha-Effekt</strong>: „Du riechst – und dein Nervensystem reagiert.“</li>
-              <li><strong>Mini-Übung</strong>: 3 Minuten Wahrnehmung statt 30 Minuten Vortrag.</li>
-              <li><strong>Wiederholung</strong>: Serie macht aus Wissen <em>Gewohnheit</em>.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="kpi-row" aria-label="Kernoutput">
-          <div class="kpi">Vertrauen</div>
+        <div class="kpi-row">
+          <div class="kpi">Praxis</div>
+          <div class="kpi">Struktur</div>
           <div class="kpi">Wiederkehr</div>
-          <div class="kpi">Kits</div>
-          <div class="kpi">Archiv-Futter</div>
+          <div class="kpi">Ertrag</div>
         </div>
       </div>
-    </section>
-
-    <!-- MODUL 3 -->
-    <section id="m3" class="module reveal">
-      <div class="module-head">
-        <h2 class="module-title">Modul 3 – Permakultur & autarke Lebensversorgung</h2>
-        <p class="module-sub">
-          Ökologischer Gartenbau · Konservierung · Heilpflanzenwissen<br>
-          <strong>Praxis. Kreislauf. Versorgungssicherheit.</strong>
-        </p>
-      </div>
-
-      <div class="module-body">
-
-        <section class="text-block">
-          Dieses Modul dient <strong>nicht</strong> der Romantisierung von Natur,  
-          sondern dem Aufbau <strong>realer Selbstversorgung</strong>.
-        </section>
-
-        <section class="text-block">
-          <strong>Nicht:</strong> „Zurück zur Natur“<br>
-          <strong>Sondern:</strong> „Natur verstehen und nutzen“
-        </section>
-
-        <div class="grid2">
-
-          <div class="pill">
-            <strong>Ziele (klar & messbar)</strong>
-            <ul>
-              <li>Reduktion von Lebensmittelkosten</li>
-              <li>Versorgung von Events & Retreats</li>
-              <li>Vermittlung echter, alltagstauglicher Fähigkeiten</li>
-              <li>Aufbau funktionierender Kreislaufsysteme</li>
-              <li>Langfristige ökologische & wirtschaftliche Stabilität</li>
-            </ul>
-          </div>
-
-          <div class="pill">
-            <strong>Modulstruktur</strong>
-            <ul>
-              <li>Permakultur-Aufbau (Grundlage)</li>
-              <li>Ökologischer Gartenbau & Artenvielfalt</li>
-              <li>Verarbeitung, Haltbarmachung & Heilpflanzen</li>
-            </ul>
-          </div>
-
-        </div>
-
-        <div class="grid2">
-
-          <div class="pill">
-            <strong>1. Permakultur – System statt Beet</strong>
-            <ul>
-              <li>Zonierung: Wohnbereich → Garten → Wildzone</li>
-              <li>Wasserführung & Speicherung</li>
-              <li>Bodenaufbau (Humus statt Dünger)</li>
-              <li>Mulchsysteme & Kompostkreisläufe</li>
-              <li>Energieflüsse: Sonne, Wind, Schatten</li>
-            </ul>
-            <div class="micro-note">
-              Ziel: Ein Garten, der <em>weniger Arbeit</em> macht, je länger er existiert.
-            </div>
-          </div>
-
-          <div class="pill">
-            <strong>Umsetzung vor Ort</strong>
-            <ul>
-              <li>Analyse des bestehenden Grundstücks</li>
-              <li>Planung kleiner, funktionierender Einheiten</li>
-              <li>Pilot: Aufbau von 4–6 Beeten</li>
-              <li>Langfristige Erweiterbarkeit statt Einmalprojekt</li>
-            </ul>
-          </div>
-
-        </div>
-
-        <div class="grid2">
-
-          <div class="pill">
-            <strong>2. Ökologischer Gartenanbau – essbar & robust</strong>
-            <ul>
-              <li><strong>Grundversorgung:</strong> Kartoffeln, Bohnen, Mangold, Zucchini/Kürbis, Zwiebeln, Knoblauch</li>
-              <li><strong>Schneller Erfolg:</strong> Radieschen, Pflücksalat, Rucola, Spinat</li>
-              <li><strong>Resilienz:</strong> alte & regionale Sorten, samenfestes Saatgut</li>
-            </ul>
-            <div class="micro-note">
-              Hohe Erträge · Lagerfähigkeit · Fehlertoleranz
-            </div>
-          </div>
-
-          <div class="pill">
-            <strong>3. Heil- & Nutzpflanzen</strong>
-            <ul>
-              <li>Salbei – antibakteriell, Atemwege</li>
-              <li>Thymian – Immunsystem</li>
-              <li>Spitzwegerich – Haut & Wunden</li>
-              <li>Ringelblume – Salben & Hautpflege</li>
-              <li>Kamille – Verdauung & Beruhigung</li>
-              <li>Beifuß – Fokus & Übergänge</li>
-              <li>Brennnessel – Mineralien, Jauche, Dünger</li>
-            </ul>
-            <div class="micro-note">
-              Doppelnutzung: <em>Nahrung + Medizin</em>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="grid2">
-
-          <div class="pill">
-            <strong>4. Artenvielfalt & Garten als Ökosystem</strong>
-            <ul>
-              <li>Mischkultur statt Monokultur</li>
-              <li>Blühstreifen & Insektenhabitate</li>
-              <li>Totholzecken & offene Bodenbereiche</li>
-              <li>Natürliche Schädlingsregulation</li>
-            </ul>
-            <div class="micro-note">
-              Ein gesunder Garten reguliert sich selbst.
-            </div>
-          </div>
-
-          <div class="pill">
-            <strong>5. Haltbarmachung & Konservierung</strong>
-            <ul>
-              <li>Einkochen (Gemüse, Suppen)</li>
-              <li>Fermentieren (Sauerkraut, Kimchi, Pickles)</li>
-              <li>Trocknen (Kräuter, Pilze)</li>
-              <li>Öle, Tinkturen & stromlose Lagerung</li>
-            </ul>
-            <div class="micro-note">
-              Wertsteigerung der Ernte · Versorgung über den Winter
-            </div>
-          </div>
-
-        </div>
-
-        <div class="grid2">
-
-          <div class="pill">
-            <strong>Kursformate (monetarisierbar)</strong>
-            <ul>
-              <li>1-Tages-Workshop: <strong>60–120 €</strong> (ein Thema)</li>
-              <li>Mehrteilige Kursreihe (3–5 Termine): <strong>180–450 €</strong></li>
-              <li>Integration in Retreats: Garten → Ernte → Küche</li>
-            </ul>
-          </div>
-
-          <div class="pill">
-            <strong>Ressourcen & Einstieg</strong>
-            <ul>
-              <li>Grundstück & Wasseranschluss</li>
-              <li>Gartengeräte & Kompost/Mulch</li>
-              <li>Samenfestes Saatgut</li>
-              <li>Gläser, Töpfe, einfache Werkzeuge</li>
-            </ul>
-            <div class="micro-note">
-              Geringe Einstiegskosten · hoher Langzeitnutzen
-            </div>
-          </div>
-
-        </div>
-
-        <div class="grid2">
-
-          <div class="pill">
-            <strong>Hürden & Lösungen</strong>
-            <ul>
-              <li>Überforderung → kleiner Pilot</li>
-              <li>Pflegeaufwand → klare Routinen</li>
-              <li>Wetter → robuste Pflanzen</li>
-              <li>Unklare Zuständigkeit → Verantwortliche + Plan</li>
-            </ul>
-          </div>
-
-          <div class="pill">
-            <strong>Wirtschaftlicher Nutzen</strong>
-            <ul>
-              <li>Senkung laufender Kosten</li>
-              <li>Versorgung von Küche & Retreats</li>
-              <li>Content & Storytelling</li>
-              <li>Community-Bindung</li>
-              <li>Physische, reale Werte</li>
-            </ul>
-          </div>
-
-        </div>
-
-        <div class="kpi-row" aria-label="Kernoutput">
-          <div class="kpi">Kostenreduktion</div>
-          <div class="kpi">Versorgung</div>
-          <div class="kpi">Community</div>
-          <div class="kpi">Langfristigkeit</div>
-        </div>
-
-        <section class="text-block" style="text-align:center; margin-top:14px;">
-          <strong>Ein Garten ist kein Projekt.</strong><br>
-          Er ist <strong>Infrastruktur</strong>.
-        </section>
-
-      </div>
-    </section>
-
-    <div class="ac-divider"></div>
-
-    <h2 class="intro-text"><br>Kooperationslogik (klar)</h2>
-
-    <section class="text-block reveal">
-      <strong>Operator-Model:</strong> Ich leite die Formate vollständig (Know-how, Arbeit, Qualität).<br>
-      <strong>Lizenz/Plattform:</strong> Reichweite, Brand, Infrastruktur (je nach Setup).<br><br>
-      <em>Split wird sauber auf Netto oder KPI-abhängig definiert.</em>
-    </section>
-
-    <!-- UMSATZBETEILIGUNG (NEU) -->
-    <section id="billing" class="module reveal">
-      <div class="module-head">
-        <h2 class="module-title">Abrechnungsmodell & Umsatzbeteiligung</h2>
-        <p class="module-sub">
-          Klar · fair · risikofrei<br>
-          <strong>Operator–Lizenzgeber-Modell</strong>
-        </p>
-      </div>
-
-      <div class="module-body">
-
-        <section class="text-block">
-          Dieses Modell ist <strong>präzise definiert</strong>,  
-          <strong>wirtschaftlich nachvollziehbar</strong>  
-          und auf <strong>langfristige Zusammenarbeit</strong> ausgelegt.
-        </section>
-
-        <section class="text-block">
-          <strong>Grundlogik:</strong><br>
-          Ich trage die operative Arbeit und das Risiko.<br>
-          Du bringst Name, Plattform und punktuelle Präsenz.<br>
-          <strong>Abgerechnet wird erst, wenn Umsatz entsteht.</strong>
-        </section>
-
-        <div class="grid2">
-
-          <div class="pill">
-            <strong>Ich – Operator / Durchführender</strong>
-            <ul>
-              <li>Konzeption der Inhalte (Kurse, Module, Abläufe)</li>
-              <li>Komplette operative Umsetzung</li>
-              <li>Kursleitung & didaktische Verantwortung</li>
-              <li>Materialbeschaffung & Vorbereitung</li>
-              <li>Organisation vor Ort</li>
-              <li>Qualitätssicherung</li>
-              <li>Teilnehmerbetreuung</li>
-              <li>Dokumentation & Content-Grundlage</li>
-            </ul>
-            <div class="micro-note">
-              100&nbsp;% Arbeit · 100&nbsp;% Verantwortung
-            </div>
-          </div>
-
-          <div class="pill">
-            <strong>Du – Lizenzgeber / Plattform / Gesicht</strong>
-            <ul>
-              <li>Nutzung von Name & Plattform</li>
-              <li>Punktuelle Präsenz (1–2 kurze Auftritte pro Tag)</li>
-              <li>Einordnung & Bestätigung des Gelernten</li>
-              <li>Vertrauens- & Autoritätsanker für Teilnehmende</li>
-              <li>Keine operative Verantwortung</li>
-              <li>Keine Organisation</li>
-              <li>Kein Tagesgeschäft</li>
-            </ul>
-            <div class="micro-note">
-              Symbolische Präsenz statt Arbeitslast<br>
-              (Mentor-/Jury-Rolle)
-            </div>
-          </div>
-
-        </div>
-
-        <div class="grid2">
-
-          <div class="pill">
-            <strong>Gewinnverteilung</strong>
-            <ul>
-              <li><strong>35&nbsp;% vom Gewinn</strong> für den Operator</li>
-              <li><strong>65&nbsp;%</strong> verbleiben bei Plattform / Lizenzgeber</li>
-              <li>Abrechnung ausschließlich auf <strong>Gewinnbasis</strong></li>
-              <li>Keine Umsatzbeteiligung ohne Kostendeckung</li>
-            </ul>
-          </div>
-
-          <div class="pill">
-            <strong>Definition „Gewinn“</strong>
-            <ul>
-              <li>Einnahmen</li>
-              <li>– Materialkosten</li>
-              <li>– Verpflegung</li>
-              <li>– Location-/Infrastrukturkosten</li>
-              <li>– sonstige direkte Vorlaufkosten</li>
-            </ul>
-            <div class="micro-note">
-              Keine versteckten Kosten · keine nachträglichen Verschiebungen
-            </div>
-          </div>
-
-        </div>
-
-        <div class="grid2">
-
-          <div class="pill">
-            <strong>Risikoaufteilung</strong>
-            <ul>
-              <li>Keine Auszahlung ohne Gewinn</li>
-              <li>Keine Fixkosten durch den Operator</li>
-              <li>Kein Personalkostenrisiko</li>
-              <li>Kein wirtschaftliches Risiko für die Plattform</li>
-            </ul>
-          </div>
-
-          <div class="pill">
-            <strong>Material & Vorlaufkosten</strong>
-            <ul>
-              <li>Beschaffung: günstig, nachhaltig, funktional</li>
-              <li>Fokus: langlebig, wiederverwendbar</li>
-              <li>Kein Konsumkitsch</li>
-              <li>Vorlaufkosten transparent kalkuliert und abgestimmt</li>
-            </ul>
-          </div>
-
-        </div>
-
-        <div class="kpi-row" aria-label="Kernoutput">
-          <div class="kpi">Kein Risiko</div>
-          <div class="kpi">Klare Rollen</div>
-          <div class="kpi">Gewinnbasiert</div>
-          <div class="kpi">Langfristig</div>
-        </div>
-
-        <section class="text-block italic" style="text-align:center; margin-top:12px;">
-          „Dein Risiko ist null.<br>
-          Mein Anreiz maximal.“
-        </section>
-
-      </div>
-    </section>
-
-    <h2 class="intro-text"><br>Nächster Schritt</h2>
-
-    <section class="text-block reveal">
-      Wenn das für dich nach „fertigem Modul“ klingt, reicht ein kurzer Call:<br>
-      <strong>20 Minuten</strong>, um Realismus, Location und erstes Pilotformat festzuziehen.
-    </section>
-
-    <div class="cta-row">
-      <a href="contact.html" class="cta-fragebogen" aria-label="Kontakt aufnehmen">
-        <img src="assets/img/kontakt.PNG" alt="Kontakt" loading="lazy">
-      </a>
     </div>
 
-    <br><br><br>
-  </main>
+    <div class="denkanker reveal">
+      <h3>Denkanker</h3>
+      <p>
+        Menschen bleiben nicht wegen Programmen.<br>
+        Sie bleiben wegen <strong>Erfahrung</strong> und <strong>Struktur</strong>.
+      </p>
+    </div>
 
-  <script src="assets/js/reveal.js"></script>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer class="page-footnote">
-    <h2 class="intro-text">
-      Du findest uns hier bei <strong>AmoTattoo Atelier</strong>
-    </h2>
+<main class="intro">
 
-    <p class="footnote-line">
-      <strong>Adresse:</strong> Sternenstraße 5, 79664 Wehr (Baden)
+<h2 class="intro-text"><br>Grundrahmen</h2>
+
+<section class="text-block reveal">
+  Keine Spiritual-Inszenierung.<br>
+  Kein Leistungsurlaub.<br>
+  <strong>Arbeit, Austausch, reale Ergebnisse.</strong>
+</section>
+
+<div class="ac-divider"></div>
+
+<!-- MODUL 1 -->
+<section id="m1" class="module reveal">
+  <div class="module-head">
+    <h2 class="module-title">Modul 1 – Events & Retreats</h2>
+    <p class="module-sub">
+      Mehrtägiges, modulares Präsenzformat<br>
+      <strong>Tag 1–3 Event · Tag 4–5 Retreat</strong>
     </p>
+  </div>
 
-    <p class="footnote-line">
-      <a class="footnote-link"
-         href="https://www.google.com/maps/dir/?api=1&destination=Sternenstra%C3%9Fe%205%2C%2079664%20Wehr%20(Baden)"
-         target="_blank" rel="noopener"
-         aria-label="Route in Google Maps öffnen">
-        Route in Google Maps öffnen
-      </a>
+  <div class="module-body">
+
+    <section class="text-block">
+      Dieses Modul ist der <strong>Hauptumsatztreiber</strong>.<br>
+      Jeder Tag ist einzeln buchbar – mit klarer Progression.
+    </section>
+
+    <div class="grid2">
+
+      <div class="pill">
+        <strong>Struktur & Preise</strong>
+        <ul>
+          <li><strong>Tag 1:</strong> Einstieg & Grundlagen – 120 €</li>
+          <li><strong>Tag 2:</strong> Vertiefung & Praxis – 120 €</li>
+          <li><strong>Tag 3:</strong> Fortgeschrittene Kurse – 130 €</li>
+          <li><strong>Kombiticket (Tag 1–3):</strong> 370 €</li>
+          <li><strong>Retreat Tag 4–5:</strong> +100 € pro Tag</li>
+        </ul>
+        <div class="micro-note">
+          Retreat = nur Vertiefung, keine Einführung
+        </div>
+      </div>
+
+      <div class="pill">
+        <strong>Kursformate (Rotation)</strong>
+        <ul>
+          <li>Dreadpflege & Fehleranalyse</li>
+          <li>Mal- & Ausdruckskurse (Material, Körper, Fläche)</li>
+          <li>Töpfern & Arbeiten mit Ton</li>
+          <li>Naturhandwerk (Talismane aus Holz, Stein, Pflanzen)</li>
+          <li>Einfaches Kochen & Versorgung in Gruppen</li>
+          <li>Repair & Upcycling (Textil, Leder)</li>
+        </ul>
+        <div class="micro-note">
+          Keine Wiederholung – jedes Event neu kombinierbar
+        </div>
+      </div>
+
+    </div>
+
+    <div class="grid2">
+
+      <div class="pill">
+        <strong>Warum diese Vielfalt?</strong>
+        <ul>
+          <li>Physische Ergebnisse statt Theorie</li>
+          <li>Unterschiedliche Zugänge für unterschiedliche Menschen</li>
+          <li>Hoher Content- & Wiederkehrwert</li>
+          <li>Skalierbar ohne Abnutzung</li>
+        </ul>
+      </div>
+
+      <div class="pill">
+        <strong>Ertrag & Wirkung</strong>
+        <ul>
+          <li>Ticketumsatz</li>
+          <li>Retreat-Upsell</li>
+          <li>Produktverkauf vor Ort</li>
+          <li>Community-Bindung</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<br><br>
+
+<!-- MODUL 2 -->
+<section id="m2" class="module reveal">
+  <div class="module-head">
+    <h2 class="module-title">Modul 2 – Online-Kurse (Catcher)</h2>
+    <p class="module-sub">
+      Niedrigschwellig · Saisonal · Konsequent bodenständig
     </p>
+  </div>
 
-    <p>© <span id="year"></span> Modern Ritualistic Tattoo</p>
-  </footer>
+  <div class="module-body">
 
-  <script>
-    (function(){var y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();})();
+    <section class="text-block">
+      Modul 2 ist <strong>kein</strong> Hauptumsatzträger.<br>
+      Es dient als <strong>Einstieg</strong> und <strong>Filter</strong>.
+    </section>
 
-    const burgerBtn = document.getElementById('burgerBtn');
-    const siteNav   = document.getElementById('siteNav');
-    const body      = document.body;
+    <div class="grid2">
 
-    function toggleNav(open){
-      const willOpen = (open!==undefined) ? open : !body.classList.contains('nav-open');
-      body.classList.toggle('nav-open', willOpen);
-      if (burgerBtn) burgerBtn.setAttribute('aria-expanded', willOpen ? 'true':'false');
-    }
+      <div class="pill">
+        <strong>Kursstruktur</strong>
+        <ul>
+          <li>4 Online-Kurse pro Jahr</li>
+          <li>Je eine Jahreszeit</li>
+          <li>Fokus: <strong>regionales Räucherwerk</strong></li>
+        </ul>
+      </div>
 
-    if (burgerBtn){
-      burgerBtn.addEventListener('click', ()=>toggleNav());
-    }
+      <div class="pill">
+        <strong>Inhalte</strong>
+        <ul>
+          <li>Welche Pflanzen wachsen hier?</li>
+          <li>Ernte & Trocknung</li>
+          <li>Anwendung im Alltag</li>
+          <li>Kein Ritual, keine Heilsversprechen</li>
+        </ul>
+      </div>
 
-    document.addEventListener('click', (e)=>{
-      if (!body.classList.contains('nav-open')) return;
-      if (!siteNav.contains(e.target) && !burgerBtn.contains(e.target)) toggleNav(false);
-    });
+    </div>
 
-    let sx=null, sy=null;
-    window.addEventListener('touchstart', (e)=>{const t=e.touches[0]; sx=t.clientX; sy=t.clientY;},{passive:true});
-    window.addEventListener('touchmove', (e)=>{
-      if (sx===null) return;
-      const t=e.touches[0], dx=t.clientX-sx, dy=Math.abs(t.clientY-sy);
-      if (dy>40) return;
-      if (sx<24 && dx>40) toggleNav(true);
-      if (dx<-60) toggleNav(false);
-    },{passive:true});
-  </script>
+    <div class="grid2">
 
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Alternative Concepts – Business-Module für Lifestyle & Community",
-    "url": "https://modern-ritualistic-tattoo.com/alternativeconcepts.html",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "Modern Ritualistic Tattoo",
-      "url": "https://modern-ritualistic-tattoo.com/"
-    }
-  }
-  </script>
+      <div class="pill">
+        <strong>Preis</strong>
+        <ul>
+          <li>40 € pro Kurs</li>
+          <li>Einzeln buchbar</li>
+        </ul>
+      </div>
+
+      <div class="pill">
+        <strong>Ziel</strong>
+        <ul>
+          <li>Qualifizierte Teilnehmer für Events</li>
+          <li>Vertrauensaufbau</li>
+          <li>Kein Guru-Modell</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<br><br>
+
+<!-- MODUL 3 -->
+<section id="m3" class="module reveal">
+  <div class="module-head">
+    <h2 class="module-title">Modul 3 – Permakultur & Autarkie</h2>
+    <p class="module-sub">
+      Infrastruktur statt Idealismus
+    </p>
+  </div>
+
+  <div class="module-body">
+
+    <section class="text-block">
+      Dieses Modul reduziert Kosten,<br>
+      stärkt Unabhängigkeit<br>
+      und schafft reale Werte.
+    </section>
+
+    <div class="grid2">
+
+      <div class="pill">
+        <strong>Schwerpunkte</strong>
+        <ul>
+          <li>Permakultur-Grundlagen</li>
+          <li>Essbare & heilende Pflanzen</li>
+          <li>Haltbarmachung</li>
+          <li>Kreislaufsysteme</li>
+        </ul>
+      </div>
+
+      <div class="pill">
+        <strong>Nutzen</strong>
+        <ul>
+          <li>Versorgung von Retreats</li>
+          <li>Kostensenkung</li>
+          <li>Bildungsangebot</li>
+          <li>Langfristige Stabilität</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="kpi-row">
+      <div class="kpi">Autarkie</div>
+      <div class="kpi">Kostenreduktion</div>
+      <div class="kpi">Wertschöpfung</div>
+    </div>
+
+  </div>
+</section>
+
+<div class="ac-divider"></div>
+
+<h2 class="intro-text"><br>Abrechnungsmodell</h2>
+
+<section class="text-block reveal">
+  Operatives Risiko bei mir.<br>
+  Abrechnung ausschließlich auf Gewinnbasis.<br>
+  <strong>35 % Operator · 65 % Plattform.</strong>
+</section>
+
+<br><br>
+
+<div class="cta-row">
+  <a href="contact.html" class="cta-fragebogen">
+    <img src="assets/img/kontakt.PNG" alt="Kontakt">
+  </a>
+</div>
+
+<br><br><br>
+
+</main>
+
+<footer class="page-footnote">
+  <p>© <span id="year"></span> Modern Ritualistic Tattoo</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
 
 </body>
 </html>
