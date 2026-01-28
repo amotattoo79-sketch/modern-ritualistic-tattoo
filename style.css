@@ -820,3 +820,25 @@ main.intro .text-block{
 .ac-toc a{
   border: 0 !important;
 }
+/* --- alternativeconcepts: Hero-Headline wie index (Gold, Cinzel, Überschrift-Look) --- */
+.ac-hero-title{
+  color:#d9b26d !important;
+  font-family:"Cinzel Decorative", serif !important;
+  font-weight:700 !important;
+  letter-spacing:.6px;
+  text-align:center !important;
+  line-height:1.15;
+  margin:0;
+  font-size: clamp(30px, 6.2vw, 54px);
+}
+
+.ac-hero-title .ac-hero-sub{
+  display:block;
+  margin-top:14px;
+  color:#d9b26d !important;
+  font-family:"Cinzel Decorative", serif !important;
+  font-weight:700 !important;
+  letter-spacing:.6px;
+  font-size: .9em; /* zweite Zeile wie bei index etwas kleiner, bleibt Überschrift */
+  line-height:1.15;
+}
