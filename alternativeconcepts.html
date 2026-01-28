@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.PNG">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.PNG">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO / Social -->
+  <title>Alternative Concepts – Lifestyle & Community Formate</title>
+  <meta name="description" content="Drei bodenständige Lifestyle- & Community-Formate: kuratierte Events/Retreats, Praxis-Workshops und Produkte/Archiv. Keine Gurus. Keine Heilsversprechen. Praxis & Gemeinschaft.">
+  <link rel="canonical" href="https://modern-ritualistic-tattoo.com/alternativeconcepts.html">
+
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Modern Ritualistic Tattoo">
+  <meta property="og:title" content="Alternative Concepts – Lifestyle & Community Formate">
+  <meta property="og:description" content="Praxis. Gemeinschaft. Nachhaltige Strukturen. Drei Formate – klar, bodenständig, umsetzbar.">
+  <meta property="og:url" content="https://modern-ritualistic-tattoo.com/alternativeconcepts.html">
+  <meta property="og:image" content="https://modern-ritualistic-tattoo.com/assets/img/og.PNG">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alternative Concepts">
+  <meta name="twitter:description" content="Drei Lifestyle- & Community-Formate: Events/Retreats, Praxis-Workshops, Produkte/Archiv.">
+  <meta name="twitter:image" content="https://modern-ritualistic-tattoo.com/assets/img/og.PNG">
+
+  <link rel="stylesheet" href="style.css?v=burger2">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    @media (max-width: 900px){
+      .site-header .burger{display:block!important;}
+      .site-header{position:relative; z-index:20;}
+
+      .site-nav{
+        position:fixed; left:0; right:0; top:72px;
+        background:rgba(0,0,0,.92);
+        padding:14px 16px;
+        transform:translateY(-120%); opacity:0;
+        transition:transform .28s ease, opacity .28s ease;
+        border-bottom:1px solid rgba(255,255,255,.08);
+        box-shadow:0 10px 24px rgba(0,0,0,.45);
+        z-index:25;
+        font-size:0;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      body.nav-open .site-nav{transform:translateY(0); opacity:1;}
+
+      .site-nav a,
+      .site-nav a:link,
+      .site-nav a:visited{
+        display:block;
+        font-size:18px;
+        line-height:1.35;
+        padding:12px 6px;
+        margin:0;
+        border-bottom:1px solid rgba(255,255,255,.06);
+        color:#d9b26d !important;
+        text-decoration:none;
+        font-weight:600;
+        letter-spacing:.2px;
+        font-family:"Cinzel Decorative", serif;
+      }
+      .site-nav a:last-child{border-bottom:0;}
+
+      .site-nav a:hover,
+      .site-nav a:focus{
+        color:#ffda8a !important;
+        outline:none;
+      }
+    }
+
+    .cta-row{
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin:16px 0 0;
+    }
+
+    /* Kontrast-Boxen ohne Designbruch */
+    .concept-card{
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(0,0,0,.35);
+      border-radius:14px;
+      padding:18px 16px;
+      box-shadow:0 12px 26px rgba(0,0,0,.35);
+      margin:16px auto;
+      width:min(860px, 92vw);
+    }
+    .concept-title{
+      margin:0 0 10px 0;
+      font-family:"Cinzel Decorative", serif;
+      letter-spacing:.3px;
+      font-size: clamp(20px, 3.5vw, 28px);
+      color:#d9b26d;
+      text-align:center;
+    }
+    .concept-sub{
+      margin:0 0 14px 0;
+      text-align:center;
+      opacity:.95;
+    }
+    .concept-grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:10px;
+      margin-top:10px;
+    }
+    .concept-pill{
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:12px;
+      padding:12px 12px;
+      background:rgba(0,0,0,.28);
+    }
+    .concept-pill strong{color:#ffda8a;}
+    .micro-note{
+      opacity:.88;
+      font-size: .98em;
+      text-align:center;
+      margin-top:10px;
+    }
+
+    /* Mini-TOC */
+    .toc{
+      width:min(860px, 92vw);
+      margin: 10px auto 0;
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    .toc a{
+      border:1px solid rgba(255,255,255,.10);
+      padding:10px 12px;
+      border-radius:999px;
+      text-decoration:none;
+      color:#d9b26d !important;
+      background:rgba(0,0,0,.28);
+      font-family:"Cinzel Decorative", serif;
+      font-weight:600;
+      letter-spacing:.2px;
+    }
+    .toc a:hover{color:#ffda8a !important;}
+  </style>
+</head>
+
+<body class="page-bg">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html" class="banner-logo-link" aria-label="Zur Startseite">
+      <img src="assets/img/banner_logo.PNG" alt="Modern Ritualistic Tattoo" width="965" height="508">
+    </a>
+
+    <button class="burger" id="burgerBtn" aria-label="Menü öffnen" aria-expanded="false"
+      style="position:absolute; right:12px; top:12px; width:44px; height:44px; padding:0; border:0; background:transparent; display:none;">
+      <img src="assets/icons/Menubutton1.PNG" alt="Menü" style="width:100%; height:100%; object-fit:contain;">
+    </button>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html">Home</a> |
+      <a href="ritual.html">Ritual</a> |
+      <a href="angebote.html">Leistungen & Preise</a> |
+      <a href="fragebogen.html">Aufnahmeprüfung</a> |
+      <a href="booking.html">Termin</a> |
+      <a href="philosophie.html">Philosophie</a> |
+      <a href="gallery.html">Momentaufnahmen</a> |
+      <a href="faq.html">FAQ</a> |
+      <a href="contact.html">Kontakt</a> |
+      <a href="datenschutz.html">Datenschutz</a> |
+      <a href="impressum.html">Impressum</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <br><br>
+      <h1 class="intro-text" style="margin-top:0;">
+        Alternative Concepts<br><br>
+        Praxis. Gemeinschaft.<br><br>
+        Nachhaltige Strukturen.
+      </h1>
+
+      <section class="text-block reveal">
+        Drei Formate. Keine Gurus. Keine Heilsversprechen.<br>
+        <strong>Erfahrung statt Glaube.</strong>
+      </section>
+
+      <div class="toc reveal" aria-label="Sprungmarken">
+        <a href="#format1">Events & Retreats</a>
+        <a href="#format2">Praxis-Workshops</a>
+        <a href="#format3">Produkte & Archiv</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="intro">
+
+    <h2 class="intro-text"><br>Worum es geht</h2>
+
+    <section class="text-block reveal">
+      Diese Seite ist kein Pitch-Feuerwerk.<br>
+      Sie zeigt <strong>wie</strong> wir Formate denken:<br>
+      <em>klar</em>, <em>bodennah</em>, <em>umsetzbar</em>.
+    </section>
+
+    <section class="text-block reveal">
+      Zielgruppe: <strong>Alternative Lifestyle Community</strong><br>
+      Dreads / Nomads / Hippies / spirituelle Suchende ohne Dogma –<br>
+      Menschen, die für <strong>echte Erlebnisse</strong> und <strong>Gemeinschaft</strong> zahlen.
+    </section>
+
+    <br><br>
+
+    <!-- FORMAT 1 -->
+    <section id="format1" class="concept-card reveal">
+      <h2 class="concept-title">1) Alternative Lifestyle Events & Retreats</h2>
+      <p class="concept-sub">
+        Kuratiert. Intim. Bodennah.<br>
+        <strong>Kein Festival. Kein Chaos.</strong>
+      </p>
+
+      <div class="concept-grid">
+        <div class="concept-pill">
+          <strong>Was:</strong><br>
+          Kleine Events (1 Tag) + Retreats (3–5 Tage) mit Fokus auf Gemeinschaft, Natur, Einfachheit,
+          Essen, Musik, Handwerk, Austausch – ohne religiöses Framing.
+        </div>
+
+        <div class="concept-pill">
+          <strong>Warum das funktioniert:</strong><br>
+          Die Zielgruppe kauft nicht „Content“. Sie kauft <strong>Raum</strong>, <strong>Atmosphäre</strong>, <strong>Zugehörigkeit</strong>.
+          Ein kuratiertes Format wirkt hochwertig, sicher und wiederholbar.
+        </div>
+
+        <div class="concept-pill">
+          <strong>Monetarisierung:</strong><br>
+          Events: <strong>40–90 €</strong> Ticket · Retreats: <strong>350–900 €</strong> · Vendor-Fees · Kooperationen · Sponsoring (nachhaltige Brands)
+        </div>
+
+        <div class="concept-pill">
+          <strong>Output für Social:</strong><br>
+          Sichtbares Leben: echte Menschen, echte Praxis, echte Orte. Reichweite entsteht organisch – ohne „Marketing-Show“.
+        </div>
+      </div>
+
+      <p class="micro-note">
+        <em>Start klein.</em> Ein kuratierter Tag ist der Prototyp. Daraus wird ein Retreat.
+      </p>
+    </section>
+
+    <!-- FORMAT 2 -->
+    <section id="format2" class="concept-card reveal">
+      <h2 class="concept-title">2) Bodenständige Praxis-Workshops</h2>
+      <p class="concept-sub">
+        Erfahrung statt Glaube.<br>
+        <strong>Praxis</strong> statt Vortrag.
+      </p>
+
+      <div class="concept-grid">
+        <div class="concept-pill">
+          <strong>Themen:</strong><br>
+          Pflanzenkunde & Räucherwerk · Symbolik & Alltagsrituale · Erdung & Körperwahrnehmung · Intuition im Alltag (ohne „Channeling“)
+        </div>
+
+        <div class="concept-pill">
+          <strong>Haltung:</strong><br>
+          Keine Gurus. Keine Heilsversprechen. Kein Dogma.<br>
+          Wir schaffen Rahmen, Material, Übung – die Leute machen ihre Erfahrung selbst.
+        </div>
+
+        <div class="concept-pill">
+          <strong>Monetarisierung:</strong><br>
+          Workshop: <strong>60–150 €</strong> · Serien/Pakete · später Hybrid-Version (offline + Archiv)
+        </div>
+
+        <div class="concept-pill">
+          <strong>Qualitätssicherung:</strong><br>
+          Klare Regeln, kleine Gruppen, strukturierter Ablauf. Das schützt die Marke – und die Teilnehmer.
+        </div>
+      </div>
+
+      <p class="micro-note">
+        <em>Wiederkehr ist der Hebel:</em> Wer einmal kommt, kommt in die Serie.
+      </p>
+    </section>
+
+    <!-- FORMAT 3 -->
+    <section id="format3" class="concept-card reveal">
+      <h2 class="concept-title">3) Produkte & Online-Archiv</h2>
+      <p class="concept-sub">
+        Keine Online-Guru-Kurse.<br>
+        <strong>Werkzeuge</strong> + <strong>Archiv</strong> als Ergänzung.
+      </p>
+
+      <div class="concept-grid">
+        <div class="concept-pill">
+          <strong>Produktlinie:</strong><br>
+          Natürliche Dread-Pflege · Öle · Räucherwerk · Tools · praktische Ritual-Objekte (ohne Kitsch)
+        </div>
+
+        <div class="concept-pill">
+          <strong>Online Academy (Archiv):</strong><br>
+          Praxisvideos · dokumentiertes Community-Wissen · Anleitungen & Routinen.<br>
+          Kein „Kurs“, kein „Coach“ – eher <strong>Bibliothek</strong>.
+        </div>
+
+        <div class="concept-pill">
+          <strong>Monetarisierung:</strong><br>
+          Direktverkauf · Workshop-Bundles · Online-Shop · Archiv als Add-on zur Membership / Einzelzugang
+        </div>
+
+        <div class="concept-pill">
+          <strong>Warum das stark ist:</strong><br>
+          Offline schafft Vertrauen – Produkte/Archiv verlängern den Effekt. Wiederkehrender Umsatz ohne inhaltliche Verwässerung.
+        </div>
+      </div>
+
+      <p class="micro-note">
+        <em>Regel:</em> Erst Praxis. Dann Produkte. Dann Archiv. (Nicht andersrum.)
+      </p>
+    </section>
+
+    <br><br>
+
+    <!-- PSYLAND FIT -->
+    <h2 class="intro-text"><br>Warum das zu einer Plattform wie Psyland passt</h2>
+
+    <section class="text-block reveal">
+      Psyland hat Reichweite und Kultur – diese Formate bringen <strong>Struktur</strong> und <strong>Wertschöpfung</strong>:
+      längere Bindung, klare Angebote, wiederkehrende Einnahmen.
+    </section>
+
+    <section class="text-block reveal">
+      Kooperation nicht als Gastprojekt, sondern als <strong>Co-Creation</strong>:<br>
+      modular, skalierbar, ohne die Identität zu verbiegen.
+    </section>
+
+    <br>
+
+    <!-- CTA -->
+    <h2 class="intro-text"><br>Nächster Schritt</h2>
+
+    <section class="text-block reveal">
+      Wenn du prüfen willst, ob das strukturell Sinn macht:<br>
+      <strong>ein kurzes Gespräch</strong> reicht, um Richtung und Realismus abzugleichen.
+    </section>
+
+    <div class="cta-row">
+      <!-- Optional: eigenes Asset anlegen, sonst den Kontakt-Button nutzen -->
+      <a href="contact.html" class="cta-fragebogen" aria-label="Kontakt aufnehmen">
+        <img src="assets/img/kontakt.PNG" alt="Kontakt" loading="lazy">
+      </a>
+    </div>
+
+    <br><br><br>
+
+  </main>
+
+  <script src="assets/js/reveal.js"></script>
+
+  <!-- FOOTER -->
+  <footer class="page-footnote">
+    <h2 class="intro-text">
+      Du findest uns hier bei <strong>AmoTattoo Atelier</strong>
+    </h2>
+
+    <p class="footnote-line">
+      <strong>Adresse:</strong> Sternenstraße 5, 79664 Wehr (Baden)
+    </p>
+
+    <p class="footnote-line">
+      <a class="footnote-link"
+         href="https://www.google.com/maps/dir/?api=1&destination=Sternenstra%C3%9Fe%205%2C%2079664%20Wehr%20(Baden)"
+         target="_blank" rel="noopener"
+         aria-label="Route in Google Maps öffnen">
+        Route in Google Maps öffnen
+      </a>
+    </p>
+
+    <p>© <span id="year"></span> Modern Ritualistic Tattoo</p>
+  </footer>
+
+  <script>
+    (function(){var y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();})();
+
+    const burgerBtn = document.getElementById('burgerBtn');
+    const siteNav   = document.getElementById('siteNav');
+    const body      = document.body;
+
+    function toggleNav(open){
+      const willOpen = (open!==undefined) ? open : !body.classList.contains('nav-open');
+      body.classList.toggle('nav-open', willOpen);
+      if (burgerBtn) burgerBtn.setAttribute('aria-expanded', willOpen ? 'true':'false');
+    }
+
+    if (burgerBtn){
+      burgerBtn.addEventListener('click', ()=>toggleNav());
+    }
+
+    document.addEventListener('click', (e)=>{
+      if (!body.classList.contains('nav-open')) return;
+      if (!siteNav.contains(e.target) && !burgerBtn.contains(e.target)) toggleNav(false);
+    });
+
+    let sx=null, sy=null;
+    window.addEventListener('touchstart', (e)=>{const t=e.touches[0]; sx=t.clientX; sy=t.clientY;},{passive:true});
+    window.addEventListener('touchmove', (e)=>{
+      if (sx===null) return;
+      const t=e.touches[0], dx=t.clientX-sx, dy=Math.abs(t.clientY-sy);
+      if (dy>40) return;
+      if (sx<24 && dx>40) toggleNav(true);
+      if (dx<-60) toggleNav(false);
+    },{passive:true});
+  </script>
+
+  <!-- Structured Data: CreativeWork (neutral, da Seite nicht Tattoo-spezifisch ist) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Alternative Concepts – Lifestyle & Community Formate",
+    "url": "https://modern-ritualistic-tattoo.com/alternativeconcepts.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Modern Ritualistic Tattoo",
+      "url": "https://modern-ritualistic-tattoo.com/"
+    }
+  }
+  </script>
+
+</body>
+</html>
