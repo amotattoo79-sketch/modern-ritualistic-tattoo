@@ -10,15 +10,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- SEO / Social -->
-  <title>Alternative Concepts – Lifestyle & Community Formate</title>
-  <meta name="description" content="Drei bodenständige Lifestyle- & Community-Formate: kuratierte Events/Retreats, Praxis-Workshops und Produkte/Archiv. Keine Gurus. Keine Heilsversprechen. Praxis & Gemeinschaft.">
+  <title>Alternative Concepts – Business-Module für Lifestyle & Community</title>
+  <meta name="description" content="Drei fertige Business-Module: (1) Events & Retreats (2) Praxis-Workshops (3) Produkte & Archiv. Klarer Ablauf, Ressourcen, Hürden, Monetarisierung. Keine Gurus. Praxis & Gemeinschaft.">
   <link rel="canonical" href="https://modern-ritualistic-tattoo.com/alternativeconcepts.html">
 
   <!-- Open Graph / Social Preview -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Modern Ritualistic Tattoo">
-  <meta property="og:title" content="Alternative Concepts – Lifestyle & Community Formate">
-  <meta property="og:description" content="Praxis. Gemeinschaft. Nachhaltige Strukturen. Drei Formate – klar, bodenständig, umsetzbar.">
+  <meta property="og:title" content="Alternative Concepts – Business-Module für Lifestyle & Community">
+  <meta property="og:description" content="Umsetzungsfertig: Events/Retreats, Praxis-Workshops, Produkte/Archiv. Klar. Bodennah. Profitabel.">
   <meta property="og:url" content="https://modern-ritualistic-tattoo.com/alternativeconcepts.html">
   <meta property="og:image" content="https://modern-ritualistic-tattoo.com/assets/img/og.PNG">
   <meta property="og:image:width" content="1200">
@@ -26,8 +26,8 @@
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Alternative Concepts">
-  <meta name="twitter:description" content="Drei Lifestyle- & Community-Formate: Events/Retreats, Praxis-Workshops, Produkte/Archiv.">
+  <meta name="twitter:title" content="Alternative Concepts – Business-Module">
+  <meta name="twitter:description" content="Drei fertige Business-Module: Events/Retreats · Workshops · Produkte/Archiv.">
   <meta name="twitter:image" content="https://modern-ritualistic-tattoo.com/assets/img/og.PNG">
 
   <link rel="stylesheet" href="style.css?v=burger2">
@@ -50,7 +50,6 @@
         font-size:0;
         -webkit-tap-highlight-color: transparent;
       }
-
       body.nav-open .site-nav{transform:translateY(0); opacity:1;}
 
       .site-nav a,
@@ -69,13 +68,143 @@
         font-family:"Cinzel Decorative", serif;
       }
       .site-nav a:last-child{border-bottom:0;}
-
       .site-nav a:hover,
-      .site-nav a:focus{
-        color:#ffda8a !important;
-        outline:none;
-      }
+      .site-nav a:focus{color:#ffda8a !important; outline:none;}
     }
+
+    /* HERO (hochwertig, ruhig, visuell) */
+    .ac-hero{
+      width:min(1020px, 92vw);
+      margin: 0 auto 12px;
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.10);
+      background: linear-gradient(135deg, rgba(0,0,0,.65), rgba(0,0,0,.28));
+      box-shadow:0 18px 44px rgba(0,0,0,.55);
+    }
+    .ac-hero-inner{
+      padding: 20px 18px 18px;
+      text-align:center;
+    }
+
+    /* Mini-Navigation (Scanbarkeit) */
+    .ac-toc{
+      width:min(920px, 92vw);
+      margin: 12px auto 0;
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    .ac-toc a{
+      border:1px solid rgba(255,255,255,.10);
+      padding:10px 12px;
+      border-radius:999px;
+      text-decoration:none;
+      color:#d9b26d !important;
+      background:rgba(0,0,0,.28);
+      font-family:"Cinzel Decorative", serif;
+      font-weight:700;
+      letter-spacing:.2px;
+      box-shadow:0 10px 20px rgba(0,0,0,.25);
+    }
+    .ac-toc a:hover{color:#ffda8a !important;}
+
+    /* Karten: wie Business-Module */
+    .module{
+      width:min(920px, 92vw);
+      margin: 18px auto;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(0,0,0,.34);
+      border-radius:16px;
+      box-shadow:0 16px 34px rgba(0,0,0,.45);
+      overflow:hidden;
+    }
+    .module-head{
+      padding: 18px 16px 10px;
+      text-align:center;
+      border-bottom:1px solid rgba(255,255,255,.08);
+      background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,0));
+    }
+    .module-title{
+      margin:0;
+      font-family:"Cinzel Decorative", serif;
+      letter-spacing:.3px;
+      color:#d9b26d;
+      font-size: clamp(22px, 4vw, 30px);
+    }
+    .module-sub{
+      margin:8px 0 0;
+      opacity:.95;
+    }
+
+    .module-body{
+      padding: 14px 16px 18px;
+    }
+
+    .grid2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+      margin-top:12px;
+    }
+    @media (max-width: 860px){
+      .grid2{grid-template-columns:1fr;}
+    }
+
+    .pill{
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(0,0,0,.26);
+      border-radius:14px;
+      padding:12px 12px;
+    }
+    .pill strong{color:#ffda8a;}
+    .pill ul{margin:10px 0 0 18px;}
+    .pill li{margin: 6px 0;}
+
+    .kpi-row{
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+    .kpi{
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(0,0,0,.25);
+      border-radius:999px;
+      padding:10px 12px;
+      font-family:"Cinzel Decorative", serif;
+      font-weight:700;
+      letter-spacing:.2px;
+      color:#d9b26d;
+    }
+
+    .ac-divider{
+      width:min(920px, 92vw);
+      margin: 22px auto;
+      border-top:1px solid rgba(255,255,255,.10);
+      opacity:.9;
+    }
+
+    /* Mini-"Birkenbihl": Denkanker / Knackpunkte */
+    .denkanker{
+      width:min(920px, 92vw);
+      margin: 14px auto 0;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(0,0,0,.30);
+      border-radius:16px;
+      padding:14px 14px;
+      box-shadow:0 14px 30px rgba(0,0,0,.35);
+    }
+    .denkanker h3{
+      margin:0 0 8px 0;
+      font-family:"Cinzel Decorative", serif;
+      color:#d9b26d;
+      text-align:center;
+      font-size: clamp(18px, 3.3vw, 24px);
+    }
+    .denkanker p{margin:0; text-align:center; opacity:.95;}
 
     .cta-row{
       display:flex;
@@ -84,71 +213,6 @@
       flex-wrap:wrap;
       margin:16px 0 0;
     }
-
-    /* Kontrast-Boxen ohne Designbruch */
-    .concept-card{
-      border:1px solid rgba(255,255,255,.10);
-      background:rgba(0,0,0,.35);
-      border-radius:14px;
-      padding:18px 16px;
-      box-shadow:0 12px 26px rgba(0,0,0,.35);
-      margin:16px auto;
-      width:min(860px, 92vw);
-    }
-    .concept-title{
-      margin:0 0 10px 0;
-      font-family:"Cinzel Decorative", serif;
-      letter-spacing:.3px;
-      font-size: clamp(20px, 3.5vw, 28px);
-      color:#d9b26d;
-      text-align:center;
-    }
-    .concept-sub{
-      margin:0 0 14px 0;
-      text-align:center;
-      opacity:.95;
-    }
-    .concept-grid{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap:10px;
-      margin-top:10px;
-    }
-    .concept-pill{
-      border:1px solid rgba(255,255,255,.10);
-      border-radius:12px;
-      padding:12px 12px;
-      background:rgba(0,0,0,.28);
-    }
-    .concept-pill strong{color:#ffda8a;}
-    .micro-note{
-      opacity:.88;
-      font-size: .98em;
-      text-align:center;
-      margin-top:10px;
-    }
-
-    /* Mini-TOC */
-    .toc{
-      width:min(860px, 92vw);
-      margin: 10px auto 0;
-      display:flex;
-      gap:10px;
-      justify-content:center;
-      flex-wrap:wrap;
-    }
-    .toc a{
-      border:1px solid rgba(255,255,255,.10);
-      padding:10px 12px;
-      border-radius:999px;
-      text-decoration:none;
-      color:#d9b26d !important;
-      background:rgba(0,0,0,.28);
-      font-family:"Cinzel Decorative", serif;
-      font-weight:600;
-      letter-spacing:.2px;
-    }
-    .toc a:hover{color:#ffda8a !important;}
   </style>
 </head>
 
@@ -183,22 +247,40 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
-      <br><br>
-      <h1 class="intro-text" style="margin-top:0;">
-        Alternative Concepts<br><br>
-        Praxis. Gemeinschaft.<br><br>
-        Nachhaltige Strukturen.
-      </h1>
+      <div class="ac-hero reveal">
+        <div class="ac-hero-inner">
+          <h1 class="intro-text" style="margin:0;">
+            Alternative Concepts<br><br>
+            Business-Module für Lifestyle & Community
+          </h1>
 
-      <section class="text-block reveal">
-        Drei Formate. Keine Gurus. Keine Heilsversprechen.<br>
-        <strong>Erfahrung statt Glaube.</strong>
-      </section>
+          <br>
+          <section class="text-block" style="margin-bottom:0;">
+            <strong>Kein „Ideenpapier“.</strong><br>
+            Drei Module, die du <em>testen</em>, <em>replizieren</em> und <em>skalieren</em> kannst.
+          </section>
 
-      <div class="toc reveal" aria-label="Sprungmarken">
-        <a href="#format1">Events & Retreats</a>
-        <a href="#format2">Praxis-Workshops</a>
-        <a href="#format3">Produkte & Archiv</a>
+          <div class="kpi-row" aria-label="Kernprinzipien">
+            <div class="kpi">Praxis</div>
+            <div class="kpi">Gemeinschaft</div>
+            <div class="kpi">Wiederkehr</div>
+            <div class="kpi">Marge</div>
+          </div>
+
+          <div class="ac-toc" aria-label="Sprungmarken">
+            <a href="#m1">Modul 1: Events & Retreats</a>
+            <a href="#m2">Modul 2: Praxis-Workshops</a>
+            <a href="#m3">Modul 3: Produkte & Archiv</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="denkanker reveal">
+        <h3>Denkanker</h3>
+        <p>
+          Menschen kaufen nicht „Content“.<br>
+          Sie kaufen <strong>Raum</strong>, <strong>Rhythmus</strong> und <strong>Zugehörigkeit</strong>.
+        </p>
       </div>
     </div>
   </section>
@@ -206,165 +288,312 @@
   <!-- CONTENT -->
   <main class="intro">
 
-    <h2 class="intro-text"><br>Worum es geht</h2>
+    <h2 class="intro-text"><br>Rahmen (damit es funktioniert)</h2>
 
     <section class="text-block reveal">
-      Diese Seite ist kein Pitch-Feuerwerk.<br>
-      Sie zeigt <strong>wie</strong> wir Formate denken:<br>
-      <em>klar</em>, <em>bodennah</em>, <em>umsetzbar</em>.
+      <strong>Keine Gurus.</strong> Keine Heilsversprechen. Keine religiösen Narrative.<br>
+      Stattdessen: <strong>Handwerk</strong>, <strong>Natur</strong>, <strong>Alltag</strong>, <strong>Gemeinschaft</strong>.
     </section>
 
     <section class="text-block reveal">
-      Zielgruppe: <strong>Alternative Lifestyle Community</strong><br>
-      Dreads / Nomads / Hippies / spirituelle Suchende ohne Dogma –<br>
-      Menschen, die für <strong>echte Erlebnisse</strong> und <strong>Gemeinschaft</strong> zahlen.
+      Die Module sind so gebaut, dass man klein starten kann:<br>
+      1 Event → 1 Serie → 1 Retreat → Produktlinie → Archiv.
     </section>
 
-    <br><br>
+    <div class="ac-divider"></div>
 
-    <!-- FORMAT 1 -->
-    <section id="format1" class="concept-card reveal">
-      <h2 class="concept-title">1) Alternative Lifestyle Events & Retreats</h2>
-      <p class="concept-sub">
-        Kuratiert. Intim. Bodennah.<br>
-        <strong>Kein Festival. Kein Chaos.</strong>
-      </p>
-
-      <div class="concept-grid">
-        <div class="concept-pill">
-          <strong>Was:</strong><br>
-          Kleine Events (1 Tag) + Retreats (3–5 Tage) mit Fokus auf Gemeinschaft, Natur, Einfachheit,
-          Essen, Musik, Handwerk, Austausch – ohne religiöses Framing.
-        </div>
-
-        <div class="concept-pill">
-          <strong>Warum das funktioniert:</strong><br>
-          Die Zielgruppe kauft nicht „Content“. Sie kauft <strong>Raum</strong>, <strong>Atmosphäre</strong>, <strong>Zugehörigkeit</strong>.
-          Ein kuratiertes Format wirkt hochwertig, sicher und wiederholbar.
-        </div>
-
-        <div class="concept-pill">
-          <strong>Monetarisierung:</strong><br>
-          Events: <strong>40–90 €</strong> Ticket · Retreats: <strong>350–900 €</strong> · Vendor-Fees · Kooperationen · Sponsoring (nachhaltige Brands)
-        </div>
-
-        <div class="concept-pill">
-          <strong>Output für Social:</strong><br>
-          Sichtbares Leben: echte Menschen, echte Praxis, echte Orte. Reichweite entsteht organisch – ohne „Marketing-Show“.
-        </div>
+    <!-- MODUL 1 -->
+    <section id="m1" class="module reveal">
+      <div class="module-head">
+        <h2 class="module-title">Modul 1 – Alternative Lifestyle Events & Retreats</h2>
+        <p class="module-sub">
+          <strong>1 Tag</strong> (Prototyp) · <strong>3–5 Tage</strong> (Tiefe & Marge)<br>
+          Kuratiert. Intim. Wiederholbar.
+        </p>
       </div>
 
-      <p class="micro-note">
-        <em>Start klein.</em> Ein kuratierter Tag ist der Prototyp. Daraus wird ein Retreat.
-      </p>
-    </section>
+      <div class="module-body">
+        <div class="grid2">
+          <div class="pill">
+            <strong>Was bekommt der Teilnehmer konkret?</strong>
+            <ul>
+              <li><strong>Dreadlife Clinic</strong>: Pflege/Erhalt, Fehlerdiagnose, Routine (hands-on)</li>
+              <li><strong>Naturhandwerk</strong>: Seile/Schnüre aus Naturfasern <em>oder</em> Repair/Upcycling (Outcome: ein fertiges Stück)</li>
+              <li><strong>Pflanzen & Räuchern</strong>: Mischungen herstellen + Anwendung (Raum/Objekt/Kleidung)</li>
+              <li><strong>Gemeinschaft</strong>: gemeinsames Kochen, Essen, Austausch (ohne Gruppen-Therapie)</li>
+              <li><strong>Abendformat</strong>: Musik/Feuer/Tee – ruhig, nicht showig</li>
+            </ul>
+          </div>
 
-    <!-- FORMAT 2 -->
-    <section id="format2" class="concept-card reveal">
-      <h2 class="concept-title">2) Bodenständige Praxis-Workshops</h2>
-      <p class="concept-sub">
-        Erfahrung statt Glaube.<br>
-        <strong>Praxis</strong> statt Vortrag.
-      </p>
-
-      <div class="concept-grid">
-        <div class="concept-pill">
-          <strong>Themen:</strong><br>
-          Pflanzenkunde & Räucherwerk · Symbolik & Alltagsrituale · Erdung & Körperwahrnehmung · Intuition im Alltag (ohne „Channeling“)
+          <div class="pill">
+            <strong>Warum diese Inhalte?</strong>
+            <ul>
+              <li>Sie erzeugen <strong>Ergebnis</strong> (nicht nur Stimmung).</li>
+              <li>Sie sind <strong>nicht peinlich-esoterisch</strong>, aber sinnstiftend.</li>
+              <li>Sie sind <strong>foto-/video-fähig</strong> (Content), ohne inszeniert zu wirken.</li>
+              <li>Sie lassen sich modular skalieren: <em>Day → Retreat</em>.</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="concept-pill">
-          <strong>Haltung:</strong><br>
-          Keine Gurus. Keine Heilsversprechen. Kein Dogma.<br>
-          Wir schaffen Rahmen, Material, Übung – die Leute machen ihre Erfahrung selbst.
+        <div class="grid2">
+          <div class="pill">
+            <strong>Ablauf (1-Tages-Event – Blueprint)</strong>
+            <ul>
+              <li>09:30 Ankommen · Regeln · Setting</li>
+              <li>10:00 Block 1: Dreadlife Clinic (Praxis)</li>
+              <li>13:00 Essen (gemeinsam, simpel)</li>
+              <li>14:30 Block 2: Pflanzen & Räuchern (Mischen + Anwenden)</li>
+              <li>16:30 Block 3: Naturhandwerk (Outcome)</li>
+              <li>18:00 Austausch + Closing</li>
+            </ul>
+            <div class="micro-note">
+              <em>Retreat = gleicher Bauplan, nur tiefer + mehr Praxiszeit.</em>
+            </div>
+          </div>
+
+          <div class="pill">
+            <strong>Ressourcen (was wir benötigen)</strong>
+            <ul>
+              <li>Location: Hof/Space/Kulturort (Innenraum + Außenbereich)</li>
+              <li>Küche/Essenslogistik (simpel, pflanzenbasiert)</li>
+              <li>Material-Kits (Dreads + Pflanzen + Handwerk)</li>
+              <li>2–3 Modelle für Dread-Clinic (Qualitätssicherung)</li>
+              <li>Haftung/AGB/Refund-Regeln (Standard)</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="concept-pill">
-          <strong>Monetarisierung:</strong><br>
-          Workshop: <strong>60–150 €</strong> · Serien/Pakete · später Hybrid-Version (offline + Archiv)
+        <div class="grid2">
+          <div class="pill">
+            <strong>Monetarisierung (realistisch)</strong>
+            <ul>
+              <li>Event: <strong>40–90 €</strong> Ticket</li>
+              <li>Retreat: <strong>350–900 €</strong> je nach Komfort</li>
+              <li>Vendor-Fees (max. 8–12, kuratiert)</li>
+              <li>Bundles/Produkte vor Ort</li>
+              <li>Sponsoring (nachhaltige Brands, später)</li>
+            </ul>
+          </div>
+
+          <div class="pill">
+            <strong>Hürden (und wie wir sie lösen)</strong>
+            <ul>
+              <li><strong>„Markt-Vibe“</strong> → harte Kuratierung, wenige Anbieter, klare Ästhetik</li>
+              <li><strong>Orga-Overkill</strong> → klein starten (80–120 Pers.), feste Slots</li>
+              <li><strong>Qualitätsrisiko</strong> → Operator leitet (ich), klare Abläufe</li>
+              <li><strong>Wetter</strong> → Indoor-Backup</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="concept-pill">
-          <strong>Qualitätssicherung:</strong><br>
-          Klare Regeln, kleine Gruppen, strukturierter Ablauf. Das schützt die Marke – und die Teilnehmer.
+        <div class="kpi-row" aria-label="Kernoutput">
+          <div class="kpi">Cashflow</div>
+          <div class="kpi">Community</div>
+          <div class="kpi">Content</div>
+          <div class="kpi">Produktabsatz</div>
         </div>
       </div>
-
-      <p class="micro-note">
-        <em>Wiederkehr ist der Hebel:</em> Wer einmal kommt, kommt in die Serie.
-      </p>
     </section>
 
-    <!-- FORMAT 3 -->
-    <section id="format3" class="concept-card reveal">
-      <h2 class="concept-title">3) Produkte & Online-Archiv</h2>
-      <p class="concept-sub">
-        Keine Online-Guru-Kurse.<br>
-        <strong>Werkzeuge</strong> + <strong>Archiv</strong> als Ergänzung.
-      </p>
-
-      <div class="concept-grid">
-        <div class="concept-pill">
-          <strong>Produktlinie:</strong><br>
-          Natürliche Dread-Pflege · Öle · Räucherwerk · Tools · praktische Ritual-Objekte (ohne Kitsch)
-        </div>
-
-        <div class="concept-pill">
-          <strong>Online Academy (Archiv):</strong><br>
-          Praxisvideos · dokumentiertes Community-Wissen · Anleitungen & Routinen.<br>
-          Kein „Kurs“, kein „Coach“ – eher <strong>Bibliothek</strong>.
-        </div>
-
-        <div class="concept-pill">
-          <strong>Monetarisierung:</strong><br>
-          Direktverkauf · Workshop-Bundles · Online-Shop · Archiv als Add-on zur Membership / Einzelzugang
-        </div>
-
-        <div class="concept-pill">
-          <strong>Warum das stark ist:</strong><br>
-          Offline schafft Vertrauen – Produkte/Archiv verlängern den Effekt. Wiederkehrender Umsatz ohne inhaltliche Verwässerung.
-        </div>
+    <!-- MODUL 2 -->
+    <section id="m2" class="module reveal">
+      <div class="module-head">
+        <h2 class="module-title">Modul 2 – Bodenständige Praxis-Workshops</h2>
+        <p class="module-sub">
+          Wiederkehr statt Hype.<br>
+          <strong>Erfahrung</strong> statt Glaubenssystem.
+        </p>
       </div>
 
-      <p class="micro-note">
-        <em>Regel:</em> Erst Praxis. Dann Produkte. Dann Archiv. (Nicht andersrum.)
-      </p>
+      <div class="module-body">
+        <div class="grid2">
+          <div class="pill">
+            <strong>Konkrete Workshop-Reihe (4er Serie – Jahreszeitenlogik)</strong>
+            <ul>
+              <li><strong>Frühling:</strong> Beifuß & Wacholder · Übergänge & Raum (Mischen + Anwenden)</li>
+              <li><strong>Sommer:</strong> Fichte/Kiefer · Atem & Erdung (Harze/Kräuter + Praxis)</li>
+              <li><strong>Herbst:</strong> Salbei (heimisch) · Reinigung & Ordnung (ohne Dogma)</li>
+              <li><strong>Winter:</strong> Lavendel · Nervensystem & Ruhe (Routinen + Körperwahrnehmung)</li>
+            </ul>
+            <div class="micro-note">
+              <em>Keine Heilsversprechen.</em> Wir arbeiten mit Sinneswahrnehmung, Materialkunde, Anwendung.
+            </div>
+          </div>
+
+          <div class="pill">
+            <strong>Warum genau diese Pflanzen?</strong>
+            <ul>
+              <li>Regional/zugänglich, rechtlich unproblematisch</li>
+              <li>Praktisch erfahrbar (Geruch, Wirkung im Raum, Alltagstauglichkeit)</li>
+              <li>Traditionell genutzt – ohne religiöses Framing</li>
+              <li>Ideal für Serien (Wiederkehr & Bindung)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid2">
+          <div class="pill">
+            <strong>Material (was wir benötigen)</strong>
+            <ul>
+              <li>Kräuter/Harze (qualitätsgesichert)</li>
+              <li>Räucherschalen (Ton/Speckstein), Sieb oder Kohle</li>
+              <li>Mörser, Gläser, Papier, Etiketten (Mischungen)</li>
+              <li>1-seitige Handouts (Routinen + Mischungslogik)</li>
+            </ul>
+          </div>
+
+          <div class="pill">
+            <strong>Monetarisierung</strong>
+            <ul>
+              <li>Einzelworkshop: <strong>60–150 €</strong></li>
+              <li>Serie/Paket: Preisvorteil + Verbindlichkeit</li>
+              <li>Material-Kits (Startersets)</li>
+              <li>Brücke zu Modul 3 (Archiv + Produkte)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid2">
+          <div class="pill">
+            <strong>Hürden (und wie wir sie lösen)</strong>
+            <ul>
+              <li><strong>„Esoterik-Kitsch“</strong> → Sprache: Material, Praxis, Alltag</li>
+              <li><strong>Erwartung „Heilung“</strong> → klare Regeln, kein Versprechen</li>
+              <li><strong>Überforderung</strong> → kleine Gruppen (8–15), Outcome-First</li>
+            </ul>
+          </div>
+
+          <div class="pill">
+            <strong>Birkenbihl-Note (10%)</strong>
+            <ul>
+              <li><strong>Aha-Effekt</strong>: „Du riechst – und dein Nervensystem reagiert.“</li>
+              <li><strong>Mini-Übung</strong>: 3 Minuten Wahrnehmung statt 30 Minuten Vortrag.</li>
+              <li><strong>Wiederholung</strong>: Serie macht aus Wissen <em>Gewohnheit</em>.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="kpi-row" aria-label="Kernoutput">
+          <div class="kpi">Vertrauen</div>
+          <div class="kpi">Wiederkehr</div>
+          <div class="kpi">Kits</div>
+          <div class="kpi">Archiv-Futter</div>
+        </div>
+      </div>
     </section>
 
-    <br><br>
+    <!-- MODUL 3 -->
+    <section id="m3" class="module reveal">
+      <div class="module-head">
+        <h2 class="module-title">Modul 3 – Produkte & Online-Archiv (Add-on)</h2>
+        <p class="module-sub">
+          Erst Praxis. Dann Produkte. Dann Archiv.<br>
+          <strong>Bibliothek statt Guru-Kurs.</strong>
+        </p>
+      </div>
 
-    <!-- PSYLAND FIT -->
-    <h2 class="intro-text"><br>Warum das zu einer Plattform wie Psyland passt</h2>
+      <div class="module-body">
+        <div class="grid2">
+          <div class="pill">
+            <strong>Produktlinie (Start-SKUs – schlank)</strong>
+            <ul>
+              <li><strong>Dread Oil</strong> (Jojoba + Schwarzkümmel) – Scalp & Routine</li>
+              <li><strong>Wash Bar</strong> (natürlich, ohne Over-Parfum) – Reise/Vanlife-tauglich</li>
+              <li><strong>Tool Kit</strong> (Häkelnadel, Clips, Tuch) – Workshop-kompatibel</li>
+              <li><strong>Räucher Blend</strong> (Beifuß/Salbei/Wacholder) – Alltag, Raum</li>
+            </ul>
+          </div>
+
+          <div class="pill">
+            <strong>Beschaffung (realistisch, ohne Dropshipping)</strong>
+            <ul>
+              <li>Rohstoffe über Bio-/Naturkosmetik-Großhandel (DACH/EU)</li>
+              <li>Kleinmanufakturen für Bars/Seifen (Private Label möglich)</li>
+              <li>Eigenabfüllung (kleine Chargen, Qualitätskontrolle)</li>
+              <li>Etiketten/Packaging: minimal, edel, kein Kitsch</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid2">
+          <div class="pill">
+            <strong>Margen (Zielwerte, konservativ)</strong>
+            <ul>
+              <li>Öl: Einkauf 6–8 € → Verkauf 18–24 €</li>
+              <li>Wash Bar: 3–5 € → 12–16 €</li>
+              <li>Tool Kit: 6–10 € → 19–29 €</li>
+              <li>Räucher Blend: 2–3 € → 8–12 €</li>
+            </ul>
+            <div class="micro-note">
+              <em>Marge entsteht durch Vertrauen.</em> Vertrauen entsteht offline.
+            </div>
+          </div>
+
+          <div class="pill">
+            <strong>Online Academy (Archiv – kein Kurs)</strong>
+            <ul>
+              <li>Praxisvideos (Workshop-Mitschnitte, Routinen)</li>
+              <li>Checklisten, Fehlerkarten, Mischungslogik</li>
+              <li>Community-Wissen (FAQ, Cases, Routinen)</li>
+              <li>Add-on zur Membership oder Einzelzugang</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid2">
+          <div class="pill">
+            <strong>Hürden (und wie wir sie lösen)</strong>
+            <ul>
+              <li><strong>Zu viele SKUs</strong> → Start: 4 Produkte, 2 Bundles</li>
+              <li><strong>Online zu früh</strong> → erst nach 2–3 Offline-Serien</li>
+              <li><strong>Qualität</strong> → kleine Chargen, klare Standards</li>
+            </ul>
+          </div>
+
+          <div class="pill">
+            <strong>Monetarisierung</strong>
+            <ul>
+              <li>Direktverkauf + Bundles (Workshop/Retreat)</li>
+              <li>Archiv Add-on (Monthly/Yearly) oder Einmalzugang</li>
+              <li>Erhöhung des Warenkorbs ohne „Sales-Vibe“</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="kpi-row" aria-label="Kernoutput">
+          <div class="kpi">Wiederkehr-Umsatz</div>
+          <div class="kpi">Warenkorb</div>
+          <div class="kpi">Skalierung</div>
+          <div class="kpi">Brand Trust</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ac-divider"></div>
+
+    <h2 class="intro-text"><br>Kooperationslogik (klar)</h2>
 
     <section class="text-block reveal">
-      Psyland hat Reichweite und Kultur – diese Formate bringen <strong>Struktur</strong> und <strong>Wertschöpfung</strong>:
-      längere Bindung, klare Angebote, wiederkehrende Einnahmen.
+      <strong>Operator-Model:</strong> Ich leite die Formate vollständig (Know-how, Arbeit, Qualität).<br>
+      <strong>Lizenz/Plattform:</strong> Reichweite, Brand, Infrastruktur (je nach Setup).<br><br>
+      <em>Split wird sauber auf Netto oder KPI-abhängig definiert.</em>
     </section>
 
-    <section class="text-block reveal">
-      Kooperation nicht als Gastprojekt, sondern als <strong>Co-Creation</strong>:<br>
-      modular, skalierbar, ohne die Identität zu verbiegen.
-    </section>
-
-    <br>
-
-    <!-- CTA -->
     <h2 class="intro-text"><br>Nächster Schritt</h2>
 
     <section class="text-block reveal">
-      Wenn du prüfen willst, ob das strukturell Sinn macht:<br>
-      <strong>ein kurzes Gespräch</strong> reicht, um Richtung und Realismus abzugleichen.
+      Wenn das für dich nach „fertigem Modul“ klingt, reicht ein kurzer Call:<br>
+      <strong>20 Minuten</strong>, um Realismus, Location und erstes Pilotformat festzuziehen.
     </section>
 
     <div class="cta-row">
-      <!-- Optional: eigenes Asset anlegen, sonst den Kontakt-Button nutzen -->
       <a href="contact.html" class="cta-fragebogen" aria-label="Kontakt aufnehmen">
         <img src="assets/img/kontakt.PNG" alt="Kontakt" loading="lazy">
       </a>
     </div>
 
     <br><br><br>
-
   </main>
 
   <script src="assets/js/reveal.js"></script>
@@ -424,12 +653,12 @@
     },{passive:true});
   </script>
 
-  <!-- Structured Data: CreativeWork (neutral, da Seite nicht Tattoo-spezifisch ist) -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Alternative Concepts – Lifestyle & Community Formate",
+    "name": "Alternative Concepts – Business-Module für Lifestyle & Community",
     "url": "https://modern-ritualistic-tattoo.com/alternativeconcepts.html",
     "isPartOf": {
       "@type": "WebSite",
