@@ -842,21 +842,3 @@ main.intro .text-block{
   font-size: .9em; /* zweite Zeile wie bei index etwas kleiner, bleibt Überschrift */
   line-height:1.15;
 }
-
-/* FIX PREISMODELLE ZENTRIERUNG */
-
-.price-grid{
-  justify-items:center !important;
-  align-items:start !important;
-}
-
-.price-card{
-  width:100% !important;
-  max-width:340px !important;
-  margin:0 auto !important;
-  box-sizing:border-box !important;
-}
-
-.price-card.featured{
-  transform:none !important;
-}
