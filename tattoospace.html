@@ -1,265 +1,91 @@
-<!doctype html>
-<html lang="de">
-<head>
-  <meta charset="utf-8">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.PNG">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.PNG">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>AMO Private Atelier – Tattoo Artist Preismodelle</title>
-  <meta name="description" content="Privater Premium-Tattoo-Raum für selbstständige Artists und Guest Artists. Keine Umsatzbeteiligung. Keine Studiohierarchie. Kuratierter Zugang statt offener Raumvermietung.">
-  <link rel="canonical" href="https://modern-ritualistic-tattoo.com/preismodelletattoo.html">
-
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="AMO Private Atelier">
-  <meta property="og:title" content="AMO Private Atelier – Tattoo Artist Preismodelle">
-  <meta property="og:description" content="Arbeite wie in deinem eigenen Premiumstudio – ohne eigenes Studio zu betreiben.">
-  <meta property="og:url" content="https://modern-ritualistic-tattoo.com/preismodelletattoo.html">
-  <meta property="og:image" content="https://modern-ritualistic-tattoo.com/assets/img/og.PNG">
-
-  <link rel="stylesheet" href="style.css?v=burger2">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
-
-  <style>
-    @media(max-width:900px){
-      .site-header .burger{display:block!important}
-      .site-header{position:relative;z-index:20}
-      .site-nav{position:fixed;left:0;right:0;top:72px;background:rgba(0,0,0,.92);padding:14px 16px;transform:translateY(-120%);opacity:0;transition:.28s ease;border-bottom:1px solid rgba(255,255,255,.08);box-shadow:0 10px 24px rgba(0,0,0,.45);z-index:25;font-size:0}
-      body.nav-open .site-nav{transform:translateY(0);opacity:1}
-      .site-nav a,.site-nav a:link,.site-nav a:visited{display:block;font-size:18px;line-height:1.35;padding:12px 6px;margin:0;border-bottom:1px solid rgba(255,255,255,.06);color:#d9b26d!important;text-decoration:none;font-weight:600;font-family:"Cinzel Decorative",serif}
-    }
-
-    .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:24px 0 0}
-
-    .price-grid{
-      width:min(1120px,98vw);
-      margin:34px auto;
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:18px;
-      justify-items:center;
-      align-items:start;
-      box-sizing:border-box;
-    }
-
-    .price-card{
-      background:rgba(0,0,0,.48);
-      border:1px solid rgba(217,178,109,.28);
-      border-radius:18px;
-      padding:24px 18px;
-      box-shadow:0 14px 32px rgba(0,0,0,.38);
-      text-align:center;
-      width:100%;
-      max-width:350px;
-      margin:0 auto;
-      box-sizing:border-box;
-      position:relative;
-    }
-
-    .price-card.featured{
-      border-color:rgba(255,218,138,.68);
-      box-shadow:0 18px 42px rgba(0,0,0,.52),0 0 26px rgba(217,178,109,.14);
-    }
-
-    .badge{
-      display:inline-block;
-      border:1px solid rgba(217,178,109,.34);
-      border-radius:999px;
-      padding:7px 12px;
-      margin-bottom:12px;
-      color:#ffda8a;
-      background:rgba(0,0,0,.36);
-      font-size:12px;
-      letter-spacing:.5px;
-      text-transform:uppercase;
-    }
-
-    .price-kicker{font-family:"Cinzel Decorative",serif;color:#d9b26d;letter-spacing:.7px;font-size:14px;margin-bottom:10px;text-transform:uppercase}
-    .price-title{font-family:"Cinzel Decorative",serif;color:#ffda8a;font-size:26px;line-height:1.2;margin:0 0 12px}
-    .price-main{font-size:34px;line-height:1.1;font-weight:700;margin:18px 0 4px;color:#fff}
-    .price-sub{color:rgba(255,255,255,.72);font-size:14px;margin-bottom:20px}
-
-    .price-list{text-align:left;margin:18px auto 0;padding:0;list-style:none;max-width:315px}
-    .price-list li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.86);line-height:1.42}
-    .price-list li strong{color:#ffda8a}
-
-    .price-note{width:min(900px,92vw);margin:20px auto 40px;color:rgba(255,255,255,.74);font-size:15px;text-align:center;line-height:1.6}
-
-    .artist-strip,.pill-row{
-      width:min(920px,92vw);
-      margin:28px auto;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      justify-content:center;
-    }
-
-    .artist-strip span,.pill{
-      border:1px solid rgba(217,178,109,.28);
-      border-radius:999px;
-      padding:9px 14px;
-      background:rgba(0,0,0,.32);
-      color:rgba(255,255,255,.84);
-      font-size:14px;
-    }
-
-    .model-section{width:min(980px,92vw);margin:46px auto;padding:26px 18px;border-top:1px solid rgba(217,178,109,.22);border-bottom:1px solid rgba(217,178,109,.16)}
-    .mini-table{width:min(860px,96%);margin:20px auto;border-collapse:collapse;background:rgba(0,0,0,.35);border:1px solid rgba(217,178,109,.18);border-radius:14px;overflow:hidden}
-    .mini-table th,.mini-table td{padding:14px 12px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left;color:rgba(255,255,255,.84);vertical-align:top}
-    .mini-table th{font-family:"Cinzel Decorative",serif;color:#d9b26d;background:rgba(0,0,0,.28)}
-    .mini-table strong{color:#ffda8a}
-
-    .process{
-      width:min(900px,92vw);
-      margin:30px auto;
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:12px;
-    }
-
-    .process-step{
-      border:1px solid rgba(217,178,109,.22);
-      background:rgba(0,0,0,.34);
-      border-radius:16px;
-      padding:16px 12px;
-      text-align:center;
-      color:rgba(255,255,255,.84);
-    }
-
-    .process-step strong{
-      display:block;
-      color:#ffda8a;
-      margin-bottom:8px;
-      font-family:"Cinzel Decorative",serif;
-    }
-
-    @media(max-width:900px){
-      .price-grid{grid-template-columns:1fr;width:100%;padding:0 8px}
-      .price-card{max-width:none;width:100%}
-      .process{grid-template-columns:1fr}
-      .mini-table th,.mini-table td{display:block;width:100%;box-sizing:border-box}
-    }
-  </style>
-</head>
-
-<body class="page-bg">
-
-<header class="site-header">
-  <a href="index.html" class="banner-logo-link" aria-label="Zur Startseite">
-    <img src="assets/img/banner_logo.PNG" alt="AMO Tattoo Atelier" width="965" height="508">
-  </a>
-
-  <button class="burger" id="burgerBtn" aria-label="Menü öffnen" aria-expanded="false" style="position:absolute;right:12px;top:12px;width:44px;height:44px;padding:0;border:0;background:transparent;display:none;">
-    <img src="assets/icons/Menubutton1.PNG" alt="Menü" style="width:100%;height:100%;object-fit:contain;">
-  </button>
-
-  <nav class="site-nav" id="siteNav">
-    <a href="index.html">Home</a> |
-    <a href="preismodelletattoo.html">Artist Modelle</a> |
-    <a href="ritual.html">Ritual</a> |
-    <a href="angebote.html">Leistungen & Preise</a> |
-    <a href="booking.html">Termin</a> |
-    <a href="gallery.html">Momentaufnahmen</a> |
-    <a href="faq.html">FAQ</a> |
-    <a href="contact.html">Kontakt</a> |
-    <a href="datenschutz.html">Datenschutz</a> |
-    <a href="impressum.html">Impressum</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-video">
-      <video src="assets/video/ritual_intro.MP4" autoplay muted playsinline loop preload="metadata"></video>
-    </div>
-  </div>
-</section>
+<!-- ERSETZE DEN HAUPTBEREICH <main class="intro"> ... </main> DURCH DIESE VERSION -->
 
 <main class="intro">
 
   <h1 class="intro-text" style="margin-top:0;">
-    Arbeite wie in deinem eigenen Premiumstudio.<br><br>
-    Ohne eigenes Studio zu betreiben.
+    Dein privates Tattoo-Atelier auf Zeit.<br><br>
+    Für Artists, die frei arbeiten wollen –<br>
+    ohne eigenes Studio zu führen.
   </h1>
 
   <section class="text-block reveal">
-    <strong>AMO Private Atelier</strong> ist ein kuratierter privater Tattoo-Raum für selbstständige Artists, Guest Artists und professionelle Tätowierer*innen.
+    <strong>AMO Private Atelier</strong> ist ein kuratierter Premiumraum für selbstständige Tätowierer*innen, Guest Artists und Artists mit eigenen Kund*innen.
   </section>
 
   <section class="text-block reveal">
-    Kein Stuhlmietvertrag.<br>
-    Keine Umsatzbeteiligung.<br>
-    Keine Studiohierarchie.<br>
-    Kein offener Coworking-Space.
-  </section>
-
-  <section class="text-block reveal">
-    Du bringst deine Kund*innen, deine Verantwortung und deine künstlerische Handschrift.
-    AMO stellt den Raum, die Atmosphäre, professionelles Mobiliar, gewöhnliche Verbrauchsmaterialien und den hygienischen Rahmen.
+    Du bekommst keinen „Platz im Studio“.<br>
+    Du bekommst einen privaten, professionellen Rahmen, in dem du deine Kund*innen eigenständig betreust.
   </section>
 
   <div class="artist-strip reveal">
-    <span>Guest Artists</span>
-    <span>Tätowierer*innen ohne eigenes Studio</span>
-    <span>Premium Sessions</span>
-    <span>Großprojekte</span>
-    <span>Content Days</span>
-    <span>Selected Residents</span>
+    <span>Keine Umsatzbeteiligung</span>
+    <span>Keine Studiohierarchie</span>
+    <span>Keine Laufkundschaft</span>
+    <span>Private Sessions</span>
+    <span>Premium-Kund*innen</span>
+    <span>Guest Spots</span>
   </div>
 
-  <h2 class="intro-text">Der Zugang ist bewusst limitiert</h2>
+  <h2 class="intro-text">Für wen AMO gedacht ist</h2>
 
   <section class="text-block reveal">
-    AMO wird nicht einfach gemietet. Du fragst den Zugang an.
-    Wir prüfen, ob Arbeitsweise, Anspruch, Hygiene und Kundenerlebnis zum Atelier passen.
+    Für Artists, die bereits eigene Kund*innen haben und einen hochwertigen Ort suchen, ohne ein eigenes Studio mieten, einrichten oder dauerhaft betreiben zu müssen.
+  </section>
+
+  <section class="text-block reveal">
+    Ideal für Guest Artists, projektbasierte Tattoo-Sessions, größere Arbeiten, Premiumkund*innen, Content Days oder regelmäßige Nutzung ohne feste Studioverpflichtung.
+  </section>
+
+  <h2 class="intro-text">So funktioniert der Zugang</h2>
+
+  <section class="text-block reveal">
+    AMO ist kein offenes Mietstudio. Jede Nutzung wird vorab geprüft, damit Raum, Arbeitsweise, Hygiene und Anspruch zusammenpassen.
   </section>
 
   <div class="process reveal">
-    <div class="process-step"><strong>1</strong>Anfrage senden</div>
-    <div class="process-step"><strong>2</strong>Passung prüfen</div>
-    <div class="process-step"><strong>3</strong>Probe-Day oder Onboarding</div>
-    <div class="process-step"><strong>4</strong>Buchungszugang erhalten</div>
+    <div class="process-step"><strong>1</strong>Zugang anfragen</div>
+    <div class="process-step"><strong>2</strong>Nachweise einreichen</div>
+    <div class="process-step"><strong>3</strong>Onboarding / Probe-Day</div>
+    <div class="process-step"><strong>4</strong>Atelier buchen</div>
   </div>
 
-  <h2 class="intro-text">Drei Preismodelle für Artists</h2>
+  <h2 class="intro-text">Preismodelle für Tattoo Artists</h2>
 
   <div class="price-grid">
 
     <article class="price-card reveal">
-      <span class="badge">Flexibel</span>
+      <span class="badge">Zum Testen</span>
       <div class="price-kicker">Modell 1</div>
       <h2 class="price-title">Day Atelier</h2>
       <div class="price-main">ab 119 €</div>
-      <div class="price-sub">Einzelbuchung ohne Bindung</div>
+      <div class="price-sub">flexible Einzelbuchung</div>
       <ul class="price-list">
         <li><strong>Probe-Day:</strong> 119 € · bis 5 Stunden</li>
         <li><strong>Half Day:</strong> 189 € · bis 5 Stunden</li>
         <li><strong>Full Day:</strong> 329 € · bis 10 Stunden</li>
         <li><strong>Extended Day:</strong> 449 € · bis 12 Stunden</li>
         <li><strong>Artist Weekend:</strong> 699–999 €</li>
-        <li>Ideal für Guest Spots, einzelne Premiumkund*innen und Projekt-Tage.</li>
-        <li>Du zahlst nur, wenn du den Raum wirklich nutzt.</li>
+        <li>Für einzelne Projekte, Gasttermine und erste Nutzung.</li>
       </ul>
     </article>
 
     <article class="price-card featured reveal">
-      <span class="badge">Limitiert</span>
+      <span class="badge">Beste Wahl</span>
       <div class="price-kicker">Modell 2</div>
       <h2 class="price-title">Artist Membership</h2>
       <div class="price-main">ab 399 €</div>
-      <div class="price-sub">monatliches Nutzungskontingent</div>
+      <div class="price-sub">planbare Nutzung pro Monat</div>
       <ul class="price-list">
         <li><strong>Starter:</strong> 399 €/Monat · 3 Tage</li>
         <li><strong>Creator:</strong> 699 €/Monat · 6 Tage</li>
         <li><strong>Resident:</strong> 1.190 €/Monat · 10 Tage + Priorität</li>
         <li><strong>Maximal 3 Resident Artists gleichzeitig.</strong></li>
-        <li>Für regelmäßige Arbeit ohne eigenes Studio, Chef oder Umsatzabgabe.</li>
-        <li>Monatlich planbar. Künstlerisch frei. Professionell nach außen.</li>
+        <li>Für Artists, die regelmäßig arbeiten und professionell auftreten wollen.</li>
       </ul>
     </article>
 
     <article class="price-card reveal">
-      <span class="badge">Exklusiv</span>
+      <span class="badge">Premium</span>
       <div class="price-kicker">Modell 3</div>
       <h2 class="price-title">Private Artist Experience</h2>
       <div class="price-main">ab 399 €</div>
@@ -268,12 +94,16 @@
         <li><strong>Half Day Buyout:</strong> 399 €</li>
         <li><strong>Full Day Buyout:</strong> 699 €</li>
         <li><strong>Weekend Buyout:</strong> 999–1.490 €</li>
-        <li>Für große Projekte, Premiumkunden, Foto-/Content-Tage und geschlossene Artist-Sessions.</li>
-        <li>Das gesamte Atelier ist für diesen Zeitraum exklusiv für dich reserviert.</li>
+        <li>Für Premium-Sessions, große Projekte, VIP-Kund*innen und Content-Tage.</li>
       </ul>
     </article>
 
   </div>
+
+  <section class="text-block reveal">
+    <strong>Ein einfacher Vergleich:</strong><br><br>
+    Wenn du an einem Full Day nur ein größeres Projekt abrechnest, kann sich AMO bereits mit einer einzigen hochwertigen Kundensession wirtschaftlich tragen – ohne Miete, Einrichtung, Studioaufbau oder Umsatzabgabe.
+  </section>
 
   <div class="cta-row">
     <a href="contact.html" class="cta-fragebogen" aria-label="Zugang zum Atelier anfragen">
@@ -282,97 +112,108 @@
   </div>
 
   <p class="price-note">
-    Alle Preise verstehen sich als Startstruktur. Je nach Nutzungsart, Wochenende, Sonderaufbau, Reinigung, Materialbedarf und Dauer können Preise angepasst werden.
-    Externe Artists arbeiten eigenständig und bleiben für Kund*innen, Versicherung, Hygiene, Aufklärung, Dokumentation, Genehmigungen und berufliche Pflichten selbst verantwortlich.
+    Preise verstehen sich als Startstruktur. Je nach Nutzungsart, Wochenende, Sonderaufbau, Reinigung, Materialbedarf und Dauer können Preise angepasst werden.
   </p>
 
   <div class="model-section reveal">
-    <h2 class="intro-text">Welches Modell passt zu dir?</h2>
+    <h2 class="intro-text">Was enthalten ist</h2>
 
     <table class="mini-table">
       <thead>
         <tr>
-          <th>Deine Situation</th>
-          <th>Empfohlenes Modell</th>
-          <th>Warum</th>
+          <th>Bereich</th>
+          <th>Enthalten</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Du möchtest AMO testen oder hast einzelne Tattoo-Projekte.</td>
-          <td><strong>Day Atelier</strong></td>
-          <td>Flexibel, geringes Risiko, keine monatliche Bindung.</td>
+          <td>Raum</td>
+          <td><strong>Privater Tattoo-Arbeitsbereich</strong>, Kundenbereich, Atmosphäre, Grundlicht, WLAN.</td>
         </tr>
         <tr>
-          <td>Du arbeitest regelmäßig, willst aber kein eigenes Studio führen.</td>
-          <td><strong>Artist Membership</strong></td>
-          <td>Planbare Kosten, feste Nutzungstage, professionelle Außenwirkung.</td>
+          <td>Ausstattung</td>
+          <td>Professionelles Mobiliar und vorhandene Studio-Infrastruktur nach Absprache.</td>
         </tr>
         <tr>
-          <td>Du betreust Premiumkund*innen oder große Projekte mit besonderem Anspruch.</td>
-          <td><strong>Private Artist Experience</strong></td>
-          <td>Maximale Privatsphäre, Ruhe und Exklusivität für hohe Ticketpreise.</td>
+          <td>Material</td>
+          <td>Gewöhnliche Verbrauchsmaterialien nach Verfügbarkeit. Spezielle Materialien bringst du selbst mit.</td>
+        </tr>
+        <tr>
+          <td>Reinigung</td>
+          <td>Endreinigung außerhalb deines direkten Arbeitsbereichs. Deinen Arbeitsplatz hinterlässt du hygienisch sauber.</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <h2 class="intro-text">Warum Artists AMO buchen</h2>
+  <h2 class="intro-text">Was du mitbringen musst</h2>
 
   <section class="text-block reveal">
-    Weil du hier arbeitest, ohne dich einer Studiostruktur unterzuordnen.
-    Deine Kund*innen erleben einen ruhigen, privaten und hochwertigen Rahmen – nicht den Lärm eines vollen Studios.
+    Gewerbeanmeldung.<br><br>
+    Ausweisdokument.<br><br>
+    Hygiene- beziehungsweise Sachkundenachweis.<br><br>
+    Berufshaftpflicht beziehungsweise geeigneter Versicherungsschutz.<br><br>
+    Eigene Kund*innen und eigene Terminorganisation.<br><br>
+    Spezielle Farben, Nadeln, Maschinen und persönliche Arbeitsmaterialien.<br><br>
+    Deine Aufklärung, Dokumentation und Einhaltung aller geltenden Hygienevorgaben.
+  </section>
+
+  <h2 class="intro-text">Für wen AMO nicht geeignet ist</h2>
+
+  <section class="text-block reveal">
+    AMO passt nicht, wenn du Laufkundschaft erwartest, ohne eigene Kund*innen arbeitest, keine Nachweise vorlegen kannst oder einen günstigen Arbeitsplatz suchst.
   </section>
 
   <section class="text-block reveal">
-    AMO eignet sich besonders für Artists, die ihre eigene Marke ernst nehmen und ihren Kund*innen ein konzentriertes Erlebnis bieten wollen.
+    AMO ist für Artists, die eigenständig, sauber, zuverlässig und mit Anspruch arbeiten.
   </section>
 
   <div class="pill-row reveal">
-    <span class="pill">Keine Umsatzbeteiligung</span>
-    <span class="pill">Keine Laufkundschaft</span>
-    <span class="pill">Exklusive Nutzung</span>
-    <span class="pill">Professioneller Rahmen</span>
-    <span class="pill">Künstlerische Freiheit</span>
-    <span class="pill">Premium-Außenwirkung</span>
+    <span class="pill">Eigenverantwortlich</span>
+    <span class="pill">Professionell</span>
+    <span class="pill">Hygienebewusst</span>
+    <span class="pill">Kundenorientiert</span>
+    <span class="pill">Künstlerisch frei</span>
+    <span class="pill">Markenbewusst</span>
   </div>
 
-  <h2 class="intro-text">Was enthalten ist</h2>
+  <h2 class="intro-text">Häufige Fragen</h2>
 
-  <section class="text-block reveal">
-    Privater Tattoo-Arbeitsraum.<br><br>
-    Kundenbereich.<br><br>
-    Professionelles Mobiliar.<br><br>
-    Gewöhnliche Verbrauchsmaterialien nach Verfügbarkeit.<br><br>
-    Grundlicht, Atmosphäre und WLAN.<br><br>
-    Endreinigung außerhalb deines direkten Arbeitsbereichs.
-  </section>
-
-  <h2 class="intro-text">Was du selbst mitbringst</h2>
-
-  <section class="text-block reveal">
-    Gewerbeanmeldung und Ausweisdokument.<br><br>
-    Hygiene- beziehungsweise Sachkundenachweis.<br><br>
-    Deine Kund*innen und deine Terminorganisation.<br><br>
-    Deine berufliche Qualifikation und Versicherung.<br><br>
-    Spezielle Nadeln, Farben, Maschinen und persönliche Arbeitsmaterialien.<br><br>
-    Deine Dokumentation, Aufklärung und Einhaltung aller Hygienevorgaben.
-  </section>
+  <div class="model-section reveal">
+    <table class="mini-table">
+      <tbody>
+        <tr>
+          <td><strong>Kann ich direkt buchen?</strong></td>
+          <td>Nein. Zuerst wird geprüft, ob deine Arbeitsweise und Nutzung zum Atelier passen.</td>
+        </tr>
+        <tr>
+          <td><strong>Muss ich Umsatz abgeben?</strong></td>
+          <td>Nein. Deine Einnahmen bleiben deine Einnahmen.</td>
+        </tr>
+        <tr>
+          <td><strong>Bekomme ich Kund*innen über AMO?</strong></td>
+          <td>Nein. Du bringst deine eigenen Kund*innen mit.</td>
+        </tr>
+        <tr>
+          <td><strong>Darf ich meine eigene Marke nutzen?</strong></td>
+          <td>Ja. Du arbeitest eigenständig und kannst gegenüber deinen Kund*innen professionell auftreten.</td>
+        </tr>
+        <tr>
+          <td><strong>Ist der Raum exklusiv?</strong></td>
+          <td>Während deiner gebuchten Zeit nutzt du den vereinbarten Bereich privat und ohne offene Laufkundschaft.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
   <h2 class="intro-text">Nächster Schritt</h2>
 
   <section class="text-block reveal">
-    AMO Private Atelier ist kein Raum für jede Anfrage.
+    Frag den Zugang an, wenn du als selbstständige*r Artist professionell, frei und in hochwertiger Atmosphäre arbeiten möchtest.
   </section>
 
   <section class="text-block reveal">
-    Nicht jede Arbeitsweise passt.<br>
-    Nicht jeder Anspruch passt.<br>
-    Genau dadurch bleibt der Raum hochwertig.
-  </section>
-
-  <section class="text-block reveal">
-    Wenn du eigenständig arbeitest, professionell auftrittst und deinen Kund*innen mehr bieten willst als einen normalen Studiotermin, dann frag den Zugang an.
+    Nicht jede Anfrage wird angenommen. Genau dadurch bleibt AMO ruhig, exklusiv und hochwertig.
   </section>
 
   <div class="cta-row">
@@ -384,93 +225,3 @@
   <br><br><br>
 
 </main>
-
-<script src="assets/js/reveal.js"></script>
-
-<footer class="page-footnote">
-  <h2 class="intro-text">
-    Du findest uns hier bei <strong>AMO Tattoo Atelier</strong>
-  </h2>
-
-  <p class="footnote-line">
-    <strong>Adresse:</strong> Sternenstraße 5, 79664 Wehr (Baden)
-  </p>
-
-  <p class="footnote-line">
-    <a class="footnote-link" href="https://www.google.com/maps/dir/?api=1&destination=Sternenstra%C3%9Fe%205%2C%2079664%20Wehr%20(Baden)" target="_blank" rel="noopener">
-      Route in Google Maps öffnen
-    </a>
-  </p>
-
-  <p>© <span id="year"></span> AMO Private Atelier</p>
-</footer>
-
-<script>
-  (function(){
-    var y=document.getElementById('year');
-    if(y) y.textContent=new Date().getFullYear();
-  })();
-
-  const burgerBtn=document.getElementById('burgerBtn');
-  const siteNav=document.getElementById('siteNav');
-  const body=document.body;
-
-  function toggleNav(open){
-    const willOpen=(open!==undefined)?open:!body.classList.contains('nav-open');
-    body.classList.toggle('nav-open',willOpen);
-    if(burgerBtn) burgerBtn.setAttribute('aria-expanded',willOpen?'true':'false');
-  }
-
-  if(burgerBtn){
-    burgerBtn.addEventListener('click',()=>toggleNav());
-  }
-
-  document.addEventListener('click',(e)=>{
-    if(!body.classList.contains('nav-open')) return;
-    if(!siteNav.contains(e.target)&&!burgerBtn.contains(e.target)) toggleNav(false);
-  });
-
-  let sx=null,sy=null;
-
-  window.addEventListener('touchstart',(e)=>{
-    const t=e.touches[0];
-    sx=t.clientX;
-    sy=t.clientY;
-  },{passive:true});
-
-  window.addEventListener('touchmove',(e)=>{
-    if(sx===null) return;
-    const t=e.touches[0],dx=t.clientX-sx,dy=Math.abs(t.clientY-sy);
-    if(dy>40) return;
-    if(sx<24&&dx>40) toggleNav(true);
-    if(dx<-60) toggleNav(false);
-  },{passive:true});
-</script>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"TattooParlor",
-  "name":"AMO Private Atelier",
-  "url":"https://modern-ritualistic-tattoo.com/preismodelletattoo.html",
-  "image":"https://modern-ritualistic-tattoo.com/assets/img/og.PNG",
-  "description":"Privater Premium-Tattoo-Raum für selbstständige Artists und Guest Artists mit kuratiertem Zugang.",
-  "address":{
-    "@type":"PostalAddress",
-    "streetAddress":"Sternenstraße 5",
-    "postalCode":"79664",
-    "addressLocality":"Wehr",
-    "addressRegion":"Baden-Württemberg",
-    "addressCountry":"DE"
-  },
-  "areaServed":"DE",
-  "priceRange":"€€€",
-  "sameAs":[
-    "https://www.instagram.com/amotattoatelier",
-    "https://www.tiktok.com/@amotattoo79"
-  ]
-}
-</script>
-
-</body>
-</html>
