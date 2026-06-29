@@ -842,3 +842,24 @@ main.intro .text-block{
   font-size: .9em; /* zweite Zeile wie bei index etwas kleiner, bleibt Überschrift */
   line-height:1.15;
 }
+
+/* FIX: Bubbles exakt mittig ausrichten */
+.artist-strip{
+  width:100%;
+  max-width:920px;
+  margin:28px auto;
+  padding:0 12px;
+  box-sizing:border-box;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.artist-strip span{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
