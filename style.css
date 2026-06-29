@@ -882,5 +882,12 @@ main.intro .text-block{
   .price-card:last-child{
     margin-bottom:0 !important;
   }
-
+.price-description{
+    font-size:14px;
+    color:#ffffff;
+    opacity:.82;
+    line-height:1.45;
+    margin:-2px 0 16px;
+    text-align:left;
+}
 }
