@@ -873,3 +873,14 @@ main.intro .text-block{
   font-size: .9em;
   line-height:1.15;
 }
+@media (max-width:900px){
+
+  .price-card{
+    margin-bottom:40px !important;
+  }
+
+  .price-card:last-child{
+    margin-bottom:0 !important;
+  }
+
+}
